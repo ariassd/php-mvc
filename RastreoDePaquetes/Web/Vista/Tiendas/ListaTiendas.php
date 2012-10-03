@@ -1,29 +1,26 @@
 <?php
-    $g_tituloPagina = 'Lista de clientes';
+    $g_tituloPagina = 'Lista de tiendas';
     $g_formAction = "";
     ob_start();
 ?>
-
-<h1>Esta es la lista de los clientes</h1>
+<h1>Esta es la lista de las tiendas</h1>
         <table>
             <thead>
                 <tr>
-                    <th>Id Cliente</th>
-                    <th>Nombre</th>
-                    <th>Direccion</th>
+                    <th>Id Tienda</th>
+                    <th>Descripion</th>
                     <th>Estado</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($o_clientes as $value) { ?>
+                <?php foreach ($tiendas_al as $value) { ?>
                 <tr>
-                    <td><?php echo $value->I_idCliente; ?></td>
-                    <td><?php echo $value->S_nombreCompleto; ?></td>
-                    <td><?php echo $value->S_direccion; ?></td>
+                    <td><?php echo $value->I_idTienda; ?></td>
+                    <td><?php echo $value->S_descripcion; ?></td>
                     <td><?php echo $value->S_estado; ?></td>
                     <td>
-                        <a href="?vista=DetalleCliente&idCliente=<?php echo $value->I_idCliente; ?>">Ver detalle</a>
+                        <a href="?vista=DetalleTienda&idTienda=<?php echo $value->I_idCliente; ?>">Ver detalle</a>
                     </td>
                 </tr>
                 <?php } ?>

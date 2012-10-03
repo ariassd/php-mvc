@@ -3,8 +3,6 @@
     $g_formAction = "";
     ob_start();
 ?>
-<?php echo _TITULO_; ?>
-
 <h2>Este es el detalle del cliente</h2>
 
 <table class="FormularioDetalle">
