@@ -16,10 +16,7 @@ import("MbeFramework.Configuracion.ConfigurationSettings");
     </head>
     <body>
         <div class="BarraDeIdioma">
-            <form method="post" action="" >
-                <?php HtmlControles::Iniciar(); ?>
-                <?php include_once 'Controles/Idiomas.php'; ?>
-            </form>
+            <?php include_once 'Controles/Idiomas.php'; ?>
         </div>
         <div id="UIAyudaAusuario" style="display: none" title="Ayuda">
         </div>
