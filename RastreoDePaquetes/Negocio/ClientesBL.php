@@ -20,6 +20,22 @@ class ClientesBL {
         return $a_listaClientes;
     }
     
+    public static function DetalleCliente_a($i_idCliente) {
+        
+        $a_cliente = NULL;
+        
+        $dataResult = ClientesDAO::DetalleClientes_o($i_idCliente);
+        if ( count($dataResult) >= 1 ) {
+            $a_cliente = new Cliente();
+            while($row = mysql_fetch_array($dataResult))
+            {
+                $a_cliente = ClientesBL::ConvertirMySQLRowACliente_o($row);
+            }
+        }
+        
+        return $a_cliente;
+    }
+    
     private static function ConvertirMySQLRowACliente_o($row) {
         $o_clienteEncontrado = NULL;
         
