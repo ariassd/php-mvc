@@ -21,6 +21,13 @@ function Indice() {
     include("Vista/Clientes/ListaDeClientes.php");
 }
 
+function DetalleCliente() {
+    $idCliente = $_REQUEST["idCliente"];
+    $cliente = ClientesBL::DetalleCliente_a($idCliente);
+    
+    include("Vista/Clientes/DetalleDeUnCliente.php");
+}
+
 function Saludar_click() {
     echo 'hola';
     $saludo = "Que pasoo amigo!";

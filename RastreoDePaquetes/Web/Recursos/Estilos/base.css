@@ -18,6 +18,11 @@ h1{
     text-shadow: 1px 1px #DFDFDF;
 }
 
+h2{
+    color: #000f00;
+    text-shadow: 1px 1px #DFDFDF;
+}
+
 input[type="sbmit"]:hover {
     color: #000000;
     text-shadow: 1px 1px #DFDFDF;
@@ -36,8 +41,14 @@ a:hover {
     margin-bottom: -8px;
 }
 
-BarraDeIdioma {
+.BarraDeIdioma {
     width: 100%;
     text-align: right;
     
+}
+
+.FormularioDetalle .campo {
+    background-color: #efefef;
+    text-align: right;
+    font-weight: bold;
 }
