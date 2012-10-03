@@ -24,5 +24,4 @@ function Saludar_click() {
     echo 'hola';
     $saludo = "Que pasoo amigo!";
 }
-//sfsfsfs
 ?>
