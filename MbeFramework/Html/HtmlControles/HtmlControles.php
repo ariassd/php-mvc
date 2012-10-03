@@ -28,21 +28,29 @@ Class HtmlControles {
     * @access public
     */
     public static function Iniciar() {
-        echo "<input type='hidden' name='__7ygv8iji9olwsedfgtyho9iu__' value='' />
+        echo "<input type='hidden' id='__7ygv8iji9olwsedfgtyho9iu__' name='__7ygv8iji9olwsedfgtyho9iu__' value='' />
 ";
     }
 
     /**
      * Crea un boton de tipo submit que hace submit y ejecuta automaticamente 
      * una funcion en el codigo php
-     *
+     *if (isset($_POST["__7ygv8iji9olwsedfgtyho9iu__"])) {
+    try {
+
+        $fName = $_POST["__7ygv8iji9olwsedfgtyho9iu__"];
+        $fName();
+    } catch (Exception $e) {
+        echo $e;
+    }
+}
      * @access public
      * @param string $texto el texto del boton
      * @param string $phpFuncion la funcion que se va a ejecutar
      * @param string $javascriptFuncion la funcion de javascript que se ejecuta
      */
-    public static function SubmitButton($idControl, $text, $phpFunction, $javascriptFunction) {
-        echo "<input type='submit' id='".$idControl."' value='" . $text . "' onclick='document.getElementsByName(\"__7ygv8iji9olwsedfgtyho9iu__\")[0].value=\"" . $phpFunction . "\";return ".$javascriptFunction."' />";
+    public static function SubmitButton($idControl, $texto, $phpFuncion, $javascriptFuncion) {
+        echo "<input type='submit' id='".$idControl."' value='" . $texto . "' onclick='document.getElementById(\"__7ygv8iji9olwsedfgtyho9iu__\").value=\"" . $phpFuncion . "\";return ".$javascriptFuncion."' />";
     }
 
     /**
