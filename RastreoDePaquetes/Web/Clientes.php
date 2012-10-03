@@ -3,8 +3,9 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 include("../../MbeFramework/MbeFramework.php");
 import("RastreoDePaquetes.Negocio.ClientesBL");
-import("MbeFramework.Html.HtmlControles.HtmlControles");
 import("MbeFramework.MbeController");
+import("MbeFramework.Html.HtmlControles.HtmlControles");
+
 /**
  * Controlador de clientes
  *
