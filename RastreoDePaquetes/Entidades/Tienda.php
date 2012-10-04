@@ -1,34 +1,33 @@
 <?php
 import("MbeFramework.MbeEntity");
+/**
+ * Este codigo es autogenerado usando PhpGenerator.py, desarrollado
+ * por Luis Diego Arias Segura
+ */
+/**
+ * Entidad Tienda
+ *
+ * @author Luis Diego Arias Segura
+ * @package RastreoDePaquetes.Tienda
+ */
+class Tienda extends MbeEntity {
+    //Atributos
+	private $i_idTienda;
+	private $s_descripcion;
+	private $s_estado;
 
-class Tienda  extends MbeEntity {
-    private $i_idTienda;
-    private $s_descripcion;
-    private $s_estado;
+
+    //setters
+	public function setI_Idtienda($i_idTienda) { $this->i_idTienda = $i_idTienda; }
+	public function setS_Descripcion($s_descripcion) { $this->s_descripcion = $s_descripcion; }
+	public function setS_Estado($s_estado) { $this->s_estado = $s_estado; }
 
 
-    public function getI_idTienda() {
-        return $this->i_idTienda;
-    }
-    
-    public function setI_idTienda( $valor) {
-        $this->i_idTienda = $valor;
-    }
-    
-    public function getS_descripcion() {
-        return $this->s_Descripcion;
-    }
-    
-    public function setS_descripcion( $valor) {
-        $this->s_Descripcion = $valor;
-    }
-    public function getS_estado() {
-        return $this->s_Estado;
-    }
-    
-    public function setS_estado( $valor) {
-        $this->s_Estado = $valor;
-    }
-    
+    //getters
+	public function getI_Idtienda() { return $this->i_idTienda; }
+	public function getS_Descripcion() { return $this->s_descripcion; }
+	public function getS_Estado() { return $this->s_estado; }
+
 }
+
 ?>
