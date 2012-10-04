@@ -18,15 +18,15 @@ class Tienda extends MbeEntity {
 
 
     //setters
-	public function setI_Idtienda($i_idTienda) { $this->i_idTienda = $i_idTienda; }
-	public function setS_Descripcion($s_descripcion) { $this->s_descripcion = $s_descripcion; }
-	public function setS_Estado($s_estado) { $this->s_estado = $s_estado; }
+	public function setI_idtienda($i_idTienda) { $this->i_idTienda = $i_idTienda; }
+	public function setS_descripcion($s_descripcion) { $this->s_descripcion = $s_descripcion; }
+	public function setS_estado($s_estado) { $this->s_estado = $s_estado; }
 
 
     //getters
-	public function getI_Idtienda() { return $this->i_idTienda; }
-	public function getS_Descripcion() { return $this->s_descripcion; }
-	public function getS_Estado() { return $this->s_estado; }
+	public function getI_idtienda() { return $this->i_idTienda; }
+	public function getS_descripcion() { return $this->s_descripcion; }
+	public function getS_estado() { return $this->s_estado; }
 
 }
 

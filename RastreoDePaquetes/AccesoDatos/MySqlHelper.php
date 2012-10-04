@@ -35,7 +35,16 @@ class MySqlHelper {
 		
     }
 
-
+    public static function GetQueryFromFile($queryName, $queryParams) {
+        $query = file_get_contents(dirname(__FILE__).$queryName,0,null,0,10000);
+        if ($queryParams != NULL){
+            foreach ($queryParams as $llave => $value) {
+                //$query = $query.replace($llave,$value);
+                $query = str_replace($llave,$value,$query);
+            }
+        }
+        return $query;
+    }
 }
 
 ?>

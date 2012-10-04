@@ -5,31 +5,28 @@ include("../../MbeFramework/MbeFramework.php");
 import("RastreoDePaquetes.Negocio.ClientesBL");
 import("MbeFramework.Html.HtmlControles.HtmlControles");
 import("MbeFramework.MbeController");
-
-
 /**
- * Controlador de clientes
+ * Este codigo es autogenerado usando PhpGenerator.py, desarrollado
+ * por Luis Diego Arias Segura
+ */
+/**
+ * Clase de capa de negocio para Cliente
+ * Esta es la clase controlador para las GUI's de Cliente
  *
  * @author Luis Diego Arias Segura
+ * @package RastreoDePaquetes.Web.Clientes
  */
 
-$saludo = "";
-$o_clientes = NULL;
-
-function Indice() {
-    $o_clientes = ClientesBL::ListarClientes_a();
-    include("Vista/Clientes/ListaDeClientes.php");
+function ListarCliente() {
+    $o_Clientes = ClientesBL::ListarClientes_al();
+    include("Vista/Clientes/ListarClientes.php");
 }
 
 function DetalleCliente() {
     $idCliente = $_REQUEST["idCliente"];
-    $cliente = ClientesBL::DetalleCliente_a($idCliente);
+    $Cliente = ClientesBL::DetalleCliente_o($idCliente);
     
-    include("Vista/Clientes/DetalleDeUnCliente.php");
+    include("Vista/Clientes/DetalleClientes.php");
 }
 
-function Saludar_click() {
-    echo 'hola';
-    $saludo = "Que pasoo amigo!";
-}
 ?>

@@ -1,55 +1,68 @@
 <?php
+/**
+ * Este codigo es autogenerado usando PhpGenerator.py, desarrollado
+ * por Luis Diego Arias Segura
+ */
+/**
+ * Clase de capa de negocio para Cliente
+ * Esta clase convierte el data result devuelto por la capa de acceso a datos
+ * en un objetos del tipo de la entidad 
+ *
+ * @author Luis Diego Arias Segura
+ * @package RastreoDePaquetes.Negocio.ClientesBL
+ */
 include("../../MbeFramework/MbeFramework.php");
 import("MbeFramework.Configuracion.ConfigurationSettings");
 import("RastreoDePaquetes.AccesoDatos.ClientesDAO");
 import("RastreoDePaquetes.Entidades.*");
 class ClientesBL {
-    public static function ListarClientes_a() {
+    public static function ListarClientes_al() {
         
-        $a_listaClientes = NULL;
+        $a_lista = NULL;
         
         $dataResult = ClientesDAO::ListarClientes_o();
         if ( count($dataResult) >= 1 ) {
-            $a_listaClientes = Array();
+            $a_lista = Array();
             while($row = mysql_fetch_array($dataResult))
             {
-                $o_clienteEncontrado = ClientesBL::ConvertirMySQLRowACliente_o($row);
-                $a_listaClientes[] = $o_clienteEncontrado;
+                $o_ClienteEncontrado = ClientesBL::ConvertirMySQLRowACliente_o($row);
+                $a_lista[] = $o_ClienteEncontrado;
             }
         }
-        return $a_listaClientes;
+        return $a_lista;
     }
     
-    public static function DetalleCliente_a($i_idCliente) {
+    public static function DetalleCliente_o($i_idCliente) {
         
-        $a_cliente = NULL;
+        $o_Cliente = NULL;
         
-        $dataResult = ClientesDAO::DetalleClientes_o($i_idCliente);
+        $dataResult = ClientesDAO::DetalleCliente_o($i_idCliente);
         if ( count($dataResult) >= 1 ) {
-            $a_cliente = new Cliente();
+            $o_Cliente = new Cliente();
             while($row = mysql_fetch_array($dataResult))
             {
-                $a_cliente = ClientesBL::ConvertirMySQLRowACliente_o($row);
+                $a_Cliente = ClientesBL::ConvertirMySQLRowACliente_o($row);
             }
         }
         
-        return $a_cliente;
+        return $a_Cliente;
     }
     
     private static function ConvertirMySQLRowACliente_o($row) {
-        $o_clienteEncontrado = NULL;
+        $o_Cliente = NULL;
         
         if ($row !=NULL) {
             
-            $o_clienteEncontrado = new Cliente();
-            $o_clienteEncontrado->I_idCliente = $row['idCliente'];
-            $o_clienteEncontrado->S_nombreCompleto = $row['nombreCompleto'];
-            $o_clienteEncontrado->S_direccion = $row['direccion'];
-            $o_clienteEncontrado->S_estado = $row['estado'];
+            $o_Cliente = new Cliente();
+            $o_Cliente->i_idCliente = $row['i_idCliente'];
+            $o_Cliente->s_nombreCompleto = $row['s_nombreCompleto'];
+            $o_Cliente->s_direccion = $row['s_direccion'];
+            $o_Cliente->s_estado = $row['s_estado'];
+
             
         }
         
-        return $o_clienteEncontrado;
+        return $o_Cliente;
     }
     
 }

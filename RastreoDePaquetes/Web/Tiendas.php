@@ -5,11 +5,28 @@ include("../../MbeFramework/MbeFramework.php");
 import("RastreoDePaquetes.Negocio.TiendasBL");
 import("MbeFramework.Html.HtmlControles.HtmlControles");
 import("MbeFramework.MbeController");
+/**
+ * Este codigo es autogenerado usando PhpGenerator.py, desarrollado
+ * por Luis Diego Arias Segura
+ */
+/**
+ * Clase de capa de negocio para Tienda
+ * Esta es la clase controlador para las GUI's de Tienda
+ *
+ * @author Luis Diego Arias Segura
+ * @package RastreoDePaquetes.Web.Tiendas
+ */
 
+function ListarTienda() {
+    $o_Tiendas = TiendasBL::ListarTiendas_al();
+    include("Vista/Tiendas/ListarTiendas.php");
+}
 
-function Listar() {
-    $tiendas_al = TiendasBL::ListarTiendas_a();
-    include('Vista/Tiendas/ListaTiendas.php');
+function DetalleTienda() {
+    $idTienda = $_REQUEST["idTienda"];
+    $Tienda = TiendasBL::DetalleTienda_o($idTienda);
+    
+    include("Vista/Tiendas/DetalleTiendas.php");
 }
 
 ?>
