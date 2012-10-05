@@ -1,18 +1,30 @@
 <?php session_start(); ?>
 <?php 
-include("../../MbeFramework/MbeFramework.php"); 
+include("../../MbeFramework/MbeFramework.php");
 import("MbeFramework.Html.HtmlControles.HtmlControles");
+import("MbeFramework.Configuracion.ConfigurationSettings");
 ?>
 <!DOCTYPE HTML>
 <html>
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <title><?php echo $g_tituloPagina; ?></title>
+        <link rel="stylesheet" href="Recursos/Estilos/base.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="Recursos/Estilos/smoothness/jquery-ui-1.8.24.custom.css" type="text/css" media="all" />
+        <script type="text/javascript" src="Recursos/Jslibs/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="Recursos/Jslibs/jquery-ui-1.8.24.custom.min.js"></script>
     </head>
     <body>
-        Mmenu
+        <div class="BarraDeIdioma">
+            <?php include_once 'Controles/Idiomas.php'; ?>
+        </div>
+        <div id="UIAyudaAusuario" style="display: none" title="Ayuda">
+        </div>
+        <h1><?php echo ConfigurationSettings::GetApplicationSetting("NombreDelSistema"); ?></h1>
         <form method="post" action="<?php echo $g_formAction?>" id="ctl00">
+            <?php import("RastreoDePaquetes.Web.Controles.MenuHorizontal");?>
             <?php HtmlControles::Iniciar(); ?>
+            
             <div id="wrapper">
                 <div id="content">
                     <?php
@@ -25,6 +37,6 @@ import("MbeFramework.Html.HtmlControles.HtmlControles");
                 </div>
             </div>
         </form>
-        Footer
+        
     </body>
-</html>
+</html> 
