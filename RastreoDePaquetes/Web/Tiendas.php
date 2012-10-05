@@ -29,4 +29,24 @@ function DetalleTienda() {
     include("Vista/Tiendas/DetalleTiendas.php");
 }
 
+function InsertarTienda() {
+    throw new Exception("Debe de implementarse");
+    include("Vista/Tiendas/InsertarTiendas.php");
+}
+
+function InsertarTiendaConfirmacion() {
+    throw new Exception("Debe de implementarse");
+    include("Vista/Tiendas/InsertarTiendaConfirmacion.php");
+}
+
+function ActualizarTienda() {
+    throw new Exception("Debe de implementarse");
+    include("Vista/Tiendas/ActualizarTiendas.php");
+}
+
+function ActualizarTiendaConfirmacion() {
+    throw new Exception("Debe de implementarse");
+    include("Vista/Tiendas/ActualizarTiendaConfirmacion.php");
+}
+
 ?>

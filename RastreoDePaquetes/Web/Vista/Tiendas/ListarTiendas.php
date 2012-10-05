@@ -15,18 +15,22 @@
         <table>
             <thead>
                 <tr>
-                    <th>i_idTienda</th>
-                    <th>s_descripcion</th>
-                    <th>s_estado</th>
+                    <th>s_codigoTienda</th>
+                    <th>s_estadoActivo</th>
+                    <th>s_email</th>
+                    <th>s_telefono</th>
+                    <th>s_direccion</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
                 <?php foreach ($o_Tiendas as $value) { ?>
                 <tr>
-                    <td><?php echo $value->I_idtienda; ?></td>
-                    <td><?php echo $value->S_descripcion; ?></td>
-                    <td><?php echo $value->S_estado; ?></td>
+                    <td><?php echo $value->S_codigotienda; ?></td>
+                    <td><?php echo $value->S_estadoactivo; ?></td>
+                    <td><?php echo $value->S_email; ?></td>
+                    <td><?php echo $value->S_telefono; ?></td>
+                    <td><?php echo $value->S_direccion; ?></td>
                     <td><a href="?vista=DetalleTienda&idTienda=<?php echo $value->I_idTienda; ?>">Ver detalle</a></td>
                 </tr>
                 <?php } ?>

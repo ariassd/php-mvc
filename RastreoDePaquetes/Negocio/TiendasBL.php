@@ -41,11 +41,41 @@ class TiendasBL {
             $o_Tienda = new Tienda();
             while($row = mysql_fetch_array($dataResult))
             {
-                $a_Tienda = TiendasBL::ConvertirMySQLRowATienda_o($row);
+                $o_Tienda = TiendasBL::ConvertirMySQLRowATienda_o($row);
             }
         }
         
-        return $a_Tienda;
+        return $o_Tienda;
+    }
+
+    public static function InsertarTienda_o($i_idTienda) {
+        
+        $i_total = 0;
+        
+        $dataResult = TiendasDAO::InsertarTienda_o($i_idTienda);
+        if ( count($dataResult) >= 1 ) {
+            while($row = mysql_fetch_array($dataResult))
+            {
+                $i_total = $row[0];
+            }
+        }
+        
+        return $i_total;
+    }
+
+    public static function ActualizarTienda_o($i_idTienda) {
+        
+        $i_total = 0;
+        
+        $dataResult = TiendasDAO::ActualizarTienda_o($i_idTienda);
+        if ( count($dataResult) >= 1 ) {
+            while($row = mysql_fetch_array($dataResult))
+            {
+                $i_total = $row[0];
+            }
+        }
+        
+        return $i_total;
     }
     
     private static function ConvertirMySQLRowATienda_o($row) {
@@ -54,9 +84,11 @@ class TiendasBL {
         if ($row !=NULL) {
             
             $o_Tienda = new Tienda();
-            $o_Tienda->i_idTienda = $row['i_idTienda'];
-            $o_Tienda->s_descripcion = $row['s_descripcion'];
-            $o_Tienda->s_estado = $row['s_estado'];
+            $o_Tienda->s_codigoTienda = $row['s_codigoTienda'];
+            $o_Tienda->s_estadoActivo = $row['s_estadoActivo'];
+            $o_Tienda->s_email = $row['s_email'];
+            $o_Tienda->s_telefono = $row['s_telefono'];
+            $o_Tienda->s_direccion = $row['s_direccion'];
 
             
         }

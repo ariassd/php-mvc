@@ -41,11 +41,41 @@ class ClientesBL {
             $o_Cliente = new Cliente();
             while($row = mysql_fetch_array($dataResult))
             {
-                $a_Cliente = ClientesBL::ConvertirMySQLRowACliente_o($row);
+                $o_Cliente = ClientesBL::ConvertirMySQLRowACliente_o($row);
             }
         }
         
-        return $a_Cliente;
+        return $o_Cliente;
+    }
+
+    public static function InsertarCliente_o($i_idCliente) {
+        
+        $i_total = 0;
+        
+        $dataResult = ClientesDAO::InsertarCliente_o($i_idCliente);
+        if ( count($dataResult) >= 1 ) {
+            while($row = mysql_fetch_array($dataResult))
+            {
+                $i_total = $row[0];
+            }
+        }
+        
+        return $i_total;
+    }
+
+    public static function ActualizarCliente_o($i_idCliente) {
+        
+        $i_total = 0;
+        
+        $dataResult = ClientesDAO::ActualizarCliente_o($i_idCliente);
+        if ( count($dataResult) >= 1 ) {
+            while($row = mysql_fetch_array($dataResult))
+            {
+                $i_total = $row[0];
+            }
+        }
+        
+        return $i_total;
     }
     
     private static function ConvertirMySQLRowACliente_o($row) {
@@ -55,9 +85,15 @@ class ClientesBL {
             
             $o_Cliente = new Cliente();
             $o_Cliente->i_idCliente = $row['i_idCliente'];
-            $o_Cliente->s_nombreCompleto = $row['s_nombreCompleto'];
+            $o_Cliente->s_nombre = $row['s_nombre'];
+            $o_Cliente->s_apellidos = $row['s_apellidos'];
             $o_Cliente->s_direccion = $row['s_direccion'];
-            $o_Cliente->s_estado = $row['s_estado'];
+            $o_Cliente->s_telefono = $row['s_telefono'];
+            $o_Cliente->s_email = $row['s_email'];
+            $o_Cliente->s_planContratado = $row['s_planContratado'];
+            $o_Cliente->s_codigoPais = $row['s_codigoPais'];
+            $o_Cliente->s_numCasillero = $row['s_numCasillero'];
+            $o_Cliente->o_codTienda = $row['o_codTienda'];
 
             
         }

@@ -29,4 +29,24 @@ function DetalleCliente() {
     include("Vista/Clientes/DetalleClientes.php");
 }
 
+function InsertarCliente() {
+    throw new Exception("Debe de implementarse");
+    include("Vista/Clientes/InsertarClientes.php");
+}
+
+function InsertarClienteConfirmacion() {
+    throw new Exception("Debe de implementarse");
+    include("Vista/Clientes/InsertarClienteConfirmacion.php");
+}
+
+function ActualizarCliente() {
+    throw new Exception("Debe de implementarse");
+    include("Vista/Clientes/ActualizarClientes.php");
+}
+
+function ActualizarClienteConfirmacion() {
+    throw new Exception("Debe de implementarse");
+    include("Vista/Clientes/ActualizarClienteConfirmacion.php");
+}
+
 ?>

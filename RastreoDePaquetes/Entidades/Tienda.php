@@ -12,21 +12,27 @@ import("MbeFramework.MbeEntity");
  */
 class Tienda extends MbeEntity {
     //Atributos
-	private $i_idTienda;
-	private $s_descripcion;
-	private $s_estado;
+	private $s_codigoTienda;
+	private $s_estadoActivo;
+	private $s_email;
+	private $s_telefono;
+	private $s_direccion;
 
 
     //setters
-	public function setI_idtienda($i_idTienda) { $this->i_idTienda = $i_idTienda; }
-	public function setS_descripcion($s_descripcion) { $this->s_descripcion = $s_descripcion; }
-	public function setS_estado($s_estado) { $this->s_estado = $s_estado; }
+	public function setS_codigotienda($s_codigoTienda) { $this->s_codigoTienda = $s_codigoTienda; }
+	public function setS_estadoactivo($s_estadoActivo) { $this->s_estadoActivo = $s_estadoActivo; }
+	public function setS_email($s_email) { $this->s_email = $s_email; }
+	public function setS_telefono($s_telefono) { $this->s_telefono = $s_telefono; }
+	public function setS_direccion($s_direccion) { $this->s_direccion = $s_direccion; }
 
 
     //getters
-	public function getI_idtienda() { return $this->i_idTienda; }
-	public function getS_descripcion() { return $this->s_descripcion; }
-	public function getS_estado() { return $this->s_estado; }
+	public function getS_codigotienda() { return $this->s_codigoTienda; }
+	public function getS_estadoactivo() { return $this->s_estadoActivo; }
+	public function getS_email() { return $this->s_email; }
+	public function getS_telefono() { return $this->s_telefono; }
+	public function getS_direccion() { return $this->s_direccion; }
 
 }
 

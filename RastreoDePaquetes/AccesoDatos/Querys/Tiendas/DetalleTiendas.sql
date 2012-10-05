@@ -1,21 +1,30 @@
 /*
 Nombre:         DetalleTiendas.sql
 Autor:          Luis Diego Arias Segura
-Fecha creado:   2012-10-03
+Fecha creado:   2012-10-05
 Descripcion:    
-Obtiene el detalle de una tienda de la base de datos.
+Obtiene el detalle de un Tienda almacenados en la base de datos.
+
+Nota: Este codigo es autogenerado usando PhpGenerator.py, desarrollado
+por Luis Diego Arias Segura
+Debe de ser modificado segun la estructura de la base de datos para 
+que su funcionalidad sea la adecuada
 
 Historico de cambios
 ================================================================
 === FECHA ====  AUTOR ============  DETALLE ====================
-2012-10-03      Luis Diego A        Creacion del procedimiento
+2012-10-05      Luis Diego A        Creacion del procedimiento
             +                   +                               
             +                   +                               
             +                   +                               
             +                   +                               
 */
-SELECT  idTienda as i_idTienda
-	,Descripcion as s_descripcion
-	,Estado as s_estado
-FROM    Tiendas
-WHERE   idTienda = @idTienda
+SELECT  
+	s_codigoTienda
+	,s_estadoActivo
+	,s_email
+	,s_telefono
+	,s_direccion
+
+FROM    Tienda
+WHERE   i_idTienda = @idTienda

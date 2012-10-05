@@ -16,9 +16,15 @@
             <thead>
                 <tr>
                     <th>i_idCliente</th>
-                    <th>s_nombreCompleto</th>
+                    <th>s_nombre</th>
+                    <th>s_apellidos</th>
                     <th>s_direccion</th>
-                    <th>s_estado</th>
+                    <th>s_telefono</th>
+                    <th>s_email</th>
+                    <th>s_planContratado</th>
+                    <th>s_codigoPais</th>
+                    <th>s_numCasillero</th>
+                    <th>o_codTienda</th>
                     <th></th>
                 </tr>
             </thead>
@@ -26,9 +32,15 @@
                 <?php foreach ($o_Clientes as $value) { ?>
                 <tr>
                     <td><?php echo $value->I_idcliente; ?></td>
-                    <td><?php echo $value->S_nombrecompleto; ?></td>
+                    <td><?php echo $value->S_nombre; ?></td>
+                    <td><?php echo $value->S_apellidos; ?></td>
                     <td><?php echo $value->S_direccion; ?></td>
-                    <td><?php echo $value->S_estado; ?></td>
+                    <td><?php echo $value->S_telefono; ?></td>
+                    <td><?php echo $value->S_email; ?></td>
+                    <td><?php echo $value->S_plancontratado; ?></td>
+                    <td><?php echo $value->S_codigopais; ?></td>
+                    <td><?php echo $value->S_numcasillero; ?></td>
+                    <td><?php echo $value->O_codtienda; ?></td>
                     <td><a href="?vista=DetalleCliente&idCliente=<?php echo $value->I_idCliente; ?>">Ver detalle</a></td>
                 </tr>
                 <?php } ?>

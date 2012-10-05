@@ -19,16 +19,40 @@
         <td><?php echo $Cliente->I_idcliente; ?></td>
     </tr>
     <tr>
-        <td class="campo">s_nombreCompleto:</td>
-        <td><?php echo $Cliente->S_nombrecompleto; ?></td>
+        <td class="campo">s_nombre:</td>
+        <td><?php echo $Cliente->S_nombre; ?></td>
+    </tr>
+    <tr>
+        <td class="campo">s_apellidos:</td>
+        <td><?php echo $Cliente->S_apellidos; ?></td>
     </tr>
     <tr>
         <td class="campo">s_direccion:</td>
         <td><?php echo $Cliente->S_direccion; ?></td>
     </tr>
     <tr>
-        <td class="campo">s_estado:</td>
-        <td><?php echo $Cliente->S_estado; ?></td>
+        <td class="campo">s_telefono:</td>
+        <td><?php echo $Cliente->S_telefono; ?></td>
+    </tr>
+    <tr>
+        <td class="campo">s_email:</td>
+        <td><?php echo $Cliente->S_email; ?></td>
+    </tr>
+    <tr>
+        <td class="campo">s_planContratado:</td>
+        <td><?php echo $Cliente->S_plancontratado; ?></td>
+    </tr>
+    <tr>
+        <td class="campo">s_codigoPais:</td>
+        <td><?php echo $Cliente->S_codigopais; ?></td>
+    </tr>
+    <tr>
+        <td class="campo">s_numCasillero:</td>
+        <td><?php echo $Cliente->S_numcasillero; ?></td>
+    </tr>
+    <tr>
+        <td class="campo">o_codTienda:</td>
+        <td><?php echo $Cliente->O_codtienda; ?></td>
     </tr>
 
 </table>
