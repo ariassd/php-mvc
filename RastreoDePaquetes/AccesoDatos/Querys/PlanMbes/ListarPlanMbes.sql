@@ -1,7 +1,7 @@
 /*
 Nombre:         ListarPlanMbes.sql
 Autor:          Luis Diego Arias Segura
-Fecha creado:   2012-10-05
+Fecha creado:   2012-10-06
 Descripcion:    
 Obtiene la lista de los PlanMbes almacenados en la base de datos.
 
@@ -13,7 +13,7 @@ que su funcionalidad sea la adecuada
 Historico de cambios
 ================================================================
 === FECHA ====  AUTOR ============  DETALLE ====================
-2012-10-05      Luis Diego A        Creacion del procedimiento
+2012-10-06      Luis Diego A        Creacion del procedimiento
             +                   +                               
             +                   +                               
             +                   +                               
@@ -21,7 +21,7 @@ Historico de cambios
 */
 SELECT  
 	i_id
-	,s_ipo
+	,s_tipo
 	,d_seguroParaPaquetes
 
-FROM    PlanMbe
+FROM    mbeot_PlanMbe

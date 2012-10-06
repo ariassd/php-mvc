@@ -1,12 +1,12 @@
 <?php
 /**
- * Vista detalle para la entidad de ValoresArancelarios
+ * Vista detalle para la entidad de ValorArancelarios
  * GUI
  * @author Luis Diego Arias Segura
- * @package RastreoDePaquetes.Web.ValoresArancelario.DetalleValoresArancelarios
+ * @package RastreoDePaquetes.Web.ValorArancelario.DetalleValorArancelarios
  */
 
-    $g_tituloPagina = 'Detalle de ValoresArancelarios';
+    $g_tituloPagina = 'Detalle de ValorArancelarios';
     $g_formAction = "";
     ob_start();
 ?>
@@ -16,19 +16,19 @@
 <table class="FormularioDetalle">
     <tr>
         <td class="campo">d_valorAdicional:</td>
-        <td><?php echo $ValoresArancelario->D_valoradicional; ?></td>
+        <td><?php echo $ValorArancelario->D_valoradicional; ?></td>
     </tr>
     <tr>
         <td class="campo">d_valorBodegaje:</td>
-        <td><?php echo $ValoresArancelario->D_valorbodegaje; ?></td>
+        <td><?php echo $ValorArancelario->D_valorbodegaje; ?></td>
     </tr>
     <tr>
         <td class="campo">d_valorDesalmacenaje:</td>
-        <td><?php echo $ValoresArancelario->D_valordesalmacenaje; ?></td>
+        <td><?php echo $ValorArancelario->D_valordesalmacenaje; ?></td>
     </tr>
     <tr>
         <td class="campo">e_operacionValoradicional:</td>
-        <td><?php echo $ValoresArancelario->E_operacionvaloradicional; ?></td>
+        <td><?php echo $ValorArancelario->E_operacionvaloradicional; ?></td>
     </tr>
 
 </table>

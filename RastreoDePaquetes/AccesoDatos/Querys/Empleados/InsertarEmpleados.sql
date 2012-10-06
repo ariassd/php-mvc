@@ -1,7 +1,7 @@
 /*
 Nombre:         InsertarEmpleados.sql
 Autor:          Luis Diego Arias Segura
-Fecha creado:   2012-10-05
+Fecha creado:   2012-10-06
 Descripcion:    
 Ingresa Empleado en la base de datos.
 
@@ -13,13 +13,13 @@ que su funcionalidad sea la adecuada
 Historico de cambios
 ================================================================
 === FECHA ====  AUTOR ============  DETALLE ====================
-2012-10-05      Luis Diego A        Creacion del procedimiento
+2012-10-06      Luis Diego A        Creacion del procedimiento
             +                   +                               
             +                   +                               
             +                   +                               
             +                   +                               
 */
-INSERT INTO Empleado
+INSERT INTO mbeot_Empleado
 (
 	i_id
 	,s_nombre

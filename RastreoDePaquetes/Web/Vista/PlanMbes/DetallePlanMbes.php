@@ -19,8 +19,8 @@
         <td><?php echo $PlanMbe->I_id; ?></td>
     </tr>
     <tr>
-        <td class="campo">s_ipo:</td>
-        <td><?php echo $PlanMbe->S_ipo; ?></td>
+        <td class="campo">s_tipo:</td>
+        <td><?php echo $PlanMbe->S_tipo; ?></td>
     </tr>
     <tr>
         <td class="campo">d_seguroParaPaquetes:</td>

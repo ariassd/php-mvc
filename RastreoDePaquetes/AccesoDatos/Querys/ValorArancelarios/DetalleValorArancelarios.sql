@@ -1,9 +1,9 @@
 /*
-Nombre:         ListarValoresArancelarios.sql
+Nombre:         DetalleValorArancelarios.sql
 Autor:          Luis Diego Arias Segura
-Fecha creado:   2012-10-05
+Fecha creado:   2012-10-06
 Descripcion:    
-Obtiene la lista de los ValoresArancelarios almacenados en la base de datos.
+Obtiene el detalle de un ValorArancelario almacenados en la base de datos.
 
 Nota: Este codigo es autogenerado usando PhpGenerator.py, desarrollado
 por Luis Diego Arias Segura
@@ -13,7 +13,7 @@ que su funcionalidad sea la adecuada
 Historico de cambios
 ================================================================
 === FECHA ====  AUTOR ============  DETALLE ====================
-2012-10-05      Luis Diego A        Creacion del procedimiento
+2012-10-06      Luis Diego A        Creacion del procedimiento
             +                   +                               
             +                   +                               
             +                   +                               
@@ -25,4 +25,5 @@ SELECT
 	,d_valorDesalmacenaje
 	,e_operacionValoradicional
 
-FROM    ValoresArancelario
+FROM    mbeot_ValorArancelario
+WHERE   i_idValorArancelario = @idValorArancelario

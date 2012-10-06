@@ -16,7 +16,7 @@
             <thead>
                 <tr>
                     <th>i_id</th>
-                    <th>s_ipo</th>
+                    <th>s_tipo</th>
                     <th>d_seguroParaPaquetes</th>
                     <th></th>
                 </tr>
@@ -25,7 +25,7 @@
                 <?php foreach ($o_PlanMbes as $value) { ?>
                 <tr>
                     <td><?php echo $value->I_id; ?></td>
-                    <td><?php echo $value->S_ipo; ?></td>
+                    <td><?php echo $value->S_tipo; ?></td>
                     <td><?php echo $value->D_seguroparapaquetes; ?></td>
                     <td><a href="?vista=DetallePlanMbe&idPlanMbe=<?php echo $value->I_idPlanMbe; ?>">Ver detalle</a></td>
                 </tr>

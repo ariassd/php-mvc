@@ -92,8 +92,8 @@ class ClientesBL {
             $o_Cliente->s_email = $row['s_email'];
             $o_Cliente->s_planContratado = $row['s_planContratado'];
             $o_Cliente->s_codigoPais = $row['s_codigoPais'];
-            $o_Cliente->s_numCasillero = $row['s_numCasillero'];
-            $o_Cliente->o_codTienda = $row['o_codTienda'];
+            $o_Cliente->i_numCasillero = $row['i_numCasillero'];
+            $o_Cliente->o_codigoTienda = $row['o_codigoTienda'];
 
             
         }

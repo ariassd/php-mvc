@@ -1,7 +1,7 @@
 /*
 Nombre:         InsertarClientes.sql
 Autor:          Luis Diego Arias Segura
-Fecha creado:   2012-10-05
+Fecha creado:   2012-10-06
 Descripcion:    
 Ingresa Cliente en la base de datos.
 
@@ -13,13 +13,13 @@ que su funcionalidad sea la adecuada
 Historico de cambios
 ================================================================
 === FECHA ====  AUTOR ============  DETALLE ====================
-2012-10-05      Luis Diego A        Creacion del procedimiento
+2012-10-06      Luis Diego A        Creacion del procedimiento
             +                   +                               
             +                   +                               
             +                   +                               
             +                   +                               
 */
-INSERT INTO Cliente
+INSERT INTO mbeot_Cliente
 (
 	i_idCliente
 	,s_nombre
@@ -29,8 +29,8 @@ INSERT INTO Cliente
 	,s_email
 	,s_planContratado
 	,s_codigoPais
-	,s_numCasillero
-	,o_codTienda
+	,i_numCasillero
+	,o_codigoTienda
 
 )
 VALUES
@@ -43,8 +43,8 @@ VALUES
 	,@s_email
 	,@s_planContratado
 	,@s_codigoPais
-	,@s_numCasillero
-	,@o_codTienda
+	,@i_numCasillero
+	,@o_codigoTienda
 
 );
 

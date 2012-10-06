@@ -15,12 +15,12 @@
 
 <table class="FormularioDetalle">
     <tr>
-        <td class="campo">s_codigoTienda:</td>
-        <td><?php echo $Tienda->S_codigotienda; ?></td>
+        <td class="campo">i_codigoTienda:</td>
+        <td><?php echo $Tienda->I_codigotienda; ?></td>
     </tr>
     <tr>
-        <td class="campo">s_estadoActivo:</td>
-        <td><?php echo $Tienda->S_estadoactivo; ?></td>
+        <td class="campo">b_estadoActivo:</td>
+        <td><?php echo $Tienda->B_estadoactivo; ?></td>
     </tr>
     <tr>
         <td class="campo">s_email:</td>

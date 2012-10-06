@@ -29,11 +29,11 @@ class TiendasDAO {
         return $dataResult;
     }
 
-    public static function InsertarTienda_o($s_codigoTienda,$s_estadoActivo,$s_email,$s_telefono,$s_direccion) {
+    public static function InsertarTienda_o($i_codigoTienda,$b_estadoActivo,$s_email,$s_telefono,$s_direccion) {
         $cnn_MYSQL = ConfigurationSettings::GetConnectionString("CnxMySQL-RW");
         $params = array();
-        $params[@s_codigoTienda] = $s_codigoTienda;
-        $params[@s_estadoActivo] = $s_estadoActivo;
+        $params[@i_codigoTienda] = $i_codigoTienda;
+        $params[@b_estadoActivo] = $b_estadoActivo;
         $params[@s_email] = $s_email;
         $params[@s_telefono] = $s_telefono;
         $params[@s_direccion] = $s_direccion;
@@ -43,11 +43,11 @@ class TiendasDAO {
         return $dataResult;
     }
 
-    public static function ActualizarTienda_o($s_codigoTienda,$s_estadoActivo,$s_email,$s_telefono,$s_direccion) {
+    public static function ActualizarTienda_o($i_codigoTienda,$b_estadoActivo,$s_email,$s_telefono,$s_direccion) {
         $cnn_MYSQL = ConfigurationSettings::GetConnectionString("CnxMySQL-RW");
         $params = array();
-        $params[@s_codigoTienda] = $s_codigoTienda;
-        $params[@s_estadoActivo] = $s_estadoActivo;
+        $params[@i_codigoTienda] = $i_codigoTienda;
+        $params[@b_estadoActivo] = $b_estadoActivo;
         $params[@s_email] = $s_email;
         $params[@s_telefono] = $s_telefono;
         $params[@s_direccion] = $s_direccion;

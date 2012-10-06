@@ -5,12 +5,12 @@ import("MbeFramework.MbeEntity");
  * por Luis Diego Arias Segura
  */
 /**
- * Entidad ValoresArancelario
+ * Entidad ValorArancelario
  *
  * @author Luis Diego Arias Segura
- * @package RastreoDePaquetes.ValoresArancelario
+ * @package RastreoDePaquetes.ValorArancelario
  */
-class ValoresArancelario extends MbeEntity {
+class ValorArancelario extends MbeEntity {
     //Atributos
 	private $d_valorAdicional;
 	private $d_valorBodegaje;

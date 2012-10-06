@@ -1,9 +1,9 @@
 /*
-Nombre:         ListarArticuloCalculadoras.sql
+Nombre:         ListarBanners.sql
 Autor:          Luis Diego Arias Segura
-Fecha creado:   2012-10-05
+Fecha creado:   2012-10-06
 Descripcion:    
-Obtiene la lista de los ArticuloCalculadoras almacenados en la base de datos.
+Obtiene la lista de los Banners almacenados en la base de datos.
 
 Nota: Este codigo es autogenerado usando PhpGenerator.py, desarrollado
 por Luis Diego Arias Segura
@@ -13,16 +13,21 @@ que su funcionalidad sea la adecuada
 Historico de cambios
 ================================================================
 === FECHA ====  AUTOR ============  DETALLE ====================
-2012-10-05      Luis Diego A        Creacion del procedimiento
+2012-10-06      Luis Diego A        Creacion del procedimiento
             +                   +                               
             +                   +                               
             +                   +                               
             +                   +                               
 */
 SELECT  
-	d_peso
-	,d_porcentajeArancelario
-	,d_valorComercial
+	i_id
 	,s_descripcion
+	,dt_fechaIngreso
+	,dt_fechaInicioPublicacion
+	,dt_fechaFinPublicacion
+	,s_textoPublicitario
+	,s_linkDeVisita
+	,s_posicion
+	,s_estadoDePublicacion
 
-FROM    ArticuloCalculadora
+FROM    mbeot_Banner

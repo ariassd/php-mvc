@@ -15,8 +15,8 @@
         <table>
             <thead>
                 <tr>
-                    <th>s_codigoTienda</th>
-                    <th>s_estadoActivo</th>
+                    <th>i_codigoTienda</th>
+                    <th>b_estadoActivo</th>
                     <th>s_email</th>
                     <th>s_telefono</th>
                     <th>s_direccion</th>
@@ -26,8 +26,8 @@
             <tbody>
                 <?php foreach ($o_Tiendas as $value) { ?>
                 <tr>
-                    <td><?php echo $value->S_codigotienda; ?></td>
-                    <td><?php echo $value->S_estadoactivo; ?></td>
+                    <td><?php echo $value->I_codigotienda; ?></td>
+                    <td><?php echo $value->B_estadoactivo; ?></td>
                     <td><?php echo $value->S_email; ?></td>
                     <td><?php echo $value->S_telefono; ?></td>
                     <td><?php echo $value->S_direccion; ?></td>

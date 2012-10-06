@@ -29,11 +29,11 @@ class PlanMbesDAO {
         return $dataResult;
     }
 
-    public static function InsertarPlanMbe_o($i_id,$s_ipo,$d_seguroParaPaquetes) {
+    public static function InsertarPlanMbe_o($i_id,$s_tipo,$d_seguroParaPaquetes) {
         $cnn_MYSQL = ConfigurationSettings::GetConnectionString("CnxMySQL-RW");
         $params = array();
         $params[@i_id] = $i_id;
-        $params[@s_ipo] = $s_ipo;
+        $params[@s_tipo] = $s_tipo;
         $params[@d_seguroParaPaquetes] = $d_seguroParaPaquetes;
 
         $query = MySqlHelper::GetQueryFromFile("/Querys/PlanMbes/InsertarPlanMbes.sql", $params);
@@ -41,11 +41,11 @@ class PlanMbesDAO {
         return $dataResult;
     }
 
-    public static function ActualizarPlanMbe_o($i_id,$s_ipo,$d_seguroParaPaquetes) {
+    public static function ActualizarPlanMbe_o($i_id,$s_tipo,$d_seguroParaPaquetes) {
         $cnn_MYSQL = ConfigurationSettings::GetConnectionString("CnxMySQL-RW");
         $params = array();
         $params[@i_id] = $i_id;
-        $params[@s_ipo] = $s_ipo;
+        $params[@s_tipo] = $s_tipo;
         $params[@d_seguroParaPaquetes] = $d_seguroParaPaquetes;
 
         $query = MySqlHelper::GetQueryFromFile("/Querys/PlanMbes/ActualizarPlanMbes.sql", $params);

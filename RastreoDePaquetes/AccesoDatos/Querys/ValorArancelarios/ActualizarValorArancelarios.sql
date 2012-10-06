@@ -1,9 +1,9 @@
 /*
-Nombre:         ListarPreAlertas.sql
+Nombre:         ActualizarValorArancelarios.sql
 Autor:          Luis Diego Arias Segura
-Fecha creado:   2012-10-05
+Fecha creado:   2012-10-06
 Descripcion:    
-Obtiene la lista de los PreAlertas almacenados en la base de datos.
+Atualizar ValorArancelario en la base de datos.
 
 Nota: Este codigo es autogenerado usando PhpGenerator.py, desarrollado
 por Luis Diego Arias Segura
@@ -13,16 +13,20 @@ que su funcionalidad sea la adecuada
 Historico de cambios
 ================================================================
 === FECHA ====  AUTOR ============  DETALLE ====================
-2012-10-05      Luis Diego A        Creacion del procedimiento
+2012-10-06      Luis Diego A        Creacion del procedimiento
             +                   +                               
             +                   +                               
             +                   +                               
             +                   +                               
 */
-SELECT  
-	i_id
-	,s_descripcion
-	,d_valor
-	,s_archivo
+UPDATE mbeot_ValorArancelario
+SET
+	d_valorAdicional = @d_valorAdicional
+	,d_valorBodegaje = @d_valorBodegaje
+	,d_valorDesalmacenaje = @d_valorDesalmacenaje
+	,e_operacionValoradicional = @e_operacionValoradicional
 
-FROM    PreAlerta
+WHERE idValorArancelario = @idValorArancelario;
+
+select ROW_COUNT() as TOTAL_ACTUALIZADO;
+

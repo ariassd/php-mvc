@@ -1,17 +1,17 @@
 <?php
 /**
- * Vista listado para la entidad de ValoresArancelarios
+ * Vista listado para la entidad de ValorArancelarios
  * GUI
  * @author Luis Diego Arias Segura
- * @package RastreoDePaquetes.Web.ValoresArancelario.ListarValoresArancelarios
+ * @package RastreoDePaquetes.Web.ValorArancelario.ListarValorArancelarios
  */
 
-    $g_tituloPagina = 'Lista de ValoresArancelarios';
+    $g_tituloPagina = 'Lista de ValorArancelarios';
     $g_formAction = "";
     ob_start();
 ?>
 
-	<h1>Lista de ValoresArancelarios</h1>
+	<h1>Lista de ValorArancelarios</h1>
         <table>
             <thead>
                 <tr>
@@ -23,13 +23,13 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($o_ValoresArancelarios as $value) { ?>
+                <?php foreach ($o_ValorArancelarios as $value) { ?>
                 <tr>
                     <td><?php echo $value->D_valoradicional; ?></td>
                     <td><?php echo $value->D_valorbodegaje; ?></td>
                     <td><?php echo $value->D_valordesalmacenaje; ?></td>
                     <td><?php echo $value->E_operacionvaloradicional; ?></td>
-                    <td><a href="?vista=DetalleValoresArancelario&idValoresArancelario=<?php echo $value->I_idValoresArancelario; ?>">Ver detalle</a></td>
+                    <td><a href="?vista=DetalleValorArancelario&idValorArancelario=<?php echo $value->I_idValorArancelario; ?>">Ver detalle</a></td>
                 </tr>
                 <?php } ?>
             </tbody>

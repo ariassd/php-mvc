@@ -1,7 +1,7 @@
 /*
 Nombre:         InsertarTiendas.sql
 Autor:          Luis Diego Arias Segura
-Fecha creado:   2012-10-05
+Fecha creado:   2012-10-06
 Descripcion:    
 Ingresa Tienda en la base de datos.
 
@@ -13,16 +13,16 @@ que su funcionalidad sea la adecuada
 Historico de cambios
 ================================================================
 === FECHA ====  AUTOR ============  DETALLE ====================
-2012-10-05      Luis Diego A        Creacion del procedimiento
+2012-10-06      Luis Diego A        Creacion del procedimiento
             +                   +                               
             +                   +                               
             +                   +                               
             +                   +                               
 */
-INSERT INTO Tienda
+INSERT INTO mbeot_Tienda
 (
-	s_codigoTienda
-	,s_estadoActivo
+	i_codigoTienda
+	,b_estadoActivo
 	,s_email
 	,s_telefono
 	,s_direccion
@@ -30,8 +30,8 @@ INSERT INTO Tienda
 )
 VALUES
 (
-	@s_codigoTienda
-	,@s_estadoActivo
+	@i_codigoTienda
+	,@b_estadoActivo
 	,@s_email
 	,@s_telefono
 	,@s_direccion

@@ -47,12 +47,12 @@
         <td><?php echo $Cliente->S_codigopais; ?></td>
     </tr>
     <tr>
-        <td class="campo">s_numCasillero:</td>
-        <td><?php echo $Cliente->S_numcasillero; ?></td>
+        <td class="campo">i_numCasillero:</td>
+        <td><?php echo $Cliente->I_numcasillero; ?></td>
     </tr>
     <tr>
-        <td class="campo">o_codTienda:</td>
-        <td><?php echo $Cliente->O_codtienda; ?></td>
+        <td class="campo">o_codigoTienda:</td>
+        <td><?php echo $Cliente->O_codigotienda; ?></td>
     </tr>
 
 </table>

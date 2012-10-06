@@ -84,8 +84,8 @@ class TiendasBL {
         if ($row !=NULL) {
             
             $o_Tienda = new Tienda();
-            $o_Tienda->s_codigoTienda = $row['s_codigoTienda'];
-            $o_Tienda->s_estadoActivo = $row['s_estadoActivo'];
+            $o_Tienda->i_codigoTienda = $row['i_codigoTienda'];
+            $o_Tienda->b_estadoActivo = $row['b_estadoActivo'];
             $o_Tienda->s_email = $row['s_email'];
             $o_Tienda->s_telefono = $row['s_telefono'];
             $o_Tienda->s_direccion = $row['s_direccion'];

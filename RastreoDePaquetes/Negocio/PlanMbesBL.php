@@ -85,7 +85,7 @@ class PlanMbesBL {
             
             $o_PlanMbe = new PlanMbe();
             $o_PlanMbe->i_id = $row['i_id'];
-            $o_PlanMbe->s_ipo = $row['s_ipo'];
+            $o_PlanMbe->s_tipo = $row['s_tipo'];
             $o_PlanMbe->d_seguroParaPaquetes = $row['d_seguroParaPaquetes'];
 
             

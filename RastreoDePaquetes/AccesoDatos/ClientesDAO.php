@@ -29,7 +29,7 @@ class ClientesDAO {
         return $dataResult;
     }
 
-    public static function InsertarCliente_o($i_idCliente,$s_nombre,$s_apellidos,$s_direccion,$s_telefono,$s_email,$s_planContratado,$s_codigoPais,$s_numCasillero,$o_codTienda) {
+    public static function InsertarCliente_o($i_idCliente,$s_nombre,$s_apellidos,$s_direccion,$s_telefono,$s_email,$s_planContratado,$s_codigoPais,$i_numCasillero,$o_codigoTienda) {
         $cnn_MYSQL = ConfigurationSettings::GetConnectionString("CnxMySQL-RW");
         $params = array();
         $params[@i_idCliente] = $i_idCliente;
@@ -40,15 +40,15 @@ class ClientesDAO {
         $params[@s_email] = $s_email;
         $params[@s_planContratado] = $s_planContratado;
         $params[@s_codigoPais] = $s_codigoPais;
-        $params[@s_numCasillero] = $s_numCasillero;
-        $params[@o_codTienda] = $o_codTienda;
+        $params[@i_numCasillero] = $i_numCasillero;
+        $params[@o_codigoTienda] = $o_codigoTienda;
 
         $query = MySqlHelper::GetQueryFromFile("/Querys/Clientes/InsertarClientes.sql", $params);
         $dataResult = MySqlHelper::ExecuteQuery($cnn_MYSQL,$query);
         return $dataResult;
     }
 
-    public static function ActualizarCliente_o($i_idCliente,$s_nombre,$s_apellidos,$s_direccion,$s_telefono,$s_email,$s_planContratado,$s_codigoPais,$s_numCasillero,$o_codTienda) {
+    public static function ActualizarCliente_o($i_idCliente,$s_nombre,$s_apellidos,$s_direccion,$s_telefono,$s_email,$s_planContratado,$s_codigoPais,$i_numCasillero,$o_codigoTienda) {
         $cnn_MYSQL = ConfigurationSettings::GetConnectionString("CnxMySQL-RW");
         $params = array();
         $params[@i_idCliente] = $i_idCliente;
@@ -59,8 +59,8 @@ class ClientesDAO {
         $params[@s_email] = $s_email;
         $params[@s_planContratado] = $s_planContratado;
         $params[@s_codigoPais] = $s_codigoPais;
-        $params[@s_numCasillero] = $s_numCasillero;
-        $params[@o_codTienda] = $o_codTienda;
+        $params[@i_numCasillero] = $i_numCasillero;
+        $params[@o_codigoTienda] = $o_codigoTienda;
 
         $query = MySqlHelper::GetQueryFromFile("/Querys/Clientes/ActualizarClientes.sql", $params);
         $dataResult = MySqlHelper::ExecuteQuery($cnn_MYSQL,$query);

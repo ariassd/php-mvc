@@ -1,9 +1,9 @@
 /*
-Nombre:         ListarValoresArancelarios.sql
+Nombre:         InsertarBanners.sql
 Autor:          Luis Diego Arias Segura
-Fecha creado:   2012-10-05
+Fecha creado:   2012-10-06
 Descripcion:    
-Obtiene la lista de los ValoresArancelarios almacenados en la base de datos.
+Ingresa Banner en la base de datos.
 
 Nota: Este codigo es autogenerado usando PhpGenerator.py, desarrollado
 por Luis Diego Arias Segura
@@ -13,16 +13,37 @@ que su funcionalidad sea la adecuada
 Historico de cambios
 ================================================================
 === FECHA ====  AUTOR ============  DETALLE ====================
-2012-10-05      Luis Diego A        Creacion del procedimiento
+2012-10-06      Luis Diego A        Creacion del procedimiento
             +                   +                               
             +                   +                               
             +                   +                               
             +                   +                               
 */
-SELECT  
-	d_valorAdicional
-	,d_valorBodegaje
-	,d_valorDesalmacenaje
-	,e_operacionValoradicional
+INSERT INTO mbeot_Banner
+(
+	i_id
+	,s_descripcion
+	,dt_fechaIngreso
+	,dt_fechaInicioPublicacion
+	,dt_fechaFinPublicacion
+	,s_textoPublicitario
+	,s_linkDeVisita
+	,s_posicion
+	,s_estadoDePublicacion
 
-FROM    ValoresArancelario
+)
+VALUES
+(
+	@i_id
+	,@s_descripcion
+	,@dt_fechaIngreso
+	,@dt_fechaInicioPublicacion
+	,@dt_fechaFinPublicacion
+	,@s_textoPublicitario
+	,@s_linkDeVisita
+	,@s_posicion
+	,@s_estadoDePublicacion
+
+);
+
+select LAST_INSERT_ID() as ID_NUEVO;

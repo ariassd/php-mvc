@@ -20,8 +20,8 @@ class Cliente extends MbeEntity {
 	private $s_email;
 	private $s_planContratado;
 	private $s_codigoPais;
-	private $s_numCasillero;
-	private $o_codTienda;
+	private $i_numCasillero;
+	private $o_codigoTienda;
 
 
     //setters
@@ -33,8 +33,8 @@ class Cliente extends MbeEntity {
 	public function setS_email($s_email) { $this->s_email = $s_email; }
 	public function setS_plancontratado($s_planContratado) { $this->s_planContratado = $s_planContratado; }
 	public function setS_codigopais($s_codigoPais) { $this->s_codigoPais = $s_codigoPais; }
-	public function setS_numcasillero($s_numCasillero) { $this->s_numCasillero = $s_numCasillero; }
-	public function setO_codtienda($o_codTienda) { $this->o_codTienda = $o_codTienda; }
+	public function setI_numcasillero($i_numCasillero) { $this->i_numCasillero = $i_numCasillero; }
+	public function setO_codigotienda($o_codigoTienda) { $this->o_codigoTienda = $o_codigoTienda; }
 
 
     //getters
@@ -46,8 +46,8 @@ class Cliente extends MbeEntity {
 	public function getS_email() { return $this->s_email; }
 	public function getS_plancontratado() { return $this->s_planContratado; }
 	public function getS_codigopais() { return $this->s_codigoPais; }
-	public function getS_numcasillero() { return $this->s_numCasillero; }
-	public function getO_codtienda() { return $this->o_codTienda; }
+	public function getI_numcasillero() { return $this->i_numCasillero; }
+	public function getO_codigotienda() { return $this->o_codigoTienda; }
 
 }
 

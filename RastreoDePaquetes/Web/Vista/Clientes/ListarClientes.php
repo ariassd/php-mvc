@@ -23,8 +23,8 @@
                     <th>s_email</th>
                     <th>s_planContratado</th>
                     <th>s_codigoPais</th>
-                    <th>s_numCasillero</th>
-                    <th>o_codTienda</th>
+                    <th>i_numCasillero</th>
+                    <th>o_codigoTienda</th>
                     <th></th>
                 </tr>
             </thead>
@@ -39,8 +39,8 @@
                     <td><?php echo $value->S_email; ?></td>
                     <td><?php echo $value->S_plancontratado; ?></td>
                     <td><?php echo $value->S_codigopais; ?></td>
-                    <td><?php echo $value->S_numcasillero; ?></td>
-                    <td><?php echo $value->O_codtienda; ?></td>
+                    <td><?php echo $value->I_numcasillero; ?></td>
+                    <td><?php echo $value->O_codigotienda; ?></td>
                     <td><a href="?vista=DetalleCliente&idCliente=<?php echo $value->I_idCliente; ?>">Ver detalle</a></td>
                 </tr>
                 <?php } ?>

@@ -1,7 +1,7 @@
 /*
 Nombre:         ListarClientes.sql
 Autor:          Luis Diego Arias Segura
-Fecha creado:   2012-10-05
+Fecha creado:   2012-10-06
 Descripcion:    
 Obtiene la lista de los Clientes almacenados en la base de datos.
 
@@ -13,7 +13,7 @@ que su funcionalidad sea la adecuada
 Historico de cambios
 ================================================================
 === FECHA ====  AUTOR ============  DETALLE ====================
-2012-10-05      Luis Diego A        Creacion del procedimiento
+2012-10-06      Luis Diego A        Creacion del procedimiento
             +                   +                               
             +                   +                               
             +                   +                               
@@ -28,7 +28,7 @@ SELECT
 	,s_email
 	,s_planContratado
 	,s_codigoPais
-	,s_numCasillero
-	,o_codTienda
+	,i_numCasillero
+	,o_codigoTienda
 
-FROM    Cliente
+FROM    mbeot_Cliente
