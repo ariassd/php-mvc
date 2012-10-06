@@ -23,10 +23,12 @@ class PaquetesBL {
         $dataResult = PaquetesDAO::ListarPaquetes_o();
         if ( count($dataResult) >= 1 ) {
             $a_lista = Array();
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $o_PaqueteEncontrado = PaquetesBL::ConvertirMySQLRowAPaquete_o($row);
-                $a_lista[] = $o_PaqueteEncontrado;
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $o_PaqueteEncontrado = PaquetesBL::ConvertirMySQLRowAPaquete_o($row);
+                    $a_lista[] = $o_PaqueteEncontrado;
+                }
             }
         }
         return $a_lista;
@@ -39,9 +41,11 @@ class PaquetesBL {
         $dataResult = PaquetesDAO::DetallePaquete_o($i_idPaquete);
         if ( count($dataResult) >= 1 ) {
             $o_Paquete = new Paquete();
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $o_Paquete = PaquetesBL::ConvertirMySQLRowAPaquete_o($row);
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $o_Paquete = PaquetesBL::ConvertirMySQLRowAPaquete_o($row);
+                }
             }
         }
         
@@ -54,9 +58,11 @@ class PaquetesBL {
         
         $dataResult = PaquetesDAO::InsertarPaquete_o($i_idPaquete);
         if ( count($dataResult) >= 1 ) {
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $i_total = $row[0];
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $i_total = $row[0];
+                }
             }
         }
         
@@ -69,9 +75,11 @@ class PaquetesBL {
         
         $dataResult = PaquetesDAO::ActualizarPaquete_o($i_idPaquete);
         if ( count($dataResult) >= 1 ) {
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $i_total = $row[0];
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $i_total = $row[0];
+                }
             }
         }
         

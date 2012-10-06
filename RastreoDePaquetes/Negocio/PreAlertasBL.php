@@ -23,10 +23,12 @@ class PreAlertasBL {
         $dataResult = PreAlertasDAO::ListarPreAlertas_o();
         if ( count($dataResult) >= 1 ) {
             $a_lista = Array();
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $o_PreAlertaEncontrado = PreAlertasBL::ConvertirMySQLRowAPreAlerta_o($row);
-                $a_lista[] = $o_PreAlertaEncontrado;
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $o_PreAlertaEncontrado = PreAlertasBL::ConvertirMySQLRowAPreAlerta_o($row);
+                    $a_lista[] = $o_PreAlertaEncontrado;
+                }
             }
         }
         return $a_lista;
@@ -39,9 +41,11 @@ class PreAlertasBL {
         $dataResult = PreAlertasDAO::DetallePreAlerta_o($i_idPreAlerta);
         if ( count($dataResult) >= 1 ) {
             $o_PreAlerta = new PreAlerta();
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $o_PreAlerta = PreAlertasBL::ConvertirMySQLRowAPreAlerta_o($row);
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $o_PreAlerta = PreAlertasBL::ConvertirMySQLRowAPreAlerta_o($row);
+                }
             }
         }
         
@@ -54,9 +58,11 @@ class PreAlertasBL {
         
         $dataResult = PreAlertasDAO::InsertarPreAlerta_o($i_idPreAlerta);
         if ( count($dataResult) >= 1 ) {
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $i_total = $row[0];
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $i_total = $row[0];
+                }
             }
         }
         
@@ -69,9 +75,11 @@ class PreAlertasBL {
         
         $dataResult = PreAlertasDAO::ActualizarPreAlerta_o($i_idPreAlerta);
         if ( count($dataResult) >= 1 ) {
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $i_total = $row[0];
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $i_total = $row[0];
+                }
             }
         }
         

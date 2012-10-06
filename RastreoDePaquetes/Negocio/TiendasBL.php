@@ -23,10 +23,12 @@ class TiendasBL {
         $dataResult = TiendasDAO::ListarTiendas_o();
         if ( count($dataResult) >= 1 ) {
             $a_lista = Array();
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $o_TiendaEncontrado = TiendasBL::ConvertirMySQLRowATienda_o($row);
-                $a_lista[] = $o_TiendaEncontrado;
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $o_TiendaEncontrado = TiendasBL::ConvertirMySQLRowATienda_o($row);
+                    $a_lista[] = $o_TiendaEncontrado;
+                }
             }
         }
         return $a_lista;
@@ -39,9 +41,11 @@ class TiendasBL {
         $dataResult = TiendasDAO::DetalleTienda_o($i_idTienda);
         if ( count($dataResult) >= 1 ) {
             $o_Tienda = new Tienda();
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $o_Tienda = TiendasBL::ConvertirMySQLRowATienda_o($row);
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $o_Tienda = TiendasBL::ConvertirMySQLRowATienda_o($row);
+                }
             }
         }
         
@@ -54,9 +58,11 @@ class TiendasBL {
         
         $dataResult = TiendasDAO::InsertarTienda_o($i_idTienda);
         if ( count($dataResult) >= 1 ) {
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $i_total = $row[0];
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $i_total = $row[0];
+                }
             }
         }
         
@@ -69,9 +75,11 @@ class TiendasBL {
         
         $dataResult = TiendasDAO::ActualizarTienda_o($i_idTienda);
         if ( count($dataResult) >= 1 ) {
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $i_total = $row[0];
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $i_total = $row[0];
+                }
             }
         }
         

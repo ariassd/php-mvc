@@ -23,10 +23,12 @@ class EmpleadosBL {
         $dataResult = EmpleadosDAO::ListarEmpleados_o();
         if ( count($dataResult) >= 1 ) {
             $a_lista = Array();
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $o_EmpleadoEncontrado = EmpleadosBL::ConvertirMySQLRowAEmpleado_o($row);
-                $a_lista[] = $o_EmpleadoEncontrado;
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $o_EmpleadoEncontrado = EmpleadosBL::ConvertirMySQLRowAEmpleado_o($row);
+                    $a_lista[] = $o_EmpleadoEncontrado;
+                }
             }
         }
         return $a_lista;
@@ -39,9 +41,11 @@ class EmpleadosBL {
         $dataResult = EmpleadosDAO::DetalleEmpleado_o($i_idEmpleado);
         if ( count($dataResult) >= 1 ) {
             $o_Empleado = new Empleado();
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $o_Empleado = EmpleadosBL::ConvertirMySQLRowAEmpleado_o($row);
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $o_Empleado = EmpleadosBL::ConvertirMySQLRowAEmpleado_o($row);
+                }
             }
         }
         
@@ -54,9 +58,11 @@ class EmpleadosBL {
         
         $dataResult = EmpleadosDAO::InsertarEmpleado_o($i_idEmpleado);
         if ( count($dataResult) >= 1 ) {
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $i_total = $row[0];
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $i_total = $row[0];
+                }
             }
         }
         
@@ -69,9 +75,11 @@ class EmpleadosBL {
         
         $dataResult = EmpleadosDAO::ActualizarEmpleado_o($i_idEmpleado);
         if ( count($dataResult) >= 1 ) {
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $i_total = $row[0];
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $i_total = $row[0];
+                }
             }
         }
         

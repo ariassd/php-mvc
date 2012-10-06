@@ -23,10 +23,12 @@ class ManifiestosBL {
         $dataResult = ManifiestosDAO::ListarManifiestos_o();
         if ( count($dataResult) >= 1 ) {
             $a_lista = Array();
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $o_ManifiestoEncontrado = ManifiestosBL::ConvertirMySQLRowAManifiesto_o($row);
-                $a_lista[] = $o_ManifiestoEncontrado;
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $o_ManifiestoEncontrado = ManifiestosBL::ConvertirMySQLRowAManifiesto_o($row);
+                    $a_lista[] = $o_ManifiestoEncontrado;
+                }
             }
         }
         return $a_lista;
@@ -39,9 +41,11 @@ class ManifiestosBL {
         $dataResult = ManifiestosDAO::DetalleManifiesto_o($i_idManifiesto);
         if ( count($dataResult) >= 1 ) {
             $o_Manifiesto = new Manifiesto();
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $o_Manifiesto = ManifiestosBL::ConvertirMySQLRowAManifiesto_o($row);
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $o_Manifiesto = ManifiestosBL::ConvertirMySQLRowAManifiesto_o($row);
+                }
             }
         }
         
@@ -54,9 +58,11 @@ class ManifiestosBL {
         
         $dataResult = ManifiestosDAO::InsertarManifiesto_o($i_idManifiesto);
         if ( count($dataResult) >= 1 ) {
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $i_total = $row[0];
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $i_total = $row[0];
+                }
             }
         }
         
@@ -69,9 +75,11 @@ class ManifiestosBL {
         
         $dataResult = ManifiestosDAO::ActualizarManifiesto_o($i_idManifiesto);
         if ( count($dataResult) >= 1 ) {
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $i_total = $row[0];
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $i_total = $row[0];
+                }
             }
         }
         

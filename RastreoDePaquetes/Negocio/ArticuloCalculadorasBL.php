@@ -23,10 +23,12 @@ class ArticuloCalculadorasBL {
         $dataResult = ArticuloCalculadorasDAO::ListarArticuloCalculadoras_o();
         if ( count($dataResult) >= 1 ) {
             $a_lista = Array();
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $o_ArticuloCalculadoraEncontrado = ArticuloCalculadorasBL::ConvertirMySQLRowAArticuloCalculadora_o($row);
-                $a_lista[] = $o_ArticuloCalculadoraEncontrado;
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $o_ArticuloCalculadoraEncontrado = ArticuloCalculadorasBL::ConvertirMySQLRowAArticuloCalculadora_o($row);
+                    $a_lista[] = $o_ArticuloCalculadoraEncontrado;
+                }
             }
         }
         return $a_lista;
@@ -39,9 +41,11 @@ class ArticuloCalculadorasBL {
         $dataResult = ArticuloCalculadorasDAO::DetalleArticuloCalculadora_o($i_idArticuloCalculadora);
         if ( count($dataResult) >= 1 ) {
             $o_ArticuloCalculadora = new ArticuloCalculadora();
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $o_ArticuloCalculadora = ArticuloCalculadorasBL::ConvertirMySQLRowAArticuloCalculadora_o($row);
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $o_ArticuloCalculadora = ArticuloCalculadorasBL::ConvertirMySQLRowAArticuloCalculadora_o($row);
+                }
             }
         }
         
@@ -54,9 +58,11 @@ class ArticuloCalculadorasBL {
         
         $dataResult = ArticuloCalculadorasDAO::InsertarArticuloCalculadora_o($i_idArticuloCalculadora);
         if ( count($dataResult) >= 1 ) {
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $i_total = $row[0];
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $i_total = $row[0];
+                }
             }
         }
         
@@ -69,9 +75,11 @@ class ArticuloCalculadorasBL {
         
         $dataResult = ArticuloCalculadorasDAO::ActualizarArticuloCalculadora_o($i_idArticuloCalculadora);
         if ( count($dataResult) >= 1 ) {
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $i_total = $row[0];
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $i_total = $row[0];
+                }
             }
         }
         

@@ -23,10 +23,12 @@ class BannersBL {
         $dataResult = BannersDAO::ListarBanners_o();
         if ( count($dataResult) >= 1 ) {
             $a_lista = Array();
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $o_BannerEncontrado = BannersBL::ConvertirMySQLRowABanner_o($row);
-                $a_lista[] = $o_BannerEncontrado;
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $o_BannerEncontrado = BannersBL::ConvertirMySQLRowABanner_o($row);
+                    $a_lista[] = $o_BannerEncontrado;
+                }
             }
         }
         return $a_lista;
@@ -39,9 +41,11 @@ class BannersBL {
         $dataResult = BannersDAO::DetalleBanner_o($i_idBanner);
         if ( count($dataResult) >= 1 ) {
             $o_Banner = new Banner();
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $o_Banner = BannersBL::ConvertirMySQLRowABanner_o($row);
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $o_Banner = BannersBL::ConvertirMySQLRowABanner_o($row);
+                }
             }
         }
         
@@ -54,9 +58,11 @@ class BannersBL {
         
         $dataResult = BannersDAO::InsertarBanner_o($i_idBanner);
         if ( count($dataResult) >= 1 ) {
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $i_total = $row[0];
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $i_total = $row[0];
+                }
             }
         }
         
@@ -69,9 +75,11 @@ class BannersBL {
         
         $dataResult = BannersDAO::ActualizarBanner_o($i_idBanner);
         if ( count($dataResult) >= 1 ) {
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $i_total = $row[0];
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $i_total = $row[0];
+                }
             }
         }
         

@@ -23,10 +23,12 @@ class ValorArancelariosBL {
         $dataResult = ValorArancelariosDAO::ListarValorArancelarios_o();
         if ( count($dataResult) >= 1 ) {
             $a_lista = Array();
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $o_ValorArancelarioEncontrado = ValorArancelariosBL::ConvertirMySQLRowAValorArancelario_o($row);
-                $a_lista[] = $o_ValorArancelarioEncontrado;
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $o_ValorArancelarioEncontrado = ValorArancelariosBL::ConvertirMySQLRowAValorArancelario_o($row);
+                    $a_lista[] = $o_ValorArancelarioEncontrado;
+                }
             }
         }
         return $a_lista;
@@ -39,9 +41,11 @@ class ValorArancelariosBL {
         $dataResult = ValorArancelariosDAO::DetalleValorArancelario_o($i_idValorArancelario);
         if ( count($dataResult) >= 1 ) {
             $o_ValorArancelario = new ValorArancelario();
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $o_ValorArancelario = ValorArancelariosBL::ConvertirMySQLRowAValorArancelario_o($row);
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $o_ValorArancelario = ValorArancelariosBL::ConvertirMySQLRowAValorArancelario_o($row);
+                }
             }
         }
         
@@ -54,9 +58,11 @@ class ValorArancelariosBL {
         
         $dataResult = ValorArancelariosDAO::InsertarValorArancelario_o($i_idValorArancelario);
         if ( count($dataResult) >= 1 ) {
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $i_total = $row[0];
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $i_total = $row[0];
+                }
             }
         }
         
@@ -69,9 +75,11 @@ class ValorArancelariosBL {
         
         $dataResult = ValorArancelariosDAO::ActualizarValorArancelario_o($i_idValorArancelario);
         if ( count($dataResult) >= 1 ) {
-            while($row = mysql_fetch_array($dataResult))
-            {
-                $i_total = $row[0];
+            if ($dataResult != NULL) {
+                while($row = mysql_fetch_array($dataResult))
+                {
+                    $i_total = $row[0];
+                }
             }
         }
         
