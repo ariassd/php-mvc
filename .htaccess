@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule ^RastreoDePaquetes/Web/(.+)/(.+) /MailBoxesOnlineTracking/RastreoDePaquetes/Web/$1.php?vista=$2 [QSA]
