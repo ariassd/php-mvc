@@ -153,3 +153,10 @@ a:hover {
     color: #FFFFFF;
 }
 
+.copyright_block {
+    text-align: center;
+    padding-top: 50px;
+    color: #877F7C;
+    text-transform: uppercase;
+    font-size: 11px;
+}

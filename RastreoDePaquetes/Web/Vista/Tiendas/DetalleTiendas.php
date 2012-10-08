@@ -11,7 +11,7 @@
     ob_start();
 ?>
 
-<h2>Detalle de cliente</h2>
+<h2>Detalle de Tienda</h2>
 
 <table class="FormularioDetalle">
     <tr>

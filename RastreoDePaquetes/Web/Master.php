@@ -47,6 +47,6 @@ import("MbeFramework.Configuracion.ConfigurationSettings");
                 </div>
             </div>
         </form>
-        
+        <?php include_once 'Controles/PieDePagina.php'; ?>
     </body>
 </html> 
