@@ -24,7 +24,8 @@ import("MbeFramework.Configuracion.ConfigurationSettings");
                     <img src="<?php echo path('Recursos/Imagenes/mbelogoblack.png');?>" width="100px" alt='MBE' />
                 </td>
                 <td>
-                    <h1><?php echo ConfigurationSettings::GetApplicationSetting("NombreDelSistema"); ?></h1>
+                    <span class="nombreSitioMBE"><?php echo ConfigurationSettings::GetApplicationSetting("NombreDeLaEmpresa"); ?></span>
+                    <span class="nombreSitioSistema"><?php echo ConfigurationSettings::GetApplicationSetting("NombreDelSistema"); ?></span>
                 </td>
             </tr>
         </table>

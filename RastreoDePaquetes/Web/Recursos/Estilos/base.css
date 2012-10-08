@@ -11,20 +11,42 @@ body {
     font-size: 12px;
     background-color: black;
     color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.nombreSitioMBE {
+    color: #31B404;
+    font-size: 50px;
+    text-shadow: 1px 1px #DFDFDF;
+}
+
+.nombreSitioSistema {
+    color: #efefef;
+    font-size: 30px;
+    text-shadow: 1px 1px #DFDFDF;
+    margin-left: 20px;
+    font-family: Comic Sans, Comic Sans MS, cursive;
+    font-style: italic;
+}
+
+#wrapper {
+    background-color: #000000;
 }
 
 h1{
-    color: white;
+    color: #2C91CC;
     text-shadow: 1px 1px #DFDFDF;
 }
 
 h2{
-    color: white;
+    color: #FFFFFF;
     text-shadow: 1px 1px #DFDFDF;
 }
 text{
      color: white;
 }
+
 input[type="sbmit"]:hover {
     color: #000000;
     text-shadow: 1px 1px #DFDFDF;
@@ -69,26 +91,65 @@ a:hover {
     padding-bottom: 3px;
 }
 
-.menuHorizontal ul li {
-      display: inline;
+.menuHorizontal a {
+    color:#F0AC9F;
+    text-shadow: 1px 1px #3B0B0B;
+    text-decoration: none;
+    font-size: 14px;
 }
+
+.menuHorizontal a:hover {
+    color:#F0B400;
+    text-shadow: 1px 1px #3B0B0B;
+    text-decoration: none;
+}
+
  
 .menuHorizontal ul li {
-        display: inline;
-        padding: 2px 7px; /*Separar el texto*/
-        margin:5px; /* Separar los botones */
-        background-color:#04B404; /* Color de fondo */
-        font-size: 14px
+    display: inline;
+    padding: 0px 10px; /*Separar el texto*/
+    margin-left:1px; /* Separar los botones */
+    background-color:#8A0808; /* Color de fondo */
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .menuHorizontal ul li:hover {
-        background-color:#CCCCCC; /* Color de fondo sobre el boton */
-        cursor: pointer; /* cambiar el aspecto del puntero */
-        font-size: 14px;
+    background-color:#CCCCCC; /* Color de fondo sobre el boton */
+    cursor: pointer; /* cambiar el aspecto del puntero */
+    font-size: 14px;
 }
 .menuHorizontal ul {
-        /* Linea para delimitar la botonera */
-        border-bottom-width: 3px;
-        border-bottom-style: solid;
-        border-bottom-color: #04B404;
-        font-size: 14px;
+    /* Linea para delimitar la botonera */
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: #8A0808;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
+
+.Lista {
+    border-style: none;
+    border-collapse: collapse;
+    border-width: 0;
+}
+
+.Lista th {
+    background-color: #08088A;
+    color:#efefef;
+    font-weight: bold;
+    padding: 3px;
+    font-size: 14px;
+}
+
+.Lista tr:nth-child(odd){
+    background: #848484;
+    color: #FFFFFF;
+}
+ 
+.Lista tr:nth-child(even){
+    background: #120A2A;
+    color: #FFFFFF;
+}
+

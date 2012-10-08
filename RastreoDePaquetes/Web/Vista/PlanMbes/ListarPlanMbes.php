@@ -12,7 +12,7 @@
 ?>
 
 	<h1>Lista de PlanMbes</h1>
-        <table>
+        <table class="Lista">
             <thead>
                 <tr>
                     <th>i_id</th>

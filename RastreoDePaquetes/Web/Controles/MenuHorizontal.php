@@ -1,7 +1,7 @@
  <div class="menuHorizontal">
     <ul>
         <li>
-            <a href="<?php echo path('Clientes/ListarCliente');?>">Tiendas</a>
+            <a href="<?php echo path('Clientes/ListarCliente');?>">Clientes</a>
         </li>
         <li>
             <a href="<?php echo path('Tiendas/ListarTienda');?>">Tiendas</a>
