@@ -27,7 +27,7 @@
                     <td><?php echo $value->I_id; ?></td>
                     <td><?php echo $value->S_tipo; ?></td>
                     <td><?php echo $value->D_seguroparapaquetes; ?></td>
-                    <td><a href="?vista=DetallePlanMbe&idPlanMbe=<?php echo $value->I_idPlanMbe; ?>">Ver detalle</a></td>
+                    <td><a href="DetallePlanMbe?idPlanMbe=<?php echo $value->I_id; ?>">Ver detalle</a></td>
                 </tr>
                 <?php } ?>
             </tbody>

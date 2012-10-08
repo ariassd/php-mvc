@@ -9,20 +9,22 @@
 body { 
     font-family: arial;
     font-size: 12px;
-    background-color: #ffffff;
-    
+    background-color: black;
+    color: white;
 }
 
 h1{
-    color: #000f00;
+    color: white;
     text-shadow: 1px 1px #DFDFDF;
 }
 
 h2{
-    color: #000f00;
+    color: white;
     text-shadow: 1px 1px #DFDFDF;
 }
-
+text{
+     color: white;
+}
 input[type="sbmit"]:hover {
     color: #000000;
     text-shadow: 1px 1px #DFDFDF;
@@ -31,6 +33,10 @@ input[type="sbmit"]:hover {
 input[type="sbmit"]:hover {
     color: #2C91CC;
     text-shadow: 1px 1px #DFDFDF;
+}
+
+a{
+    color:#00FF00;
 }
 
 a:hover {
@@ -47,10 +53,20 @@ a:hover {
     
 }
 
+.FormularioDetalle {
+    border-style: none;
+    border-collapse: collapse;
+    border-width: 0;
+}
+
 .FormularioDetalle .campo {
-    background-color: #efefef;
+    background-color: #2E2E2E;
     text-align: right;
     font-weight: bold;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 .menuHorizontal ul li {
@@ -61,15 +77,18 @@ a:hover {
         display: inline;
         padding: 2px 7px; /*Separar el texto*/
         margin:5px; /* Separar los botones */
-        background-color:#E4E4E4; /* Color de fondo */
+        background-color:#04B404; /* Color de fondo */
+        font-size: 14px
 }
 .menuHorizontal ul li:hover {
         background-color:#CCCCCC; /* Color de fondo sobre el boton */
         cursor: pointer; /* cambiar el aspecto del puntero */
+        font-size: 14px;
 }
 .menuHorizontal ul {
         /* Linea para delimitar la botonera */
         border-bottom-width: 3px;
         border-bottom-style: solid;
-        border-bottom-color: #E4E4E4;
+        border-bottom-color: #04B404;
+        font-size: 14px;
 }

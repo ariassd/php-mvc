@@ -1,9 +1,13 @@
  <div class="menuHorizontal">
     <ul>
         <li>
-            <a href="Clientes.php?vista=ListarCliente">Lista de clientes</a>
+            <a href="<?php echo path('Clientes/ListarCliente');?>">Tiendas</a>
         </li>
-        <li>Botón dos</li>
-        <li>Botón tres</li>
+        <li>
+            <a href="<?php echo path('Tiendas/ListarTienda');?>">Tiendas</a>
+        </li>
+        <li>
+            <a href="<?php echo path('PlanMbes/ListarPlanMbe');?>">Planes MBE</a>
+        </li>
     </ul>
 </div>

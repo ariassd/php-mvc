@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <config>
-    <dataBaseConnection name="CnxMySQL-RW" dbServer="MYSQL" host="localhost" database="MbeTest" user="root" password="sa" />
+    <dataBaseConnection name="CnxMySQL-RW" dbServer="MYSQL" host="localhost" database="MailBoxesEtc" user="root" password="sa" />
     <settings>
         <add key="NombreDelSistema" value="Mail Boxes ETC :: Online Tracking" />
     </settings>

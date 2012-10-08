@@ -21,10 +21,11 @@ Historico de cambios
 */
 SELECT  
 	i_codigoTienda
-	,b_estadoActivo
+	,s_estadoActivo
 	,s_email
 	,s_telefono
 	,s_direccion
+	,s_descripcion
 
-FROM    mbeot_Tienda
-WHERE   i_idTienda = @idTienda
+FROM    mbeot_Tiendas
+WHERE   i_codigoTienda = @idTienda

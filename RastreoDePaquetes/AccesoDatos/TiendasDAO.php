@@ -29,7 +29,7 @@ class TiendasDAO {
         return $dataResult;
     }
 
-    public static function InsertarTienda_o($i_codigoTienda,$b_estadoActivo,$s_email,$s_telefono,$s_direccion) {
+    public static function InsertarTienda_o($i_codigoTienda,$b_estadoActivo,$s_email,$s_telefono,$s_direccion,$s_descripcion) {
         $cnn_MYSQL = ConfigurationSettings::GetConnectionString("CnxMySQL-RW");
         $params = array();
         $params[@i_codigoTienda] = $i_codigoTienda;
@@ -37,13 +37,14 @@ class TiendasDAO {
         $params[@s_email] = $s_email;
         $params[@s_telefono] = $s_telefono;
         $params[@s_direccion] = $s_direccion;
+        $params[@s_descripcion] = $s_descripcion;
 
         $query = MySqlHelper::GetQueryFromFile("/Querys/Tiendas/InsertarTiendas.sql", $params);
         $dataResult = MySqlHelper::ExecuteQuery($cnn_MYSQL,$query);
         return $dataResult;
     }
 
-    public static function ActualizarTienda_o($i_codigoTienda,$b_estadoActivo,$s_email,$s_telefono,$s_direccion) {
+    public static function ActualizarTienda_o($i_codigoTienda,$b_estadoActivo,$s_email,$s_telefono,$s_direccion,$s_descripcion) {
         $cnn_MYSQL = ConfigurationSettings::GetConnectionString("CnxMySQL-RW");
         $params = array();
         $params[@i_codigoTienda] = $i_codigoTienda;
@@ -51,6 +52,7 @@ class TiendasDAO {
         $params[@s_email] = $s_email;
         $params[@s_telefono] = $s_telefono;
         $params[@s_direccion] = $s_direccion;
+        $params[@s_descripcion] = $s_descripcion;
 
         $query = MySqlHelper::GetQueryFromFile("/Querys/Tiendas/ActualizarTiendas.sql", $params);
         $dataResult = MySqlHelper::ExecuteQuery($cnn_MYSQL,$query);

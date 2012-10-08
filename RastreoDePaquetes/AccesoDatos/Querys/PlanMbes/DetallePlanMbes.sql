@@ -24,5 +24,5 @@ SELECT
 	,s_tipo
 	,d_seguroParaPaquetes
 
-FROM    mbeot_PlanMbe
-WHERE   i_idPlanMbe = @idPlanMbe
+FROM    mbeot_PlanMbes
+WHERE   i_id = @idPlanMbe

@@ -24,4 +24,4 @@ SELECT
 	,s_tipo
 	,d_seguroParaPaquetes
 
-FROM    mbeot_PlanMbe
+FROM    mbeot_PlanMbes

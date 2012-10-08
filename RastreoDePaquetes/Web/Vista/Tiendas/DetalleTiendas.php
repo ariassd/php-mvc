@@ -34,6 +34,10 @@
         <td class="campo">s_direccion:</td>
         <td><?php echo $Tienda->S_direccion; ?></td>
     </tr>
+    <tr>
+        <td class="campo">s_descripcion:</td>
+        <td><?php echo $Tienda->S_descripcion; ?></td>
+    </tr>
 
 </table>
 

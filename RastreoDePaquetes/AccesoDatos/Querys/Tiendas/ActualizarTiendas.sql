@@ -26,6 +26,7 @@ SET
 	,s_email = @s_email
 	,s_telefono = @s_telefono
 	,s_direccion = @s_direccion
+	,s_descripcion = @s_descripcion
 
 WHERE idTienda = @idTienda;
 

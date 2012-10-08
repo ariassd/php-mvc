@@ -41,7 +41,7 @@
                     <td><?php echo $value->S_codigopais; ?></td>
                     <td><?php echo $value->I_numcasillero; ?></td>
                     <td><?php echo $value->O_codigotienda; ?></td>
-                    <td><a href="?vista=DetalleCliente&idCliente=<?php echo $value->I_idCliente; ?>">Ver detalle</a></td>
+                    <td><a href="DetalleCliente?idCliente=<?php echo $value->I_idCliente; ?>">Ver detalle</a></td>
                 </tr>
                 <?php } ?>
             </tbody>

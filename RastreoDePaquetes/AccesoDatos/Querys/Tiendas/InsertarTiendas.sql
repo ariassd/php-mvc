@@ -26,6 +26,7 @@ INSERT INTO mbeot_Tienda
 	,s_email
 	,s_telefono
 	,s_direccion
+	,s_descripcion
 
 )
 VALUES
@@ -35,6 +36,7 @@ VALUES
 	,@s_email
 	,@s_telefono
 	,@s_direccion
+	,@s_descripcion
 
 );
 

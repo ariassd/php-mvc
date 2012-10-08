@@ -20,6 +20,7 @@
                     <th>s_email</th>
                     <th>s_telefono</th>
                     <th>s_direccion</th>
+                    <th>s_descripcion</th>
                     <th></th>
                 </tr>
             </thead>
@@ -31,7 +32,10 @@
                     <td><?php echo $value->S_email; ?></td>
                     <td><?php echo $value->S_telefono; ?></td>
                     <td><?php echo $value->S_direccion; ?></td>
-                    <td><a href="?vista=DetalleTienda&idTienda=<?php echo $value->I_idTienda; ?>">Ver detalle</a></td>
+                    <td><?php echo $value->S_descripcion; ?></td>
+                    <td>
+                        <a href="DetalleTienda?idTienda=<?php echo $value->I_codigotienda; ?>">Ver detalle</a>
+                    </td>
                 </tr>
                 <?php } ?>
             </tbody>

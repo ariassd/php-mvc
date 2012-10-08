@@ -93,10 +93,11 @@ class TiendasBL {
             
             $o_Tienda = new Tienda();
             $o_Tienda->i_codigoTienda = $row['i_codigoTienda'];
-            $o_Tienda->b_estadoActivo = $row['b_estadoActivo'];
+            $o_Tienda->b_estadoActivo = $row['s_estadoActivo'];
             $o_Tienda->s_email = $row['s_email'];
             $o_Tienda->s_telefono = $row['s_telefono'];
             $o_Tienda->s_direccion = $row['s_direccion'];
+            $o_Tienda->s_descripcion = $row['s_descripcion'];
 
             
         }

@@ -17,6 +17,7 @@ class Tienda extends MbeEntity {
 	private $s_email;
 	private $s_telefono;
 	private $s_direccion;
+	private $s_descripcion;
 
 
     //setters
@@ -25,6 +26,7 @@ class Tienda extends MbeEntity {
 	public function setS_email($s_email) { $this->s_email = $s_email; }
 	public function setS_telefono($s_telefono) { $this->s_telefono = $s_telefono; }
 	public function setS_direccion($s_direccion) { $this->s_direccion = $s_direccion; }
+	public function setS_descripcion($s_descripcion) { $this->s_descripcion = $s_descripcion; }
 
 
     //getters
@@ -33,6 +35,7 @@ class Tienda extends MbeEntity {
 	public function getS_email() { return $this->s_email; }
 	public function getS_telefono() { return $this->s_telefono; }
 	public function getS_direccion() { return $this->s_direccion; }
+	public function getS_descripcion() { return $this->s_descripcion; }
 
 }
 

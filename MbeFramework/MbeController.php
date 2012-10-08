@@ -1,12 +1,26 @@
 <?php
 
-if (isset($_GET["vista"])) {
+$viewToVisit = $_GET["vista"];
+
+if (isset($viewToVisit)) {
     try {
-        $fName = $_GET["vista"];
-        $fName();
+        if (function_exists($viewToVisit)) { 
+            $fName = $viewToVisit;
+            $fName();
+        } else {
+            redirectUndefinedPage($viewToVisit);
+        }
+        
     } catch (Exception $e) {
-        echo $e;
+        redirectUndefinedPage($viewToVisit);
     }
+} else {
+    redirectUndefinedPage($viewToVisit);
+}
+
+function redirectUndefinedPage($uri){
+    $message = $uri;
+    import("RastreoDePaquetes.Web.Recursos.PaginasDeError.PaginaNoEncontrada");
 }
 
 ?> 

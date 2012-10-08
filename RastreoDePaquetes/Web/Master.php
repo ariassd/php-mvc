@@ -9,18 +9,27 @@ import("MbeFramework.Configuracion.ConfigurationSettings");
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <title><?php echo $g_tituloPagina; ?></title>
-        <link rel="stylesheet" href="Recursos/Estilos/base.css" type="text/css" media="all" />
-        <link rel="stylesheet" href="Recursos/Estilos/smoothness/jquery-ui-1.8.24.custom.css" type="text/css" media="all" />
-        <script type="text/javascript" src="Recursos/Jslibs/jquery-1.8.2.min.js"></script>
-        <script type="text/javascript" src="Recursos/Jslibs/jquery-ui-1.8.24.custom.min.js"></script>
+        <link rel="stylesheet" href="<?php echo path('Recursos/Estilos/base.css');?>" type="text/css" media="all" />
+        <link rel="stylesheet" href="<?php echo path('Recursos/Estilos/smoothness/jquery-ui-1.8.24.custom.css');?>" type="text/css" media="all" />
+        <script type="text/javascript" src="<?php echo path('Recursos/Jslibs/jquery-1.8.2.min.js');?>"></script>
+        <script type="text/javascript" src="<?php echo path('Recursos/Jslibs/jquery-ui-1.8.24.custom.min.js');?>"></script>
     </head>
     <body>
         <div class="BarraDeIdioma">
             <?php include_once 'Controles/Idiomas.php'; ?>
         </div>
+        <table>
+            <tr>
+                <td>
+                    <img src="<?php echo path('Recursos/Imagenes/mbelogoblack.png');?>" width="100px" alt='MBE' />
+                </td>
+                <td>
+                    <h1><?php echo ConfigurationSettings::GetApplicationSetting("NombreDelSistema"); ?></h1>
+                </td>
+            </tr>
+        </table>
         <div id="UIAyudaAusuario" style="display: none" title="Ayuda">
         </div>
-        <h1><?php echo ConfigurationSettings::GetApplicationSetting("NombreDelSistema"); ?></h1>
         <form method="post" action="<?php echo $g_formAction?>" id="ctl00">
             <?php import("RastreoDePaquetes.Web.Controles.MenuHorizontal");?>
             <?php HtmlControles::Iniciar(); ?>
