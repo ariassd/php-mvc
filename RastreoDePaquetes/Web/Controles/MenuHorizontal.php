@@ -9,5 +9,8 @@
         <li>
             <a href="<?php echo path('PlanMbes/ListarPlanMbe');?>">Planes MBE</a>
         </li>
+        <li>
+            <a href="<?php echo path('SeguimientoDePaquetes/CargaDeListadoDePaquetes');?>">Carga del listado de paquetes</a>
+        </li>
     </ul>
 </div>
