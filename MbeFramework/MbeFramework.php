@@ -21,6 +21,7 @@ if (!function_exists('path')) {
         if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on'){
             $pageProtocol .= 's';
         }
+        
         return $pageProtocol.'://'.str_replace(basename($_SERVER['PHP_SELF']), '', $_SERVER['HTTP_HOST'].$_SERVER['SCRIPT_NAME']).$file;
 }}
 include_once("MbeLangSupport.php");

@@ -19,7 +19,7 @@ import("MbeFramework.MbeController");
 
 function ListarTienda() {
     $o_Tiendas = TiendasBL::ListarTiendas_al();
-    include("Vista/Tiendas/ListarTiendas.php");
+    View('ListarTiendas',array('o_Tiendas'=>$o_Tiendas));
 }
 
 function DetalleTienda() {

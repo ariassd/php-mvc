@@ -3,6 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 include("../../MbeFramework/MbeFramework.php");
 import("RastreoDePaquetes.Negocio.ClientesBL");
+import("RastreoDePaquetes.Negocio.PlanMbesBL");
 import("MbeFramework.Html.HtmlControles.HtmlControles");
 import("MbeFramework.MbeController");
 /**
@@ -19,7 +20,7 @@ import("MbeFramework.MbeController");
 
 function ListarCliente() {
     $o_Clientes = ClientesBL::ListarClientes_al();
-    include("Vista/Clientes/ListarClientes.php");
+    View('ListarClientes',array('o_Clientes'=>$o_Clientes));
 }
 
 function DetalleCliente() {
@@ -47,6 +48,14 @@ function ActualizarCliente() {
 function ActualizarClienteConfirmacion() {
     throw new Exception("Debe de implementarse");
     include("Vista/Clientes/ActualizarClienteConfirmacion.php");
+}
+
+function RegistroClientesManual() {
+    
+    echo $_POST["tf_NombreCliente"];
+    
+    $planes=PlanMbesBL::ListarPlanMbes_al();
+    include("Vista/Clientes/RegistroClientesManual.php");
 }
 
 ?>

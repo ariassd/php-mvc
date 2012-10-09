@@ -2,4 +2,4 @@ RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} !^/RastreoDePaquetes/Web/Recursos/
-RewriteRule ^Web/(.+)/(.+) /MailBoxesOnlineTracking/RastreoDePaquetes/Web/$1.php?vista=$2 [QSA]
+RewriteRule ^RastreoDePaquetes/Web/(.+)/(.+) /MailBoxesOnlineTracking/RastreoDePaquetes/Web/$1.php?vista=$2 [QSA]

