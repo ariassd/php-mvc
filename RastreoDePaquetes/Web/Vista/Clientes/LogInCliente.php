@@ -1,17 +1,18 @@
 <?php
 
-$g_tituloPagina = 'Actualizacion de Datos del Cliente';
+    $g_tituloPagina = 'Actualizacion de Datos del Cliente';
     $g_formAction = "Clientes.php?vista=RegistroClientesManual";
     ob_start();
     
-    ?><script language="JavaScript">
+    ?>
+<script language="javascript" type="text/javascript">
     function limpiar(obj){
         obj.value="";
     }
-    </script>
+</script>
 <center>
-    </br>
-    </br>
+    <br/>
+    <br/>
     <div>
         <table>
             <tr>
@@ -20,7 +21,7 @@ $g_tituloPagina = 'Actualizacion de Datos del Cliente';
                     <input type="text" name="tf_CodPaisNumCas" value="SJO####" onclick="limpiar(this)"/>
                     <?php HtmlControles::UserHelpInformation("AyudaUsuario", "Ayuda", "LoginUsuario.php?IdAyuda=tf_CodPaisNumCas") ?>
                 </td>
-                <td><p class="hide" name="p_ayudaUserName">Ej SJO-1234</p>
+                <td><p class="hide" name="p_ayudaUserName">Ej SJO-1234</p></td>
             </tr>
             <tr>
                 <td><h3>Contrasena:</h3></td>
@@ -30,17 +31,8 @@ $g_tituloPagina = 'Actualizacion de Datos del Cliente';
         <input type="submit" value="Ingresar"/>
     </div>
 
-    
-    
     <h3>Olvido su contrasena? Click </h3><a href onclick="">Aqui<a/>
 </center>
-
-
-
-
-    
-
-
 
 
 <?php

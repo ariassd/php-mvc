@@ -39,14 +39,16 @@ function InsertarPaqueteConfirmacion() {
     include("Vista/Paquetes/InsertarPaqueteConfirmacion.php");
 }
 
-function ActualizarPaquete() {
-    throw new Exception("Debe de implementarse");
-    include("Vista/Paquetes/ActualizarPaquetes.php");
+function ActualizaEstado() {
+    include("Vista/Paquetes/ActualizaEstado.php");
 }
 
 function ActualizarPaqueteConfirmacion() {
     throw new Exception("Debe de implementarse");
     include("Vista/Paquetes/ActualizarPaqueteConfirmacion.php");
+}
+function ConsultaPaquetes() {
+    include("Vista/Paquetes/ConsultaPaquetes.php");
 }
 
 ?>

@@ -15,10 +15,10 @@
         <table>
             <thead>
                 <tr>
-                    <th>i_id</th>
-                    <th>s_descripcion</th>
-                    <th>d_valor</th>
-                    <th>s_archivo</th>
+                    <th>Codigo Pre-Alerta</th>
+                    <th>Descripcion</th>
+                    <th>Valor</th>
+                    <th>Archivo</th>
                     <th></th>
                 </tr>
             </thead>

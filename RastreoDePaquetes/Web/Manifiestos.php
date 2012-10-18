@@ -29,9 +29,9 @@ function DetalleManifiesto() {
     include("Vista/Manifiestos/DetalleManifiestos.php");
 }
 
-function InsertarManifiesto() {
-    throw new Exception("Debe de implementarse");
-    include("Vista/Manifiestos/InsertarManifiestos.php");
+function CargarManifiesto() {
+    
+    include("Vista/Manifiestos/CargarManifiesto.php");
 }
 
 function InsertarManifiestoConfirmacion() {
@@ -39,8 +39,8 @@ function InsertarManifiestoConfirmacion() {
     include("Vista/Manifiestos/InsertarManifiestoConfirmacion.php");
 }
 
-function ActualizarManifiesto() {
-    throw new Exception("Debe de implementarse");
+function ActualizarManifiestos() {
+    $o_Manifiestos = ManifiestosBL::ListarManifiestos_al();
     include("Vista/Manifiestos/ActualizarManifiestos.php");
 }
 

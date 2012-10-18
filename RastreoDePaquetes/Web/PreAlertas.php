@@ -30,7 +30,7 @@ function DetallePreAlerta() {
 }
 
 function InsertarPreAlerta() {
-    throw new Exception("Debe de implementarse");
+    //throw new Exception("Debe de implementarse");
     include("Vista/PreAlertas/InsertarPreAlertas.php");
 }
 

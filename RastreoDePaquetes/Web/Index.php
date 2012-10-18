@@ -8,9 +8,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 ?>
 
-Esta es la pagina de indice
-
-<?php
+    <?php
     $g_contenido = ob_get_contents();
     ob_end_clean();
     include "Master.php";

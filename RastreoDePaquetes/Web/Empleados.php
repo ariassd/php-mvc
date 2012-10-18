@@ -30,8 +30,7 @@ function DetalleEmpleado() {
 }
 
 function InsertarEmpleado() {
-    throw new Exception("Debe de implementarse");
-    include("Vista/Empleados/InsertarEmpleados.php");
+    include("Vista/Empleados/RegistroEmpleados.php");
 }
 
 function InsertarEmpleadoConfirmacion() {
@@ -40,8 +39,14 @@ function InsertarEmpleadoConfirmacion() {
 }
 
 function ActualizarEmpleado() {
-    throw new Exception("Debe de implementarse");
     include("Vista/Empleados/ActualizarEmpleados.php");
+}
+function EliminarEmpleado() {
+    include("Vista/Empleados/EliminarEmpleados.php");
+}
+
+function BuscarEmpleado() {
+    include("Vista/Empleados/BuscarEmpleados.php");
 }
 
 function ActualizarEmpleadoConfirmacion() {

@@ -19,7 +19,7 @@ import("MbeFramework.MbeController");
 
 function ListarTienda() {
     $o_Tiendas = TiendasBL::ListarTiendas_al();
-    View('ListarTiendas',array('o_Tiendas'=>$o_Tiendas));
+    include("Vista/Tiendas/ListarTiendas.php");
 }
 
 function DetalleTienda() {
@@ -29,9 +29,8 @@ function DetalleTienda() {
     include("Vista/Tiendas/DetalleTiendas.php");
 }
 
-function InsertarTienda() {
-    throw new Exception("Debe de implementarse");
-    include("Vista/Tiendas/InsertarTiendas.php");
+function RegistrarTienda() {
+    include("Vista/Tiendas/RegistrarTienda.php");
 }
 
 function InsertarTiendaConfirmacion() {

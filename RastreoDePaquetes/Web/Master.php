@@ -13,6 +13,7 @@ import("MbeFramework.Configuracion.ConfigurationSettings");
         <link rel="stylesheet" href="<?php echo path('Recursos/Estilos/smoothness/jquery-ui-1.8.24.custom.css');?>" type="text/css" media="all" />
         <script type="text/javascript" src="<?php echo path('Recursos/Jslibs/jquery-1.8.2.min.js');?>"></script>
         <script type="text/javascript" src="<?php echo path('Recursos/Jslibs/jquery-ui-1.8.24.custom.min.js');?>"></script>
+	<script type="text/javascript" src="<?php echo path('Recursos/Estilos/menu.js');?>"></script>
     </head>
     <body>
         <div class="BarraDeIdioma">

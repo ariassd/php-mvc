@@ -51,10 +51,9 @@ function ActualizarCliente() {
     throw new Exception("Debe de implementarse");
     include("Vista/Clientes/ActualizarClientes.php");
 }
-
-function ActualizarClienteConfirmacion() {
-    throw new Exception("Debe de implementarse");
-    include("Vista/Clientes/ActualizarClienteConfirmacion.php");
+function IngresoClienteCargaArchivotxt() {
+    //$planes=PlanMbesBL::ListarPlanMbes_al();
+    include("Vista/Clientes/IngresoClienteCargaArchivotxt.php");
 }
 
 function RegistroClientesManual() {
@@ -94,11 +93,15 @@ function ActualizacionDatosCliente(){
     if ($clienteSeleccionado != NULL) {
         $cl1E = new Cliente();
         $cl1E->setS_nombre("Nombre 1");
+        $cl1E->setS_codigopais("SJO");
+        $cl1E->setI_numcasillero("1234");
     }
     
     $Resultados = array();
     $cl1 = new Cliente();
     $cl1->setS_nombre("Nombre 1");
+    $cl1->setS_codigopais("SJO");
+    $cl1->setI_numcasillero("1234");
     $Resultados[] = $cl1;
     
     if(count($Resultados)==0){

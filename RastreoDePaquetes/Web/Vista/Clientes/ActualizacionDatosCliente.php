@@ -24,12 +24,13 @@
             <input type="submit" name="b_BuscarClientes" onsubmit="" value="Buscar"/>
         </div>
         <div id="tablaResActDatCl">
-            <table border="2" bgcolor="silver">
+            <table border="2" bgcolor="silver"  class="Lista">
                 <th>SJO - ####</th>
                 <th> Nombre </th>
+                <th></th>
                 <?php foreach ($Resultados as $value) { ?>
                     <tr>
-                        <td><text>6546<text/></td>
+                        <td><text><?php echo $value->getS_codigopais();echo "-"; echo $value->getI_numcasillero();?><text/></td>
                         <td><text><?php echo $value->getS_nombre();?><text/></td>
                         <td>
                             <a href="?clienteE=1">Seleccionar</a>
