@@ -61,7 +61,7 @@ Class HtmlControles {
      * @param string $filen el archivo html o php que tiene la informacion que se va a mostrar
      */
     public static function UserHelpInformation($idControl, $text, $file) {  
-        $icon = "<img id='".$idControl."' alt='".$text."' class='btnHelp' style='width:25px;heigth:25px;' src='Recursos/Imagenes/informacion.png' onclick='$(\"#UIAyudaAusuario\").load(\"".$file."\");$(\"#UIAyudaAusuario\").dialog()' /> ";        
+        $icon = "<img id='".$idControl."' alt='".$text."' class='btnHelp' style='width:25px;heigth:25px;' src='".path('Recursos/Imagenes/informacion.png')."' onclick='$(\"#UIAyudaAusuario\").load(\"".path("/Ayudas/".$file)."\");$(\"#UIAyudaAusuario\").dialog()' /> ";        
         echo $icon;
     }
 

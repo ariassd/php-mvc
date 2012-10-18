@@ -28,9 +28,14 @@
                     <td><text>Codigo de Pais: </text></td>
                     <td><input type="text" name="tf_CodPais" size="3"/>
                     <text>Número de Casillero: </text>
-                    <input type="text" name="tf_NumCasillero" size="4"/></td>
+                    <input type="text" name="tf_NumCasillero" size="4"/>
+                    <text>Código de tienda: </text>
+                    <input type="text" name="tf_CodTienda" size="4"/></td>
                 </tr>
-
+                <tr>
+                    <td><text>Identificacion: </text></td>
+                    <td><input type="text" name="tf_IDCliente" size="15"/></td>
+                </tr>
                 <tr>
                     <td><text>Nombre: </text></td>
                     <td><input type="text" name="tf_NombreCliente" size="15"/></td>
@@ -51,15 +56,15 @@
                     <td><text>Telefono:</text></td>
                     <td><input type="text" name="tf_Telefono"/></td>
                 </tr>
-                <tr>
+                <tr> 
                     <td><text>Plan Contratado: </text></td>
-                    <?php foreach ($planes as $value) { ?>
                     <td>
-                        <input type='radio' id='<?php echo $value->I_id; ?>' value='<?php echo $value->S_tipo; ?>'/>
+                    <?php foreach ($planes as $value) { ?>
+                        <input type='radio' name="r_PlanContratado"id='<?php echo $value->I_id; ?>' value='<?php echo $value->S_tipo; ?>'/>
                         <?php echo $value->S_tipo; ?>
-                    </td>
- 
                     <?php } ?>
+                        
+                    </td>
                     </tr>
             </table>
              <br/>

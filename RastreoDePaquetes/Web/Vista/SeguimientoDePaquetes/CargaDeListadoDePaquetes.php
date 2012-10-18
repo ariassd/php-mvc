@@ -17,6 +17,7 @@
 Seleccione el archivo que desea cargar:
 <br/>
 <input type="file" name="datafile" size="40">
+<?php HtmlControles::UserHelpInformation('hlpInfo', "Ayuda", "SeguimientoDePaquetes.php?ayuda=Carga") ?>
 <div class="navegacion">
     <a href="?paso=lista">Siguiente</a>
 </div>
