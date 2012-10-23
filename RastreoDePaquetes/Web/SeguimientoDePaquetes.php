@@ -34,6 +34,8 @@ function DetalleTienda() {
     include("Vista/Tiendas/DetalleTiendas.php");
 }
 
-
+function NotificacionPaquetePerdido(){
+    include ("Vista/SeguimientoDePaquetes/NotificacionPaquetePerdido.php");
+}
 
 ?>

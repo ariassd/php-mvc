@@ -33,6 +33,13 @@ function CargarManifiesto() {
     
     include("Vista/Manifiestos/CargarManifiesto.php");
 }
+function DetalleManifiestoGuardado() {
+    include("Vista/Manifiestos/ManifiestoGuardadoDetalle.php");
+}
+function ManifiestoCargado() {
+    include("Vista/Manifiestos/ManifiestoCargado.php");
+}
+
 
 function InsertarManifiestoConfirmacion() {
     throw new Exception("Debe de implementarse");

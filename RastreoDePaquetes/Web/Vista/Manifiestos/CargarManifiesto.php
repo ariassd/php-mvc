@@ -6,8 +6,8 @@
  * @package RastreoDePaquetes.Web.Cliente.DetalleClientes
  */
 
-    $g_tituloPagina = 'Cargar Manifiesto Archivo DBF';
-    $g_formAction = "";
+    $g_tituloPagina = 'Cargar Manifiesto';
+    $g_formAction = "Manifiestos.php?vista=ManifiestoCargado";
     ob_start();
     
 ?>
@@ -17,7 +17,7 @@
     <div id="TituloRegClMan">
     <br/>
     <br/>
-        <h1>Carga de Manifiestos</h1>
+        <h1>Carga de Manifiestos por Archivo DBF</h1>
     <br/>
     <br/>
     <br/>
@@ -29,7 +29,10 @@
                 
                 <tr>
                     <td><text>Archivo DBF: </text></td>
-                    <td><input type="file" id="archivo" name="archivo" size="40"/></td>
+                    <td><input type="file" id="archivo" name="archivo" size="40"/>
+                    <?php HtmlControles::UserHelpInformation('hlpInfo', "Ayuda", "CargaManifiestos.php?ayuda=Carga") ?>
+                    </td>
+                    
                 </tr> 
                 
                 <tr>

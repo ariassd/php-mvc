@@ -48,10 +48,19 @@ function EliminarEmpleado() {
 function BuscarEmpleado() {
     include("Vista/Empleados/BuscarEmpleados.php");
 }
+function CargaBusquedaEmpleados() {
+    include("Vista/Empleados/CargaBusquedaEmpleados.php");
+}
+
 
 function ActualizarEmpleadoConfirmacion() {
     throw new Exception("Debe de implementarse");
     include("Vista/Empleados/ActualizarEmpleadoConfirmacion.php");
 }
-
+function AdministracionDePermisos(){
+    include ("Vista/Empleados/AdministracionDePermisos.php");
+}
+function TablaAccesos(){
+    include ("Vista/Empleados/TablaAccesos.php");
+}
 ?>

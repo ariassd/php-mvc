@@ -17,10 +17,6 @@ import("MbeFramework.MbeController");
  * @author Luis Diego Arias Segura
  * @package RastreoDePaquetes.Web.Clientes
  */
-
-
-
-
 function ListarCliente() {
     $o_Clientes = ClientesBL::ListarClientes_al();
     $clientes = array();
@@ -63,54 +59,33 @@ function RegistroClientesManual() {
     
     $planes=PlanMbesBL::ListarPlanMbes_al();
     include("Vista/Clientes/RegistroClientesManual.php");
-    }else{
-        $Cliente=new Cliente();
-        $Cliente->setI_idcliente($_POST["tf_IDCliente"]);
-        $Cliente->setI_numcasillero($_POST["tf_NumCasillero"]);
-        $Cliente->setS_codigopais($_POST["tf_CodPais"]);
-        $Cliente->setS_direccion($_POST["tf_DireccionCliente"]);
-        $Cliente->setS_nombre($_POST["tf_NombreCliente"]);
-        $Cliente->setS_apellidos($_POST["tf_ApellidoCliente"]);
-        $Cliente->setS_email($_POST["tf_EmailCliente"]);
-        $Cliente->setS_telefono($_POST["tf_Telefono"]);
-        $Cliente->setS_plancontratado($_POST["r_PlanContratado"]);
-        $Cliente->setO_codigotienda($_POST["tf_CodTienda"]);
-        if(ClientesBL::InsertarCLiente_b($Cliente)){
-            echo'<text>Guardado exitosamente</text>';
-            include("Vista/Clientes/RegistroClientesManual.php");
-        }else{
-            echo'<text>Error Al guardar no se cumplio con la peticion</text>';
-            include("Vista/Clientes/RegistroClientesManual.php");
-        }
-        
     }
 }
 function ActualizacionDatosCliente(){
       $planes=PlanMbesBL::ListarPlanMbes_al();
     $Resultados=ClientesBL::ListarClientes_al();
     
-    $clienteSeleccionado = isset($_GET['clienteE']);
-    if ($clienteSeleccionado != NULL) {
-        $cl1E = new Cliente();
-        $cl1E->setS_nombre("Nombre 1");
-        $cl1E->setS_codigopais("SJO");
-        $cl1E->setI_numcasillero("1234");
-    }
-    
-    $Resultados = array();
-    $cl1 = new Cliente();
-    $cl1->setS_nombre("Nombre 1");
-    $cl1->setS_codigopais("SJO");
-    $cl1->setI_numcasillero("1234");
-    $Resultados[] = $cl1;
-    
-    if(count($Resultados)==0){
-        echo'<text>Vacio</>';
-    }
     include("Vista/Clientes/ActualizacionDatosCliente.php");
 }
 function LogInCliente(){
     include ("Vista/Clientes/LogInCliente.php");
     
+    }
+    function BuscarClientes(){
+        include ("Vista/Clientes/BuscarClientes.php");
+    }
+    function TablaClientes(){
+        $Resultados=array();
+        $CL1=ClientesBL::CrearClienteTEMP('1-111-111', 'Pedro', 'Salas Perez', 'Heredia', '123456789', 'sdfslkjhsdg@sds', 'A', 'SJO', '1234', '61');
+        $CL2=ClientesBL::CrearClienteTEMP('2-222-012', 'Maria', 'Mora Perez', 'San Jose', '123456789', 'sdfslkjhsdg@sds', 'A', 'SJO', '5678', '61');
+        $Resultados[]=$CL1;
+        $Resultados[]=$CL2;
+        include ("Vista/Clientes/TablaClientes.php");
+    }
+    function RegistroManualClientesConf(){
+        include ("Vista/Clientes/RegistroManualClientesConf.php");
+    }
+    function DetalleClientes(){
+        include ("Vista/Clientes/DetalleClientes.php");
     }
 ?>

@@ -7,8 +7,8 @@
  */
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
-    $g_tituloPagina = 'Ingreso de clientes por carga de archivo txt';
-    $g_formAction = "";
+    $g_tituloPagina = 'Ingreso de Clientes';
+    $g_formAction = "Clientes.php?vista=ClientesCargados";
     ob_start();
     
 ?>
@@ -18,7 +18,7 @@ ini_set('display_errors', '1');
     <div id="TituloRegClMan">
     <br/>
     <br/>
-        <h1>Registro de Clientes por carga de archivo txt</h1>
+        <h1>Registro de Clientes por Carga de Archivo TXT</h1>
     <br/>
     <br/>
     <br/>
@@ -27,38 +27,16 @@ ini_set('display_errors', '1');
     <div id="bodyRegClMan">
         
             <table>
-                
                 <tr>
                     <td><text>Archivo txt: </text></td>
-                    <td><input type="file" id="archivo" name="archivo" size="40"/></td>
-                </tr> 
-                
-           
-                
+                    <td><input type="file" id="archivo" name="archivo" size="40"/>
+                    <?php HtmlControles::UserHelpInformation('hlpInfo', "Ayuda", "CargaClientes.php?ayuda=Carga") ?>
+                    </td>
+                </tr>      
             </table>
              <br/>
                 <br/>
-            <input type="submit" name="b_RegCLMan" onclick="cargaarchivo()" value="Registrar Clientes"/>
-        <?php
-        // archivo txt
-        $nombre_fichero = 'C:\armando.txt';
-        if (file_exists($nombre_fichero)) {
-            $f = @fopen($nombre_fichero,r);// or die("Error al abrir el archivo: $nombre");
-            fclose($f);
-            $v = file($nombre_fichero);
-            $cantidad = count($v);
-            for ($i=0; $i<$cantidad; $i++)
-            {
-                $datos = $v[$i];   
-                echo '<br>'.$datos;
-                echo '<br>'.$datos[2];
-            }
-        } else {
-            echo '<script> alert("Pidale a Armando el archivo llamado: '.$nombre_fichero.'"); </script>';
-        }
-       ?>
-        
-        
+            <input type="submit" name="b_RegCLMan" value="Cargar Clientes"/>   
     </div>
     
 </center>

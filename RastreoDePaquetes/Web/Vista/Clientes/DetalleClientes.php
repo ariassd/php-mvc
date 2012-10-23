@@ -7,7 +7,7 @@
  */
 
     $g_tituloPagina = 'Detalle de Clientes';
-    $g_formAction = "";
+    $g_formAction = "Clientes.php?vista=ActualizacionDatosCliente";
     ob_start();
 ?>
 
@@ -57,6 +57,8 @@
 
 </table>
 
+
+<input type="submit" name="b_ModificarCliente" value="Modificar"/>
 <?php
     $g_contenido = ob_get_contents();
     ob_end_clean();

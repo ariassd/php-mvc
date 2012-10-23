@@ -17,12 +17,13 @@
     <table>
         <thead>
             <tr>
-                <th>ID</th>
-                <th>NOMBRE</th>
-                <th>EMAIL</th>
-                <th>TELEFONO</th>
-                <th>TIENDA PERTENECE</th>
-                <th>OPERACIONES</th>
+            <td><text>N</text></td>
+            <td><text>ID</text></td>
+            <td><text>NOMBRE</text></td>
+            <td><text>NOM. USUARIO</text></td>
+            <td><text>CLAVE</text></td>
+            <td><text>TIPO USUARIO</text></td>
+            <td><text>ESTADO</text></td>
             </tr>
         </thead>
         <tbody>

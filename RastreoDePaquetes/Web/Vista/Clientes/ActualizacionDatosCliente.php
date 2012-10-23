@@ -5,57 +5,24 @@
     ob_start();
     
 ?>
-<center>
-    <div id="busqActDatCl">
-        <div id="paramBusquedaActDatCl">
-            <table>
-                <tr>
-                    <td>Cod. Pais: </td>
-                    <td><input type="text" name="tf_CodPais" size="3"/></td>
-                </tr>
-                 <tr>
-                    <td>Num. Casillero: </td>
-                    <td><input type="text" name="tf_NumCasillero" size="4"/></td>
-                </tr>
-            </table>
-            </br>
-            </br>
-            </br>
-            <input type="submit" name="b_BuscarClientes" onsubmit="" value="Buscar"/>
-        </div>
-        <div id="tablaResActDatCl">
-            <table border="2" bgcolor="silver"  class="Lista">
-                <th>SJO - ####</th>
-                <th> Nombre </th>
-                <th></th>
-                <?php foreach ($Resultados as $value) { ?>
-                    <tr>
-                        <td><text><?php echo $value->getS_codigopais();echo "-"; echo $value->getI_numcasillero();?><text/></td>
-                        <td><text><?php echo $value->getS_nombre();?><text/></td>
-                        <td>
-                            <a href="?clienteE=1">Seleccionar</a>
-                        </td>
-                   <tr/>
-                 <?php } ?>
-            </table>
-        </div>
-        <br/>
-        
-    </div>
- <div>
-        
-            <table>
-                <tr>
-                    <td><text>Codigo de Pais: </text></td>
-                    <td><input type="text" name="tf_CodPais" size="3"/>
-                    <text>Número de Casillero: </text>
-                    <input type="text" name="tf_NumCasillero" size="4"/>
-                    <text>Código de tienda: </text>
-                    <input type="text" name="tf_CodTienda" size="4"/></td>
-                </tr>
-                <tr>
-                    <td><text>Identificacion: </text></td>
-                    <td><input type="text" name="tf_IDCliente" size="15"/></td>
+
+<center><h1>Actualizacion de Datos de Cliente</h1>
+    <br/>
+    <input type="submit" name="b_ActDatCl" value="Actualizar Cliente"/> <input type="submit" name="b_EliominarCl" value="Eliminar Cliente"/>
+     <br/>
+      <br/>
+    <table>
+        <tr>
+            <td><text>Codigo de Pais: </text></td>
+             <td><input type="text" name="tf_CodPais" size="3"/>
+             <text>Número de Casillero: </text>
+             <input type="text" name="tf_NumCasillero" size="4"/>
+             <text>Código de tienda: </text>
+            <input type="text" name="tf_CodTienda" size="4"/></td>
+         </tr>
+          <tr>
+              <td><text>Identificacion: </text></td>
+              <td><input type="text" name="tf_IDCliente" size="15"/></td>
                 </tr>
                 <tr>
                     <td><text>Nombre: </text></td>
@@ -90,12 +57,12 @@
             </table>
              <br/>
                 <br/>
-            <input type="submit" name="b_ActDatCl" value="Actualizar Cliente"/>
-        
-    </div>
+            <input type="submit" name="b_Guardar" value="Guardar Cambios"/>
+
+
+
 
 </center>
-
 <?php
     $g_contenido = ob_get_contents();
     ob_end_clean();

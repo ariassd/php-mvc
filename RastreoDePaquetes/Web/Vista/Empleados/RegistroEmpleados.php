@@ -26,22 +26,6 @@ ob_start();
             <input type="text" name="apellidos" size="40"/>
             </td>
         </tr>
-        
-        <tr>
-            <td align="right"><label>Email: </label></td>
-            <td><input type="text" name="email" size="25"/></td>
-        </tr>
-		
-		 <tr>
-            <td align="right"><label>Direccion: </label></td>
-            <td><textarea name="direccion" resize:none cols="30" rows="3" wrap="physical">Direccion exacta...</textarea></td>
-        </tr>
-		
-		 <tr>
-            <td align="right"><label>Telefono: </label></td>
-            <td><input type="text" name="telefono" size="25"/></td>
-        </tr>
-        
         <tr>
             <td align="right"><label>Nombre Usuario: </label></td>
             <td><input type="text" name="usuario" size="15"/></td>

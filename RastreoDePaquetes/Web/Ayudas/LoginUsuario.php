@@ -1,6 +1,5 @@
 <?php
 $idAyuda = $_GET["IdAyuda"];
-
 ?>
 
 <?php if($idAyuda=='tf_CodPaisNumCas'){?>

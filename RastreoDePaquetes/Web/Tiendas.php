@@ -48,4 +48,23 @@ function ActualizarTiendaConfirmacion() {
     include("Vista/Tiendas/ActualizarTiendaConfirmacion.php");
 }
 
+function GestionTiendas(){
+    include ("Vista/Tiendas/GestionTiendas.php");
+    
+}
+function AgregarTienda(){
+    include ("Vista/Tiendas/AgregarTienda.php");
+}
+function ModificarTienda(){
+    $o_Tiendas = TiendasBL::ListarTiendas_al();
+    include ("Vista/Tiendas/ModificarTienda.php");
+    
+    
+}
+function EliminarTienda(){
+    $o_Tiendas = TiendasBL::ListarTiendas_al();
+    include ("Vista/Tiendas/EliminarTienda.php");
+    
+    
+}
 ?>

@@ -8,31 +8,13 @@
  */
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
-$g_tituloPagina = 'Eliminar Empleado';
-$g_formAction = "";
+$g_tituloPagina = 'Busqueda Empleados';
+$g_formAction = "Empleados.php?vista=BuscarEmpleado";
 ob_start();
 ?>
-<script language="JavaScript">
-
-function pregunta(){
-    if (confirm('¿Estas seguro que desea guardar los items seleccionados?')){
-        alert('Empledo Eliminado con exito');
-        <?php
-        $g_formAction = "Empleados.php?vista=BuscarEmpleado";
-        ?>
-    
-        
-     }
-    else{
-    <?php
-        $g_formAction = "Empleados.php?vista=CargaBusquedaEmpleados";
-    ?>  
-    }
-}
-</script>
 <center>
    <br/>
-   <h1>Detalle Empleados a Eliminar:</h1>
+   <h1>Busqueda de Empleados por:</h1>
     <table border="1" cellpadding="0" cellspacing="1" bordercolor="#000000" bgcolor="gray">
         <tr>
         <td colspan='13' align="center"><text>EMPLEADOS MBE-ESCAZU</text></td>
@@ -45,11 +27,11 @@ function pregunta(){
             <td><text>CLAVE</text></td>
             <td><text>TIPO USUARIO</text></td>
             <td><text>ESTADO</text></td>
-            
+            <td colspan="3">OPERACIONES</td>
         </tr> 
         
         <?php
-        for($i=1; $i < 2; $i++){
+        for($i=1; $i < 5; $i++){
             echo "<tr align='center' bgcolor='black'>";    
                 echo '<td align=center>'.$i.'</td>';
                 echo '<td>000'.$i.'</td>';
@@ -58,6 +40,13 @@ function pregunta(){
                 echo '<td>7325363jhfjdf-23'.$i.'</td>';
                 echo '<td>E.T</td>';
                 echo '<td>Activo</td>';
+                echo '<td><a href="">Ver</a></td>';
+                echo '<td><a href="Empleados.php?vista=ActualizarEmpleado">Editar</a></td>';
+                echo '<td><a href="Empleados.php?vista=EliminarEmpleado">Eliminar</a></td>';
+                
+     
+                
+                
             echo '</tr>';
         }?>
     <tr>
@@ -67,7 +56,7 @@ function pregunta(){
   </table>
     <br/>
     <br/>
-    <input type="submit" name="b_RegCLMan" onclick="pregunta()" value="Eliminar Empleado"/>
+    <input type="submit" name="b_RegCLMan" onclick="pregunta()" value="Nueva Busqueda"/>   
 </center>
 
 <?php

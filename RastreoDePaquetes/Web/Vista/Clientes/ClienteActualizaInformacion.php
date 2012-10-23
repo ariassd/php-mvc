@@ -5,64 +5,78 @@ $g_formAction = "";
 ob_start();
     
 ?>
+<script language="JavaScript">
+function pregunta(){
+    if (confirm('¿Estas seguro que desea actualizar la informacion?')){
+        alert('Informacion Actualizada con exito');
+        <?php
+        $g_formAction = "Empleados.php?vista=BuscarEmpleado";
+        ?>
+     }
+    else{
+    <?php
+      $g_formAction = ""; 
+      ?> 
+    }
+}
+</script>
 <center>
     
     <br>
     <br>
     <h1>Actualizar Informacion Cliente</h1>
-    <form name="form1" method="post" action="">
     <input type="hidden" value="1" name="enviar" />
     <table>
         
         <tr>
             <td align="right"><text>Identificacion:</text></td>
-            <td><input type="text" name="identificacion" size="15"/></td>
+            <td><input type="text" name="identificacion" value="2-0233-0258" readonly="true"  size="15"/></td>
         </tr>
         
         <tr>
             <td align="right"><label>Codigo Pais:</label></td>
-            <td><input type="text" name="codigoPais" size="5"/>
+            <td><input type="text" name="codigoPais" value="SJO" readonly="true" size="5"/>
             <label>Numero Casillero:</label>
-            <input type="text" name="numerocasillero" size="5"/>
+            <input type="text" name="numerocasillero" value="0021" readonly="true" size="5"/>
             </td>
         </tr>
         
          <tr>
             <td align="right"><label>Nombres:</label></td>
-            <td><input type="text" name="nombres" size="30"/>
+            <td><input type="text" name="nombres" value="Armando" size="25"/>
             <label>Apellidos:</label>
-            <input type="text" name="apellidos" size="40"/>
+            <input type="text" name="apellidos" value="Zambrana Gutierrez" size="30"/>
             </td>
         </tr>
             
         <tr>
             <td align="right"><label>Email: </label></td>
-            <td><input type="text" name="email" size="25"/></td>
+            <td><input type="text" name="email" value="armyrene@gmail.com" size="25"/></td>
         </tr>
 		
         <tr>
             <td align="right"><label>Direccion: </label></td>
-            <td><textarea name="direccion" resize:none cols="30" rows="2" wrap="physical">Direccion exacta...</textarea></td>
+            <td><textarea name="direccion" resize:none cols="30" rows="2" wrap="physical">Heredia Centro.</textarea></td>
         </tr>
 		
         <tr>
             <td align="right"><label>Telefono: </label></td>
-            <td><input type="text" name="telefono" size="25"/></td>
+            <td><input type="text" name="telefono" value="Casa = 2255-8829, Celular = 8858-1214, Otro = 8922-2255" size="40"/></td>
         </tr>
         
         <tr>
             <td align="right"><label>Password: </label></td>
-            <td><input type="password" name="pass" size="15"/></td>
+            <td><input type="password" name="pass" value="12345" size="15"/></td>
         </tr>
         
         <tr>
             <td align="right"><label>Confirmar Password: </label></td>
-            <td><input type="password" name="confirmar" size="15"/></td>
+            <td><input type="password" name="confirmar" value="12345" size="15"/></td>
         </tr>
 		
         <tr>
             <td align="right"><label>Plan Contratado:</label></td>
-            <td><select name="tipoplan">
+            <td><select name="tipoplan" disabled>
               <option value="1">Plan A</option>
               <option value="2">Plan B</option>
               <option value="3">Plan C</option>
@@ -71,7 +85,7 @@ ob_start();
         </tr>
         <tr>
             <td align="right"><label>Estado:</label></td>
-            <td><select name="estado">
+            <td><select name="estado" disabled>
               <option value="1">Activo</option>
               <option value="0">Inactivo</option>
             </select>    
@@ -80,9 +94,7 @@ ob_start();
     </table>
     <br>
     <br>
-    <input type="submit" value="Registar Cliente"/>
-    <input type="submit" value="Nuevo Cliente"/>
-    </form>   
+    <input type="submit" onclick="pregunta()" value="Actualizar Informacion"/>  
 </center>
 <?php
     $g_contenido = ob_get_contents();

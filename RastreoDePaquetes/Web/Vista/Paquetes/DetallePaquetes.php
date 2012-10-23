@@ -15,79 +15,75 @@
 
 <table class="FormularioDetalle">
     <tr>
-        <td class="campo">i_numeroEBL:</td>
+        <td class="campo">Numero de EBL:</td>
         <td><?php echo $Paquete->I_numeroebl; ?></td>
     </tr>
     <tr>
-        <td class="campo">s_trackingExterno:</td>
+        <td class="campo">Tracking:</td>
         <td><?php echo $Paquete->S_trackingexterno; ?></td>
     </tr>
     <tr>
-        <td class="campo">s_numeroDeBolsa:</td>
-        <td><?php echo $Paquete->S_numerodebolsa; ?></td>
-    </tr>
-    <tr>
-        <td class="campo">s_codPais:</td>
+        <td class="campo">Codigo de Pais:</td>
         <td><?php echo $Paquete->S_codpais; ?></td>
     </tr>
     <tr>
-        <td class="campo">i_numCasillero:</td>
+        <td class="campo">Numero de Casillero:</td>
         <td><?php echo $Paquete->I_numcasillero; ?></td>
     </tr>
     <tr>
-        <td class="campo">s_descripcion:</td>
+        <td class="campo">Descripion:</td>
         <td><?php echo $Paquete->S_descripcion; ?></td>
     </tr>
     <tr>
-        <td class="campo">i_piezasEnInterior:</td>
+        <td class="campo">Contenido (Piezas):</td>
         <td><?php echo $Paquete->I_piezaseninterior; ?></td>
     </tr>
     <tr>
-        <td class="campo">i_piezas:</td>
+        <td class="campo">Piezas:</td>
         <td><?php echo $Paquete->I_piezas; ?></td>
     </tr>
     <tr>
-        <td class="campo">d_peso:</td>
+        <td class="campo">Peso:</td>
         <td><?php echo $Paquete->D_peso; ?></td>
     </tr>
     <tr>
-        <td class="campo">d_largo:</td>
+        <td class="campo">Largo:</td>
         <td><?php echo $Paquete->D_largo; ?></td>
     </tr>
     <tr>
-        <td class="campo">d_ancho:</td>
+        <td class="campo">Ancho:</td>
         <td><?php echo $Paquete->D_ancho; ?></td>
     </tr>
     <tr>
-        <td class="campo">d_espesor:</td>
+        <td class="campo">Espesor:</td>
         <td><?php echo $Paquete->D_espesor; ?></td>
     </tr>
     <tr>
-        <td class="campo">e_tipo:</td>
+        <td class="campo">Tipo:</td>
         <td><?php echo $Paquete->E_tipo; ?></td>
     </tr>
     <tr>
-        <td class="campo">d_valorComercial:</td>
+        <td class="campo">Valor Comercial:</td>
         <td><?php echo $Paquete->D_valorcomercial; ?></td>
     </tr>
     <tr>
-        <td class="campo">dt_fechaIngresoAMiami:</td>
+        <td class="campo">Fecha de Ingreso en Miami:</td>
         <td><?php echo $Paquete->Dt_fechaingresoamiami; ?></td>
     </tr>
     <tr>
-        <td class="campo">dt_fechaUltimoEstado:</td>
+        <td class="campo">Ultima Actualización:</td>
         <td><?php echo $Paquete->Dt_fechaultimoestado; ?></td>
     </tr>
     <tr>
-        <td class="campo">s_manifiesto:</td>
+        <td class="campo">Manifiesto:</td>
         <td><?php echo $Paquete->S_manifiesto; ?></td>
     </tr>
     <tr>
-        <td class="campo">s_estadoImportacion:</td>
+        <td class="campo">Estado Actual en el proceso de Importacion:</td>
         <td><?php echo $Paquete->S_estadoimportacion; ?></td>
     </tr>
     <tr>
-        <td class="campo">s_estadoArchivado:</td>
+        <td class="campo">Estado:</td>
         <td><?php echo $Paquete->S_estadoarchivado; ?></td>
     </tr>
 

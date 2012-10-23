@@ -17,12 +17,12 @@ import("MbeFramework.MbeController");
  * @package RastreoDePaquetes.Web.Paquetes
  */
 
-function ListarPaquete() {
+function ListarPaquetes() {
     $o_Paquetes = PaquetesBL::ListarPaquetes_al();
     include("Vista/Paquetes/ListarPaquetes.php");
 }
 
-function DetallePaquete() {
+function DetallePaquetes() {
     $idPaquete = $_REQUEST["idPaquete"];
     $Paquete = PaquetesBL::DetallePaquete_o($idPaquete);
     
@@ -50,5 +50,7 @@ function ActualizarPaqueteConfirmacion() {
 function ConsultaPaquetes() {
     include("Vista/Paquetes/ConsultaPaquetes.php");
 }
-
+function Calendar(){
+    include ("Vista/Paquetes/Calendar.php");
+}
 ?>

@@ -6,7 +6,7 @@
  * @package RastreoDePaquetes.Web.Tienda.DetalleTiendas
  */
 
-    $g_tituloPagina = 'Detalle de Tiendas';
+    $g_tituloPagina = 'Carga Listado Paquetes';
     $g_formAction = "";
     ob_start();
 ?>

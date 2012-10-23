@@ -7,7 +7,7 @@
  */
 
     $g_tituloPagina = 'Registro Manual de Clientes';
-    $g_formAction = "Clientes.php?vista=RegistroClientesManual";
+    $g_formAction = "Clientes.php?vista=RegistroManualClientesConf";
     ob_start();
     
 ?>
@@ -69,12 +69,16 @@
             </table>
              <br/>
                 <br/>
-            <input type="submit" name="b_RegCLMan" value="Registrar Cliente"/>
+                <input type="submit" name="b_RegCLMan" value="Registrar Cliente" onclick="confirmacion()"/>
         
     </div>
     
 </center>
-
+<script>
+    function confirmacion(){
+        alert('Seguro que desea guardar?');
+    }
+</script>
 <?php
     $g_contenido = ob_get_contents();
     ob_end_clean();

@@ -109,6 +109,23 @@ class ClientesBL {
         return $o_Cliente;
     }
     
+
+    public static function CrearClienteTEMP($i_idCliente,$s_nombre,$s_apellidos,$s_direccion,$s_telefono,$s_email,$s_planContratado,$s_codigoPais,$i_numCasillero,$o_codigoTienda) {//Funcion temporal para crear clientes, BORRAR 
+            $o_Cliente = new Cliente();
+            $o_Cliente->setI_idcliente($i_idCliente);
+            $o_Cliente->setS_nombre($s_nombre);
+            $o_Cliente->setS_apellidos($s_apellidos);
+            $o_Cliente->setS_direccion($s_direccion);
+            $o_Cliente->setS_telefono($s_telefono);
+            $o_Cliente->setS_email($s_email);
+            $o_Cliente->setS_plancontratado($s_planContratado);
+            $o_Cliente->setS_codigopais($s_codigoPais);
+            $o_Cliente->setI_numcasillero($i_numCasillero);
+            $o_Cliente->setO_codigotienda($o_codigoTienda);
+        return $o_Cliente;
+    }
+    
+
 }
 
 ?>
