@@ -11,8 +11,8 @@ body {
     font-size: 12px;
     background-color: black;
     color: white;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 textarea { 
@@ -98,7 +98,7 @@ ul.menu {
 	padding: 0 20px;	
 	margin: 0;
 	float: left;
-	width: 1000px;
+	width: 100%;
 	background: #222;
 	font-size: 1.2em;
 	background: #8A0808;
@@ -211,6 +211,7 @@ input[type='text'] {
     padding-right: 10px;
     background-color: #8A0808;
     color: #F0B400;
-}.hide{
+}
+.hide{
     color: black
 }

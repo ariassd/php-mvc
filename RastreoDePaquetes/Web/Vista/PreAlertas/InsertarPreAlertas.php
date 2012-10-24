@@ -43,7 +43,7 @@ function pregunta(){
             </tr>
             <tr>
                 <td align="right"><text>Fecha Ingreso:</text></td>
-                <td><input type="text" name="tf_ApellidoCliente" size="15"/></td>
+                <td><input id="datepicker" type="text" name="tf_ApellidoCliente" size="15"/></td>
             </tr>
             <tr>
                 <td align="right"><text>Codigo Cliente:</text></td>
@@ -57,6 +57,11 @@ function pregunta(){
         <br/><br/>
         <input type="submit" onclick="pregunta()" name="b_RegCLMan" value="Registrar Pre-Alerta"/>
     </center> 
+<script>
+    $(function() {
+        $( "#datepicker" ).datepicker();
+    });
+</script>
 <?php
 $g_contenido = ob_get_contents();
 ob_end_clean();

@@ -23,7 +23,7 @@ function ListarCliente() {
     $cl1 = new Cliente();
     $cl1->setS_nombre("Nombre 1");
     $clientes[] = $cl1;
-    View('ListarClientes',array('o_Clientes'=>$clientes));
+    View('TablaClientes',array('o_Clientes'=>$clientes));
 }
 
 function DetalleCliente() {
@@ -44,7 +44,7 @@ function InsertarClienteConfirmacion() {
 }
 
 function ActualizarCliente() {
-    throw new Exception("Debe de implementarse");
+    //throw new Exception("Debe de implementarse");
     include("Vista/Clientes/ActualizarClientes.php");
 }
 function IngresoClienteCargaArchivotxt() {
@@ -55,10 +55,10 @@ function IngresoClienteCargaArchivotxt() {
 function RegistroClientesManual() {
     
     if(!isset($_POST["tf_NombreCliente"],$_POST["tf_ApellidoCliente"],$_POST["tf_CodPais"],
-            $_POST["tf_NumCasillero"],$_POST["r_PlanContratado"])){
+        $_POST["tf_NumCasillero"],$_POST["r_PlanContratado"])){
     
-    $planes=PlanMbesBL::ListarPlanMbes_al();
-    include("Vista/Clientes/RegistroClientesManual.php");
+        $planes=PlanMbesBL::ListarPlanMbes_al();
+        include("Vista/Clientes/RegistroClientesManual.php");
     }
 }
 function ActualizacionDatosCliente(){
@@ -87,5 +87,14 @@ function LogInCliente(){
     }
     function DetalleClientes(){
         include ("Vista/Clientes/DetalleClientes.php");
+    }
+    function ClienteActualizaInformacion(){
+        include ("Vista/Clientes/ClienteActualizaInformacion.php");
+    }
+    function CalculadoraImpuestos(){
+        include ("Vista/Clientes/CalculadoraImpuestos.php");
+    }
+    function DetallePagoImpuestos(){
+        include ("Vista/Clientes/DetallePagoImpuestos.php");
     }
 ?>

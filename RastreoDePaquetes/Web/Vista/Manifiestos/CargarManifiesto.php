@@ -11,7 +11,11 @@
     ob_start();
     
 ?>
-
+<script type="text/javascript">
+$(document).ready(function(){
+   $(".campofecha").calendarioDW();
+})
+</script> 
 
 <center>
     <div id="TituloRegClMan">
@@ -37,7 +41,7 @@
                 
                 <tr>
                     <td><text>Fecha: </text></td>
-                    <td><input type="text" id="archivo" name="archivo" size="15"/></td>
+                    <td><input type="text" id="archivo" name="archivo" class="campofecha" size="12"/></td>
                 </tr> 
                 
            

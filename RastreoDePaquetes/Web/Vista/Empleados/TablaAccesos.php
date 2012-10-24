@@ -89,7 +89,7 @@ ob_start();
     <br/>
     <br/>
     <br/>
-    <input type="submit" name="b_AsignarPermisos"/>
+    <input type="submit" name="b_AsignarPermisos" value="Asignar Permisos"/>
 </center>
 
 <?php

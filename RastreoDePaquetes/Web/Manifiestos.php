@@ -3,6 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 include("../../MbeFramework/MbeFramework.php");
 import("RastreoDePaquetes.Negocio.ManifiestosBL");
+import("RastreoDePaquetes.Negocio.EstadoManifiestoBL");
 import("MbeFramework.Html.HtmlControles.HtmlControles");
 import("MbeFramework.MbeController");
 /**
@@ -55,5 +56,15 @@ function ActualizarManifiestoConfirmacion() {
     throw new Exception("Debe de implementarse");
     include("Vista/Manifiestos/ActualizarManifiestoConfirmacion.php");
 }
-
+function MantenimientoDeEstados(){
+    $es1= EstadoManifiestoBL::CrearEstado("1", "En Miami", "Activo");
+    $es2= EstadoManifiestoBL::CrearEstado("2", "En Aduanas", "Activo");
+    $es3= EstadoManifiestoBL::CrearEstado("3", "En Tienda", "Activo");
+    $Resultados=array();
+    $Resultados[]=$es1;
+    $Resultados[]=$es2;
+    $Resultados[]=$es3;
+    include ("Vista/Manifiestos/MantenimientoDeEstados.php");
+    
+}
 ?>

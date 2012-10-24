@@ -18,29 +18,30 @@ $menu = 1;
         <ul class="submenu"> 
             <li><a href="<?php echo ('Empleados.php?vista=InsertarEmpleado');?>">Agregar Empleado</a></li> 
             <li><a href="<?php echo ('Empleados.php?vista=BuscarEmpleado');?>">Buscar Empleado</a></li> 
-            <li><a href="<?php echo ('Empleados.php?vista=ListarEmpleado');?>">Listar Empleado</a></li>
+            <li><a href="<?php echo ('Empleados.php?vista=ListarEmpleado');?>">Listar Empleados</a></li>
         </ul> 
     </li> 
     
     <li> 
         <a href="#">Clientes</a> 
         <ul class="submenu"> 
-            <li><a href="<?php echo ('Clientes.php?vista=RegistroClientesManual');?>">Nuevo Cliente</a></li> 
-            <li><a href="<?php echo ('Clientes.php?vista=IngresoClienteCargaArchivotxt');?>">Carga de Cliente por Archivo</a></li> 
-            <li><a href="<?php echo ('Clientes.php?vista=ActualizacionDatosCliente');?>">Actualizar Datos Cliente</a></li>  
+            <li><a href="<?php echo ('Clientes.php?vista=RegistroClientesManual');?>">Agregar Nuevo Cliente</a></li> 
+            <li><a href="<?php echo ('Clientes.php?vista=IngresoClienteCargaArchivotxt');?>">Carga de Clientes por Archivo</a></li> 
+            <li><a href="<?php echo ('Clientes.php?vista=ActualizacionDatosCliente');?>">Actualizar Datos del Cliente</a></li>  
             <li><a href="<?php echo ('Clientes.php?vista=ClienteActualizaInformacion');?>">Actualizar Informacion Personal</a></li>
-            <li><a href="Clientes.php?vista=ListarCliente">Lista de clientes</a></li>
+            <li><a href="Clientes.php?vista=ListarCliente">Lista de Clientes</a></li>
             <li><a href="#">Buscar Cliente</a></li>
-            <li><a href="<?php echo ('PreAlertas.php?vista=InsertarPreAlerta');?>">Pre-Alertas</a></li>
+            <li><a href="<?php echo ('Paquetes.php?vista=ConsultaPaquetesCliente');?>">Consultar Paquetes</a></li>
+            <li><a href="<?php echo ('PreAlertas.php?vista=InsertarPreAlerta');?>">Agregar Pre-Alertas</a></li>
         </ul> 
     </li> 
     
     <li> 
         <a href="#">Paquetes</a> 
         <ul class="submenu">
-            <li><a href="<?php echo ('Manifiestos.php?vista=CargarManifiesto');?>">Cargar Manifiesto</a></li> 
-            <li><a href="<?php echo ('SeguimientoDePaquetes.php?vista=CargaDeListadoDePaquetes');?>">Carga Listado de Paquetes</a></li>
+            <li><a href="<?php echo ('Manifiestos.php?vista=CargarManifiesto');?>">Carga de Manifiestos</a></li> 
             <li><a href="<?php echo ('Manifiestos.php?vista=ActualizarManifiestos');?>">Actualizar Estado Manifiestos</a></li>
+            <li><a href="<?php echo ('SeguimientoDePaquetes.php?vista=CargaDeListadoDePaquetes');?>">Carga Listado de Paquetes</a></li>
             <li><a href="<?php echo ('Paquetes.php?vista=ConsultaPaquetes');?>">Consultar Paquetes</a></li>
             
             

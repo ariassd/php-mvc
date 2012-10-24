@@ -43,10 +43,13 @@ function pregunta(){
         
          <tr>
             <td align="right"><label>Nombres:</label></td>
-            <td><input type="text" name="nombres" value="Armando" size="25"/>
-            <label>Apellidos:</label>
-            <input type="text" name="apellidos" value="Zambrana Gutierrez" size="30"/>
+            <td><input type="text" name="nombres" value="Armando" size="30"/>
             </td>
+        </tr>
+        
+        <tr>
+            <td align="right"><label>Apellidos:</label></td>
+            <td><input type="text" name="apellidos" value="Zambrana Gutierrez" size="30"/></td>
         </tr>
             
         <tr>
@@ -76,19 +79,17 @@ function pregunta(){
 		
         <tr>
             <td align="right"><label>Plan Contratado:</label></td>
-            <td><select name="tipoplan" disabled>
-              <option value="1">Plan A</option>
-              <option value="2">Plan B</option>
-              <option value="3">Plan C</option>
-            </select>
+            <td>
+                <input name="" type="radio" disabled value="a"/>Plan A
+                <input name="" type="radio" disabled value="b" checked/>Plan B
             </td>
         </tr>
         <tr>
             <td align="right"><label>Estado:</label></td>
-            <td><select name="estado" disabled>
-              <option value="1">Activo</option>
-              <option value="0">Inactivo</option>
-            </select>    
+            <td>
+                <input name="" type="radio" disabled value="activo" checked/>Activo
+                <input name="" type="radio" disabled value="activo"/>Activo
+                  
             </td>
         </tr>
     </table>

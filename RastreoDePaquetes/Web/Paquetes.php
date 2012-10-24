@@ -53,4 +53,7 @@ function ConsultaPaquetes() {
 function Calendar(){
     include ("Vista/Paquetes/Calendar.php");
 }
+function ConsultaPaquetesCliente() {
+    include ("Vista/Paquetes/ConsultaPaquetesCliente.php");
+}
 ?>
