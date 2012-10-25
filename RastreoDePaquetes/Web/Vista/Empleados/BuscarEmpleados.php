@@ -14,7 +14,7 @@ ob_start();
         
         <tr>
             <td align="right"><text>Criterio de busuqeda:</text></td>
-            <td><select name="criterio">
+            <td><select name="sl_criterio">
 		<option value="0">Buscar Todos</option>	
               	<option value="1">Identificacion</option>
               	<option value="2">Apellidos</option>
@@ -26,13 +26,13 @@ ob_start();
         <tr>
             <br>
             <td align="right"><text>Texto a buscar:</text></td>
-            <td><input type="text" name="identificacion" size="30"/></td>
+            <td><input type="text" name="tf_criterio" size="30"/></td>
         </tr>
         
     </table>
     <br>
     <br>
-    <input type="submit" value="Buscar Empleado"/>   
+    <input type="submit" name="b_buscarEmpleado" value="Buscar Empleado"/>   
 </center>
 <?php
     $g_contenido = ob_get_contents();

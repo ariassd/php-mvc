@@ -10,6 +10,7 @@
     $g_formAction = "";
     ob_start();
 ?>
+<br/>
 <center>
     <h1>Mantenimiento de estados para Manifiestos</h1>
     <br/>

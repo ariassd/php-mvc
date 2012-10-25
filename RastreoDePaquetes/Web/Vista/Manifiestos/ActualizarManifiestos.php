@@ -11,8 +11,8 @@
     ob_start();
 ?>
 
-	<h1>Actualizar Estado de los Manifiestos</h1>
-        <table>
+	<center><h1>Actualizar Estado de los Manifiestos</h1>
+        <table class="Lista" border="2">
             <thead>
                 <tr>
                     <th>id Manifiesto</th>
@@ -30,10 +30,11 @@
                     <td><?php echo $value->S_estadodelmanifiesto; ?></td>
                     <td><?php echo $value->S_formato; ?></td>
                     <td><a href="?vista=DetalleManifiesto&idManifiesto=<?php echo $value->I_idManifiesto; ?>">Ver detalle</a></td>
+                    <td><a href="?vista=ModificarEstado&idManifiesto=<?php echo $value->S_idmanifiesto; ?>">Cambiar estado</a></td>
                 </tr>
                 <?php } ?>
             </tbody>
-        </table>
+        </table></center>
 <?php
     $g_contenido = ob_get_contents();
     ob_end_clean();

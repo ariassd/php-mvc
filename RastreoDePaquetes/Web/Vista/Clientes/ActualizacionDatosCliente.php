@@ -1,10 +1,15 @@
 <?php
 
     $g_tituloPagina = 'Actualización de datos de clientes';
-    $g_formAction = "Clientes.php?vista=RegistroClientesManual";
-    ob_start();
-    
+    $g_formAction = "";
+    ob_start(); 
 ?>
+
+<?php if ($actualizo) { ?>
+    <script>
+        alert('Cliente actualizado con exito');
+    </script>
+<?php } ?>
 
 <center><h1>Actualizacion de Datos de Cliente</h1>
     <br/>
@@ -57,10 +62,14 @@
             </table>
              <br/>
                 <br/>
-            <input type="submit" name="b_Guardar" value="Guardar Cambios"/>
+                <input type="submit" name="b_Guardar" value="Guardar Cambios"onclick="return confCambioEstado()"/>
 
 
-
+ <script>
+        function confCambioEstado(){
+            return confirm('¿Seguro que desa Guardar los Cambios?')
+        }
+    </script>
 
 </center>
 <?php

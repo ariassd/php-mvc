@@ -40,7 +40,7 @@ ob_start();
                 echo '<td>7325363jhfjdf-23'.$i.'</td>';
                 echo '<td>E.T</td>';
                 echo '<td>Activo</td>';
-                echo '<td><a href="">Ver</a></td>';
+                //echo '<td><a href="">Ver</a></td>';
                 echo '<td><a href="Empleados.php?vista=ActualizarEmpleado">Editar</a></td>';
                 echo '<td><a href="Empleados.php?vista=EliminarEmpleado">Eliminar</a></td>';
                 
@@ -56,7 +56,7 @@ ob_start();
   </table>
     <br/>
     <br/>
-    <input type="submit" name="b_RegCLMan" onclick="pregunta()" value="Nueva Busqueda"/>   
+    <input type="submit" name="b_nuevaBusqueda" onclick="pregunta()" value="Nueva Busqueda"/>   
 </center>
 
 <?php

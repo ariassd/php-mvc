@@ -6,12 +6,14 @@
         Purpose of the stylesheet follows.
 */
 
+
 body { 
     font-family: arial;
     font-size: 12px;
-    background-color: black;
+    /*background-color: black;*/
+    background: #19140E url('../Imagenes/bg.jpg') -150px 0 no-repeat;
     color: white;
-    margin-left: 20%;
+    margin-left: 225px;
     margin-right: 20%;
 }
 
@@ -19,22 +21,26 @@ textarea {
     resize: none; 
 }
 .nombreSitioMBE {
-    color: #31B404;
+    color: #efefef;
     font-size: 50px;
-    text-shadow: 1px 1px #DFDFDF;
+    text-shadow: 1px 1px #000000;
 }
 
 .nombreSitioSistema {
-    color: #efefef;
+    color: gold;
     font-size: 30px;
-    text-shadow: 1px 1px #DFDFDF;
+    text-shadow: 1px 1px #000000;
     margin-left: 20px;
     font-family: Comic Sans, Comic Sans MS, cursive;
     font-style: italic;
 }
 
 #wrapper {
-    background-color: #000000;
+    background-color: transparent;
+}
+
+#content {
+     background-color: transparent;
 }
 
 h1{
@@ -98,7 +104,7 @@ ul.menu {
 	padding: 0 20px;	
 	margin: 0;
 	float: left;
-	width: 100%;
+	width: 807px;
 	background: #222;
 	font-size: 1.2em;
 	background: #8A0808;
@@ -190,7 +196,7 @@ html ul.menu li ul.submenu li a:hover {
 }
 
 input[type='text'] {
-    background-color: cyan;
+    background-color: #ffffff;
 }
 
 .navegacion {
@@ -214,4 +220,9 @@ input[type='text'] {
 }
 .hide{
     color: black
+}
+
+.detailview td:first-child {
+    text-align: right;
+    font-weight: bold;
 }

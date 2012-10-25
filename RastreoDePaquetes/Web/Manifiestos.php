@@ -48,7 +48,13 @@ function InsertarManifiestoConfirmacion() {
 }
 
 function ActualizarManifiestos() {
-    $o_Manifiestos = ManifiestosBL::ListarManifiestos_al();
+    $o_Manifiestos = array();
+    $man1=ManifiestosBL::CrearManifiesto('15/10/2012', '15/10/2012', 'En Vuelo', '.dbf');
+    $man2=ManifiestosBL::CrearManifiesto('17/10/2012', '17/10/2012', 'En Vuelo', '.dbf');
+    $man3=ManifiestosBL::CrearManifiesto('21/10/2012', '21/10/2012', 'En Vuelo', '.dbf');
+    $o_Manifiestos[]=$man1;
+    $o_Manifiestos[]=$man2;
+    $o_Manifiestos[]=$man3;
     include("Vista/Manifiestos/ActualizarManifiestos.php");
 }
 
@@ -66,5 +72,8 @@ function MantenimientoDeEstados(){
     $Resultados[]=$es3;
     include ("Vista/Manifiestos/MantenimientoDeEstados.php");
     
+}
+function ModificarEstado(){
+    include ("Vista/Manifiestos/ModificarEstado.php");
 }
 ?>

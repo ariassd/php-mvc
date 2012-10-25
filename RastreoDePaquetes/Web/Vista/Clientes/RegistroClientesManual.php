@@ -23,7 +23,7 @@
     </div>
     <div id="bodyRegClMan">
         
-            <table>
+            <table class="detailview">
                 <tr>
                     <td><text>Codigo de Pais: </text></td>
                     <td><input type="text" name="tf_CodPais" size="3"/>
@@ -69,16 +69,16 @@
             </table>
              <br/>
                 <br/>
-                <input type="submit" name="b_RegCLMan" value="Registrar Cliente" onclick="confirmacion()"/>
+                <input type="submit" name="b_RegCLMan" value="Registrar Cliente" onclick="return confCambioEstado()"/>
         
     </div>
     
 </center>
 <script>
-    function confirmacion(){
-        alert('Seguro que desea guardar?');
-    }
-</script>
+        function confCambioEstado(){
+            return confirm('¿Seguro que desa Guardar los Cambios?');
+        }
+    </script>
 <?php
     $g_contenido = ob_get_contents();
     ob_end_clean();

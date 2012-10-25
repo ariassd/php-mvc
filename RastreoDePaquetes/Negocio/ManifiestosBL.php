@@ -102,7 +102,15 @@ class ManifiestosBL {
         
         return $o_Manifiesto;
     }
-    
+    public static function CrearManifiesto($s_idManifiesto,$dt_fechaRegistro,$s_estadoDelManifiesto,$s_Formato){
+            $o_Manifiesto = new Manifiesto();
+            $o_Manifiesto->s_idManifiesto = $s_idManifiesto;
+            $o_Manifiesto->dt_fechaRegistro = $dt_fechaRegistro;
+            $o_Manifiesto->s_estadoDelManifiesto = $s_estadoDelManifiesto;
+            $o_Manifiesto->s_Formato = $s_Formato;
+            return $o_Manifiesto;
+            
+    }
 }
 
 ?>

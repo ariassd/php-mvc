@@ -26,10 +26,8 @@ function ListarCliente() {
     View('TablaClientes',array('o_Clientes'=>$clientes));
 }
 
-function DetalleCliente() {
-    $idCliente = $_REQUEST["idCliente"];
-    $Cliente = ClientesBL::DetalleCliente_o($idCliente);
-    
+function DetalleClientes() {
+    $Cliente = ClientesBL::CrearClienteTEMP('1-111-111', 'Pedro', 'Salas Perez', 'Heredia', '123456789', 'sdfslkjhsdg@sds', 'A', 'SJO', '1234', '61');
     include("Vista/Clientes/DetalleClientes.php");
 }
 
@@ -62,7 +60,13 @@ function RegistroClientesManual() {
     }
 }
 function ActualizacionDatosCliente(){
-      $planes=PlanMbesBL::ListarPlanMbes_al();
+    
+    $actualizo = false;
+    if (isset($_POST['tf_NombreCliente'])) {
+        $actualizo = true;
+    }
+    
+    $planes=PlanMbesBL::ListarPlanMbes_al();
     $Resultados=ClientesBL::ListarClientes_al();
     
     include("Vista/Clientes/ActualizacionDatosCliente.php");
@@ -85,9 +89,7 @@ function LogInCliente(){
     function RegistroManualClientesConf(){
         include ("Vista/Clientes/RegistroManualClientesConf.php");
     }
-    function DetalleClientes(){
-        include ("Vista/Clientes/DetalleClientes.php");
-    }
+    
     function ClienteActualizaInformacion(){
         include ("Vista/Clientes/ClienteActualizaInformacion.php");
     }

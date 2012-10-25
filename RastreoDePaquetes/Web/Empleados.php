@@ -22,7 +22,7 @@ function ListarEmpleado() {
     include("Vista/Empleados/ListarEmpleados.php");
 }
 
-function DetalleEmpleado() {
+function DetalleEmpleados() {
     $idEmpleado = $_REQUEST["idEmpleado"];
     $Empleado = EmpleadosBL::DetalleEmpleado_o($idEmpleado);
     
@@ -62,5 +62,11 @@ function AdministracionDePermisos(){
 }
 function TablaAccesos(){
     include ("Vista/Empleados/TablaAccesos.php");
+}
+function RegistroEmpleados(){
+    include ("Vista/Empleados/RegistroEmpleados.php");
+}
+function AdministracionUsuarios(){
+    include ("Vista/Empleados/AdministracionUsuarios.php");
 }
 ?>

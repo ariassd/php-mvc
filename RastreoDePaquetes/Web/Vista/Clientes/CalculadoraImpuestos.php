@@ -10,7 +10,6 @@ ob_start();
     <br>
     <br>
     <h1>Calculadora de Impuestos</h1>
-    <form name="form1" method="post" action="">
     <input type="hidden" value="1" name="enviar" />
     <table>
         
@@ -21,15 +20,16 @@ ob_start();
               <option value="2">Celular(10%)</option>
               <option value="3">Pantalla Led(15%)</option>
             </select></td>
+            <td><?php HtmlControles::UserHelpInformation('hlpInfo', "Ayuda", "Calculadora.php?IdAyuda=tipoArticulo") ?>
+        </td>
         </tr>
-        
         <tr>
-            <td align="right"><label>Valor Articulo:</label></td>
+            <td align="right"><label>Valor Articulo en USD:</label></td>
             <td><input type="text" name="valor" size="25"/></td>
         </tr>
         
         <tr>
-            <td align="right"><label>Peso Aproximado: </label></td>
+            <td align="right"><label>Peso Aproximado en Kg: </label></td>
             <td><input type="text" name="peso" size="25"/></td>
         </tr>
 		
@@ -41,12 +41,13 @@ ob_start();
               <option value="3">Plan C</option>
               <option value="3">No Plan</option>
             </select></td>
+            <td><?php HtmlControles::UserHelpInformation('hlpInfo', "Ayuda", "Calculadora.php?IdAyuda=planContratado") ?>
+        </td>
         </tr>
     </table>
     <br>
     <br>
     <input type="submit" value="Calcular Impuestos"/>
-    </form>   
 </center>
 <?php
     $g_contenido = ob_get_contents();
