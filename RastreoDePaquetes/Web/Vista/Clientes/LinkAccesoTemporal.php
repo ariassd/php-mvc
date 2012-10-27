@@ -7,12 +7,7 @@
 ?>
 <script language="JavaScript">
 function pregunta(){
-    if (confirm('¿Estas seguro que desea enviar la solicitud del LINK ?')){
-        
-     }
-    else{
-    
-    }
+    return confirm('¿Estas seguro que desea enviar la solicitud del LINK ?');
 }
 </script>
 
@@ -34,7 +29,7 @@ function pregunta(){
     <br/>
     <br/>
     <br/>
-    <input type="submit" name="b_Buscar" onclick="pregunta()" value="Solicitar Link"/>
+    <input type="submit" name="b_Buscar" onclick="return pregunta()" value="Solicitar Link"/>
 </center>
 <?php
     $g_contenido = ob_get_contents();

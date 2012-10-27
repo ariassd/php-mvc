@@ -116,4 +116,16 @@ function ClientesGuardadoDetalle() {
     include ("Vista/Clientes/ClientesGuardadoDetalle.php");
 }
 
+function LinkAccesoTemporal(){
+    include ("Vista/Clientes/LinkAccesoTemporal.php");
+}
+
+function LinkAccesoTemporalInfo(){
+    include ("Vista/Clientes/LinkAccesoTemporalInfo.php");
+}
+
+function CambioContrasena(){
+    include ("Vista/Clientes/CambioContrasena.php");
+}
+
 ?>

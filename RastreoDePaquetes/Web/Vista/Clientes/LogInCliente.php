@@ -29,9 +29,8 @@
             </tr>
         </table>
         <input type="submit" value="Ingresar"/>
-    </div>
-
-    <h3>Olvido su contrasena? Click </h3><a href onclick="">Aqui<a/>
+    <h3>Olvido su contraseña ? Solicitar Link Acceso Temporal...</h3>
+    <a href="<?php echo ('Clientes.php?vista=LinkAccesoTemporal');?>">Aqui.</a>
 </center>
 
 
