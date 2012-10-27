@@ -23,16 +23,21 @@ function CargaDeListadoDePaquetes() {
     if (isset($_GET["paso"])) {
         $paso = $_GET["paso"];
     }
-    echo $paso;
-    View('',array('s_pasoDelProceso'=>$paso));
+    $s_pasoDelProceso = $paso;
+    //echo $paso;
+    //View('',array('s_pasoDelProceso'=>$paso));
+    include("Vista/SeguimientoDePaquetes/CargaDeListadoDePaquetes.php");
 }
 
+/*
 function DetalleTienda() {
     $idTienda = $_REQUEST["idTienda"];
     $Tienda = TiendasBL::DetalleTienda_o($idTienda);
     
     include("Vista/Tiendas/DetalleTiendas.php");
 }
+*/
+
 
 function NotificacionPaquetePerdido(){
     include ("Vista/SeguimientoDePaquetes/NotificacionPaquetePerdido.php");

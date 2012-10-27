@@ -4,7 +4,7 @@ $menu = 1;
 <ul class="menu">     
     <li><a href="Index.php">Inicio</a></li> 
     <li> 
-        <a href="#">Clientes</a> 
+        <a href="javascript:return(false)">Clientes</a> 
         <ul class="submenu"> 
             
             <li><a href="<?php echo ('Clientes.php?vista=IngresoClienteCargaArchivotxt');?>">Insertar Clientes por Archivo TXT</a></li>
@@ -19,7 +19,7 @@ $menu = 1;
         </ul> 
     </li> 
     <li> 
-        <a href="#">Seguimiento Paquetes</a> 
+        <a href="javascript:return(false)">Seguimiento Paquetes</a> 
         <ul class="submenu">
             <li><a href="<?php echo ('SeguimientoDePaquetes.php?vista=CargaDeListadoDePaquetes');?>">Carga Listado de Paquetes</a></li>
             <li><a href="<?php echo ('Manifiestos.php?vista=CargarManifiesto');?>">Carga de Manifiestos</a></li> 
@@ -28,7 +28,7 @@ $menu = 1;
         </ul> 
     </li> 
     <li> 
-        <a href="#">Administracion</a> 
+        <a href="javascript:return(false)">Administracion</a> 
         <ul class="submenu"> 
             <li><a href="<?php echo ('Empleados.php?vista=AdministracionUsuarios');?>">Administracion de Usuarios</a></li>
             <li><a href="<?php echo ('Empleados.php?vista=InsertarEmpleado');?>">Cambiar Contraseña</a></li>
@@ -38,7 +38,7 @@ $menu = 1;
     </li> 
     
     <li> 
-        <a href="#">Configuracion</a> 
+        <a href="javascript:return(false)">Configuracion</a> 
         <ul class="submenu"> 
             <li><a href="">Gestion de Idiomas</a></li>
             <li><a href="">Gestion de Publicidad</a></li>

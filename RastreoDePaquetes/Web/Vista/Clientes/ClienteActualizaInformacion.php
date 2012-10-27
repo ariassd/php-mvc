@@ -26,7 +26,7 @@ function pregunta(){
     <br>
     <h1>Actualizar Informacion Cliente</h1>
     <input type="hidden" value="1" name="enviar" />
-    <table>
+    <table class="detailview">
         
         <tr>
             <td align="right"><text>Identificacion:</text></td>
@@ -34,13 +34,18 @@ function pregunta(){
         </tr>
         
         <tr>
-            <td align="right"><label>Codigo Pais:</label></td>
-            <td><input type="text" name="codigoPais" value="SJO" readonly="true" size="5"/>
-            <label>Numero Casillero:</label>
-            <input type="text" name="numerocasillero" value="0021" readonly="true" size="5"/>
+            <td><label>Codigo Pais:</label></td>
+            <td>
+                <input type="text" name="codigoPais" value="SJO" readonly="true" size="5"/>
+              
             </td>
         </tr>
-        
+        <tr>
+            <td>Numero Casillero:</td>
+            <td>
+                <input type="text" name="numerocasillero" value="0021" readonly="true" size="5"/>
+            </td>
+        </tr>
          <tr>
             <td align="right"><label>Nombres:</label></td>
             <td><input type="text" name="nombres" value="Armando" size="30"/>
@@ -54,7 +59,7 @@ function pregunta(){
             
         <tr>
             <td align="right"><label>Email: </label></td>
-            <td><input type="text" name="email" value="armyrene@gmail.com" size="25"/></td>
+            <td><input type="text" name="email" value="armyrene@gmail.com" size="30px"/></td>
         </tr>
 		
         <tr>
@@ -92,6 +97,7 @@ function pregunta(){
                   
             </td>
         </tr>
+        
     </table>
     <br>
     <br>

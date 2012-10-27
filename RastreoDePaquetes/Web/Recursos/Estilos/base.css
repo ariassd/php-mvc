@@ -9,10 +9,10 @@
 
 body { 
     font-family: arial;
-    font-size: 12px;
-    /*background-color: black;*/
-    background: #19140E url('../Imagenes/bg.jpg') -150px 0 no-repeat;
-    color: white;
+    font-size: 10px;
+    background-color: #ffffff;
+    background: #ffffff url('../Imagenes/bg.jpg') -150px 0 no-repeat;
+    color: #000000;
     margin-left: 225px;
     margin-right: 20%;
 }
@@ -36,7 +36,7 @@ textarea {
 }
 
 #wrapper {
-    background-color: transparent;
+    width: 847px;
 }
 
 #content {
@@ -44,16 +44,16 @@ textarea {
 }
 
 h1{
-    color: #2C91CC;
+    color: #000000;
     text-shadow: 1px 1px #DFDFDF;
 }
 
 h2{
-    color: #FFFFFF;
+    color: #000000;
     text-shadow: 1px 1px #DFDFDF;
 }
 text{
-     color: white;
+     color: #000000;
 }
 
 input[type="sbmit"]:hover {
@@ -100,68 +100,79 @@ a:hover {
     padding-bottom: 3px;
 }
 ul.menu {
-	list-style: none;
-	padding: 0 20px;	
-	margin: 0;
-	float: left;
-	width: 807px;
-	background: #222;
-	font-size: 1.2em;
-	background: #8A0808;
+    list-style: none;
+    padding: 0 20px;	
+    margin: 0;
+    float: left;
+    width: 807px;
+    background: #222;
+    font-size: 1.2em;
+    background: #8d2b36;
 }
 ul.menu li {
-	float: left;
-	margin: 0;	
-	padding: 0 15px 0 0;
-	position: relative; 
+    float: left;
+    margin: 0;
+    position: relative; 
 }
+
+ul.menu li:hover {
+    float: left;
+    margin: 0;
+    position: relative;
+    background: #812530 ;
+}
+
 ul.menu li a{
-	padding: 10px 5px;
-	color: #fff;
-	display: block;
-	text-decoration: none;
-	float: left;
+
+    color: #F0AC9F;
+    display: block;
+    text-decoration: none;
+    padding: 15px 15px 15px 15px;
+    float: left;
+    font-weight: bold;
 }
 ul.menu li a:hover{
-	background: url(menu/top.png) no-repeat center top;
+    background: #812530 ;
+    color: #F0B400;
 }
 ul.menu li span { 
-	width: 17px;
-	height: 35px;
-	float: left;
-	background: url(menu/subnav_btn.png) no-repeat center top;
+    width: 17px;
+    height: 35px;
+    float: left;
+    margin-top: 8px;
+    background: url(menu/subnav_btn.png) no-repeat center top;
 }
 ul.menu li span.subhover {background-position: center bottom; cursor: pointer;} 
 ul.menu li ul.submenu {
-	list-style: none;
-	position: absolute; 
-	left: 0; top: 35px;
-	background: #333;
-	margin: 0; padding: 0;
-	display: none;
-	float: left;
-	width: 170px;
-	-moz-border-radius-bottomleft: 5px;
-	-moz-border-radius-bottomright: 5px;
-	-webkit-border-bottom-left-radius: 5px;
-	-webkit-border-bottom-right-radius: 5px;
-	border: 1px solid #8A0808;
+    list-style: none;
+    position: absolute; 
+    left: 0; top: 44px;
+    background: #812530;
+    margin: 0; padding: 0;
+    display: none;
+    float: left;
+    width: 180px;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    border: 1px solid #8d2b36;
 }
 ul.menu li ul.submenu li{
-	margin: 0; padding: 0;
-	border-top: 1px solid #252525; 
-	border-bottom: 1px solid #444; 
-	clear: both;
-	width: 170px;
+    margin: 0; padding: 0;
+    border-top: 1px solid #812530; 
+    border-bottom: 1px solid #812530; 
+    clear: both;
+    width: 170px;
 }
 html ul.menu li ul.submenu li a {
-	float: left;
-	width: 145px;
-	background: #8A0808 url(menu/dropdown_linkbg.png) no-repeat 10px center;
-	padding-left: 20px;
+    float: left;
+    width: 145px;
+    background: #8d2b36 url(menu/dropdown_linkbg.png) no-repeat 10px center;
+    padding-left: 20px;
 }
 html ul.menu li ul.submenu li a:hover { 
-	background:  black url(menu/dropdown_linkbg.png) no-repeat 10px center; 
+	/*background:  black url(menu/dropdown_linkbg.png) no-repeat 30px center; */
 }
 .Lista {
     border-style: none;
@@ -169,34 +180,49 @@ html ul.menu li ul.submenu li a:hover {
     border-width: 0;
 }
 
-.Lista th {
-    background-color: #08088A;
+.Lista .nombreTabla {
+    background-color: #3F3F75;
     color:#efefef;
     font-weight: bold;
     padding: 3px;
-    font-size: 14px;
+    font-size: 12px;
+    padding-left: 20px;
+}
+
+.Lista th {
+    background-color: #A99EA1;
+    color:#33335F;
+    font-weight: bold;
+    padding: 3px;
+    font-size: 10px;
+    text-align: left;
+    font-weight: bold;
 }
 
 .Lista tr:nth-child(odd){
-    background: #848484;
-    color: #FFFFFF;
+    background: #D6D2D3;
+    color: #000000;
 }
  
 .Lista tr:nth-child(even){
-    background: #120A2A;
-    color: #FFFFFF;
+    background: #ffffff;
+    color: #000000;
+}
+
+.Lista .lineaFin {
+   background-color: #3F3F75;
 }
 
 .copyright_block {
     text-align: center;
     padding-top: 50px;
-    color: #877F7C;
+    color: #00000;
     text-transform: uppercase;
-    font-size: 11px;
+    font-size: 8px;
 }
 
 input[type='text'] {
-    background-color: #ffffff;
+    /*background-color: #effefe;*/
 }
 
 .navegacion {
@@ -218,11 +244,51 @@ input[type='text'] {
     background-color: #8A0808;
     color: #F0B400;
 }
+
 .hide{
     color: black
 }
 
-.detailview td:first-child {
+.vistaDetalle {
+    border-style: none;
+    border-width: 0px;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+.vistaDetalle td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.vistaDetalle .nombreFormulario{
+    background-color: #3F3F75;
+    color:#efefef;
+    font-weight: bold;
+    padding: 3px;
+    font-size: 12px;
+    padding-left: 20px;
+}
+
+.vistaDetalle td:first-child {
     text-align: right;
     font-weight: bold;
+    background-color: #D6D2D3;
+    padding-right: 6px;
+    border-bottom-style: solid;
+    border-bottom-color: #efefef;
+    border-bottom-width: 1px;
 }
+
+.vistaDetalle td:nth-child(2) {
+    text-align: left;
+    padding-left: 6px;
+    border-bottom-style: solid;
+    border-bottom-color: #D6D2D3;
+    border-bottom-width: 1px;
+}
+
+.vistaDetalle .lineaFin {
+   background-color: #3F3F75;
+}
+

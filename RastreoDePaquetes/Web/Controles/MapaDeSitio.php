@@ -1,0 +1,3 @@
+<?php
+?>
+Mapa de sitio

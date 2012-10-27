@@ -10,7 +10,7 @@
     $g_formAction = "";
     ob_start();
 ?>
-
+<center>
 <h2>Carga del listado de paquetes</h2>
 
 <?php if (isset($s_pasoDelProceso) && $s_pasoDelProceso == '') {?>
@@ -19,7 +19,7 @@ Seleccione el archivo que desea cargar:
 <input type="file" name="datafile" size="40">
 <?php HtmlControles::UserHelpInformation('hlpInfo', "Ayuda", "SeguimientoDePaquetes.php?ayuda=Carga") ?>
 <div class="navegacion">
-    <a href="?paso=lista">Siguiente</a>
+    <a href="?vista=CargaDeListadoDePaquetes&paso=lista">Siguiente</a>
 </div>
 
 <?php } ?>
@@ -30,8 +30,8 @@ Seleccione los paquetes que van a ser cargados al sistema
 <br/>
 <img src="<?php echo path('Vista/SeguimientoDePaquetes/lista.gif');?>" />
 <div class="navegacion">
-    <a href="?paso=">Regresar</a>
-    <a href="?paso=guardar">Siguiente</a>
+    <a href="?vista=CargaDeListadoDePaquetes&paso=">Regresar</a>
+    <a href="?vista=CargaDeListadoDePaquetes&paso=guardar">Siguiente</a>
 </div>
 <?php } ?>
 
@@ -44,7 +44,7 @@ Confirmacion:
     <a href="index.php">Terminar</a>
 </div>
 <?php } ?>
-
+<center/>
 <?php
     $g_contenido = ob_get_contents();
     ob_end_clean();

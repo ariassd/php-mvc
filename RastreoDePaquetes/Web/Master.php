@@ -37,6 +37,11 @@ import("MbeFramework.Configuracion.ConfigurationSettings");
             <?php HtmlControles::Iniciar(); ?>
             
             <div id="wrapper">
+                <br/>
+                <br/>
+                <br/>
+                <h1 style="text-align:center"><?php echo $g_tituloPagina; ?></h1>
+                <br/>
                 <div id="content">
                     <?php
                     if ($g_contenido != null) {

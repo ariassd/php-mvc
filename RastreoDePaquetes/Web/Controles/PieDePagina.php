@@ -1,6 +1,6 @@
 <?php ?>
 <div class="copyright_block">
-    <div>Grupo 07&nbsp;© 2012</div>
+    <div>Universidad Nacional de Costa Rica Grupo 07&nbsp;© 2012</div>
     <br/>
     <table align="center">
         <tr>
