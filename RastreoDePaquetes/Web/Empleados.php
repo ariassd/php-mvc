@@ -69,4 +69,16 @@ function RegistroEmpleados(){
 function AdministracionUsuarios(){
     include ("Vista/Empleados/AdministracionUsuarios.php");
 }
+function RegistroEmpleadoConf(){
+    
+    if (isset($_POST['hd_guardar'])) {
+       
+        $mensaje = 'Empleado guardado con exito';
+    }
+    include ("Vista/Empleados/RegistroEmpleadoConf.php");
+}
+function ActualizarEmpleadosConf(){
+    
+    include ("Vista/Empleados/ActualizarEmpleadosConf.php");
+}
 ?>

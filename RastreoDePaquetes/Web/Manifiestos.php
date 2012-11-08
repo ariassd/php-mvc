@@ -73,7 +73,38 @@ function MantenimientoDeEstados(){
     include ("Vista/Manifiestos/MantenimientoDeEstados.php");
     
 }
-function ModificarEstado(){
-    include ("Vista/Manifiestos/ModificarEstado.php");
+function ActualizarEstados(){
+    include ("Vista/Manifiestos/ActualizarEstados.php");
+}
+function ModificacionDeEstados(){
+    if (isset($_POST['tf_modificacion'])) {
+        $mensage = 'Estado modificado con exito';
+    }
+    
+    $Estados=array();
+    $Estados[]="En Miami";
+    $Estados[]="En Vuelo";
+    $Estados[]="En proceso Aduanal";
+    $Estados[]="Inspeccion fisica";
+    $Estados[]="En tienda";
+    include ("Vista/Manifiestos/ModificacionDeEstados.php");
+}
+function DesactivarEstados(){
+    if (isset($_POST['tf_modificacion'])) {
+        $mensage = 'Estado modificado con exito';
+    }
+    $Estados=array();
+    $Estados[]="En Miami";
+    $Estados[]="En Vuelo";
+    $Estados[]="En proceso Aduanal";
+    $Estados[]="Inspeccion fisica";
+    $Estados[]="En tienda";
+    include ("Vista/Manifiestos/DesactivarEstados.php");
+}
+function AgregarEstados() {
+    if (isset($_POST['tf_EstadoNuevo'])) {
+        $mensage = 'Estado agregado con exito';
+    }
+    include ("Vista/Manifiestos/AgregarEstados.php");
 }
 ?>

@@ -3,7 +3,6 @@
     $g_tituloPagina = 'Solicitar Link Acceso Temporal al Sistema';
     $g_formAction="Clientes.php?vista=LinkAccesoTemporalInfo";
     ob_start();
-    
 ?>
 <script language="JavaScript">
 function pregunta(){

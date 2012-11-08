@@ -6,16 +6,28 @@ import("MbeFramework.Html.HtmlControles.HtmlControles");
     ob_start();
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
-?>
-<br>
-<br>
-<center>
-    <h1>Mail Boxes Ect Online Traking les da la Bienvenida al Sistema</h1>
-    <h1>Rastreo de Paquetes Online</h1>
-</center>
+include("../../MbeFramework/MbeFramework.php");
+import("MbeFramework.Html.HtmlControles.HtmlControles");
+import("MbeFramework.MbeController");
 
-    <?php
-    $g_contenido = ob_get_contents();
-    ob_end_clean();
-    include "Master.php";
+
+function Login() {
+    include("Vista/Login/Index.php");  
+}
+function BienvenidaSistema() {
+    
+    //recibimos datos del formulario
+    /*$usuario = $_POST["tf_usuario"];
+    $clave = $_POST["tf_clave"];
+     
+    $_SESSION['autenticado'] = true;
+    $_SESSION['usuario']= $usuario;
+    $_SESSION['pclave'] = $clave;
+    $_SESSION['nombre'] = $usuario."  "."ZAMBRANA GUTIERREZ";
+    
+     */
+    include("Vista/Index/BienvenidaSistema.php");   
+    
+     
+}
 ?>

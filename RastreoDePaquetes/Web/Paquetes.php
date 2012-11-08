@@ -18,7 +18,10 @@ import("MbeFramework.MbeController");
  */
 
 function ListarPaquetes() {
-    $o_Paquetes = PaquetesBL::ListarPaquetes_al();
+    $o_Paquetes= array();
+    $paq=new Paquete();
+    $paq->setI_numeroebl("123");
+    $o_Paquetes[]=$paq;
     include("Vista/Paquetes/ListarPaquetes.php");
 }
 

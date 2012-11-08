@@ -9,25 +9,25 @@
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 $g_tituloPagina = 'Busqueda Empleados';
-$g_formAction = "Empleados.php?vista=BuscarEmpleado";
+$g_formAction = "Empleados.php?vista=BuscarEmpleados";
 ob_start();
 ?>
 <center>
-   <br/>
-   <h1>Busqueda de Empleados por:</h1>
-    <table border="1" cellpadding="0" cellspacing="1" bordercolor="#000000" bgcolor="gray">
+   <table class="Lista">
         <tr>
-        <td colspan='13' align="center"><text>EMPLEADOS MBE-ESCAZU</text></td>
-		</tr>
+            <td colspan='12' class="nombreTabla">DETALLE DE BUSQUEDA</td>
+	</tr>
         <tr align='center'>
-            <td><text>N</text></td>
-            <td><text>ID</text></td>
-            <td><text>NOMBRE</text></td>
-            <td><text>NOM. USUARIO</text></td>
-            <td><text>CLAVE</text></td>
-            <td><text>TIPO USUARIO</text></td>
-            <td><text>ESTADO</text></td>
-            <td colspan="3">OPERACIONES</td>
+            <th>Nº</th>
+            <th>IDENTIFICACION</th>
+            <th>NOMBRE</td>
+            <th>PRIMER APELLIDO</th>
+            <th>SEGUNDO APELLIDO</th>
+            <th>USUARIO</th>
+            <th>CLAVE</th>
+            <th>TIPO USUARIO</th>
+            <th>ESTADO ACTUAL</th>
+            <th colspan="3">OPERACIONES</th>
         </tr> 
         
         <?php
@@ -35,18 +35,16 @@ ob_start();
             echo "<tr align='center' bgcolor='black'>";    
                 echo '<td align=center>'.$i.'</td>';
                 echo '<td>000'.$i.'</td>';
-                echo '<td>Zambrana Gutierrez Armando - '.$i.'</td>';
+                echo '<td>Jorge - '.$i.'</td>';
+                echo '<td>Zamora - '.$i.'</td>';
+                echo '<td>Ulate - '.$i.'</td>';
                 echo '<td>Usuario-1'.$i.'</td>';
                 echo '<td>7325363jhfjdf-23'.$i.'</td>';
                 echo '<td>E.T</td>';
                 echo '<td>Activo</td>';
-                //echo '<td><a href="">Ver</a></td>';
+                echo '<td><a href="Empleados.php?vista=VerDetalleEmpleados">Ver</a></td>';
                 echo '<td><a href="Empleados.php?vista=ActualizarEmpleado">Editar</a></td>';
                 echo '<td><a href="Empleados.php?vista=EliminarEmpleado">Eliminar</a></td>';
-                
-     
-                
-                
             echo '</tr>';
         }?>
     <tr>

@@ -1,80 +1,64 @@
 <?php
 $g_tituloPagina = 'Registro de Empleados';
-$g_formAction="";
+$g_formAction="Empleados.php?vista=RegistroEmpleadoConf";
 ob_start();
 ?>
 
 <center>
-    <br>
-    <br>
-    <h1>Registrar Empleados</h1>
-    <br>
-   
-    <table>
+    
+    <table class="vistaDetalle">
         <tr>
-            <td align="right"><label>Identificacion:</label></td>
-            <td><input type="text" name="tf_identificacion" size="15"/></td>
+            <th colspan="2" class="nombreFormulario">Detalle empleado</th>
         </tr>
-
-        <tr>
-            <td align="right"><label>Nombres:</label></td>
-            <td><input type="text" name="tf_nombres" size="25"/></td>
+        <tr/>
+            <td align="right"><h3>Nombre:</h3></td>
+            <td><input type="text" name="tf_nombre" size="25"/></td>
         </tr>
         <tr>
-            <td align="right"><label>Apellidos:</label></td>
-            <td><input type="text" name="tf_apellidos" size="40"/></td>
+            <td align="right"><h3>Apellido1:</h3></td>
+            <td><input type="text" name="tf_apellidosEmpleado1"/></td>
         </tr>
         <tr>
-            <td align="right"><label>Nombre Usuario: </label></td>
+            <td align="right"><h3>Apellido2:</h3></td>
+            <td><input type="text" name="tf_apellidosEmpleado2"/></td>
+        </tr>
+        <tr>
+            <td align="right"><h3>Nombre Usuario: </h3></td>
             <td><input type="text" name="tf_usuario" size="15"/></td>
         </tr>
 
         <tr>
-            <td align="right"><label>Password:</label></td>
+            <td align="right"><h3>Password:</h3></td>
             <td><input type="password" name="pf_clave" size="15"/></td>
         </tr>
 
         <tr>
-            <td align="right"><label>Confirmar Password: </label></td>
+            <td align="right"><h3>Confirmar Password: </h3></td>
             <td><input type="password" name="pf_confirmar" size="15"/></td>
         </tr>
 
         <tr>
-            <td align="right"><label>Tipo Empleado:</label></td>
-            <td><input name="rb_et" type="radio" value="2"/>Empleado
-                <input name="rb_um" type="radio" value="1"/>Administrador
+            <td align="right"><h3>Estado:</h3></td>
+            <td><input name="rb_activo" type="radio" value="1"/>Activo
+            <input name="rb_activo" type="radio" value="0"/>Inactivo
             </td>
         </tr>
         <tr>
-            <td align="right"><label>Estado:</label></td>
-            <td><input name="rb_activo" type="radio" value="1"/>Activo
-            <input name="rb_inactivo" type="radio" value="0"/>Inactivo
-            </td>
+            <th class="lineaFin" colspan="2"></th>
         </tr>
     </table>
     <br>
     <br>
-    <input type="submit" name="b_registrarEmp" onclick="pregunta();" value="Registar"/>
-    <input type="submit" name="b_nuevoEmp" value="Nuevo"/>
-    <input type="submit" name="b_salir" onclick="salir();" value="Salir"/>
+    <input type="submit" name="b_ConfIngresoEmpleado" value="Ingresar" onclick="return Verificar()"/>
     
 </center>
 <script>
-function pregunta(){
-    if (confirm('¿Está seguro que desea ingresar el empleado?')){
-        <?php
-        $g_formAction = "Empleados.php?vista=RegistroEmpleados";
-        ?>
-     }
-    else{
-    
+    function Verificar(){
+        if(document.getElementsByName('pf_clave').value!=document.getElementsByName('pf_confirmar').value){
+            alert('Contraseñas no coinciden');
+            return confirm=false;
+        }
     }
-}
-function salir(){
-    <?php
-    $g_formAction = "Index.php";
-    ?>
-}
 </script>
 <?php
 $g_contenido = ob_get_contents();

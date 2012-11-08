@@ -43,11 +43,6 @@ function InsertarClienteConfirmacion() {
     include("Vista/Clientes/InsertarClienteConfirmacion.php");
 }
 
-function ActualizarCliente() {
-    //throw new Exception("Debe de implementarse");
-    include("Vista/Clientes/ActualizarClientes.php");
-}
-
 function IngresoClienteCargaArchivotxt() {
     //$planes=PlanMbesBL::ListarPlanMbes_al();
     include("Vista/Clientes/IngresoClienteCargaArchivotxt.php");
@@ -97,6 +92,7 @@ function RegistroManualClientesConf() {
 }
 
 function ClienteActualizaInformacion() {
+    $planes = PlanMbesBL::ListarPlanMbes_al();
     include ("Vista/Clientes/ClienteActualizaInformacion.php");
 }
 
@@ -126,6 +122,17 @@ function LinkAccesoTemporalInfo(){
 
 function CambioContrasena(){
     include ("Vista/Clientes/CambioContrasena.php");
+}
+
+function CreacionNuevaContrasena() {
+    include ("Vista/Clientes/CreacionNuevaContrasena.php");
+}
+
+function ActualizacionDatosClienteConf(){
+    include ("Vista/Clientes/ActualizacionDatosClienteConf");
+}
+function ClienteActualizaInformacionConf(){
+    include ("Vista/Clientes/ClienteActualizaInformacionConf");
 }
 
 ?>

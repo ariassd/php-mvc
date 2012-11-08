@@ -6,33 +6,42 @@
  * @package RastreoDePaquetes.Web.Manifiesto.DetalleManifiestos
  */
 
-    $g_tituloPagina = 'Detalle de Manifiestos';
-    $g_formAction = "";
+    $g_tituloPagina = 'Detalle del Manifiestos';
+    $g_formAction = "Manifiestos.php?vista=ModificarEstado";
     ob_start();
 ?>
 
-<h2>Detalle de Manifiesto</h2>
-
-<table class="FormularioDetalle">
-    <tr>
-        <td class="campo">s_idManifiesto:</td>
-        <td><?php echo $Manifiesto->S_idmanifiesto; ?></td>
-    </tr>
-    <tr>
-        <td class="campo">dt_fechaRegistro:</td>
-        <td><?php echo $Manifiesto->Dt_fecharegistro; ?></td>
-    </tr>
-    <tr>
-        <td class="campo">s_estadoDelManifiesto:</td>
-        <td><?php echo $Manifiesto->S_estadodelmanifiesto; ?></td>
-    </tr>
-    <tr>
-        <td class="campo">s_Formato:</td>
-        <td><?php echo $Manifiesto->S_formato; ?></td>
-    </tr>
-
+<center>
+<table class="vistaDetalle">
+        <tr>
+            <th align="center" colspan='15' class="nombreFormulario">
+                DETALLE DEL MANIFIESTO
+            </th>
+	</tr>
+       <tr>
+           <td>ID:</td>   
+           <td><?php echo $Manifiesto->S_idmanifiesto; ?></td>
+        </tr>
+        <tr>
+            <td>FECHA DE REGISTRO:</td>
+            <td><?php echo $Manifiesto->Dt_fecharegistro; ?></td>
+        </tr>
+        <tr>
+            <td>ESTADO DEL MANIFIESTO:</td>
+            <td><?php echo $Manifiesto->S_estadodelmanifiesto; ?></td>
+        </tr>
+        <tr>
+            <td>FORMATO DEL MANIFIESTO:</td>
+            <td><?php echo $Manifiesto->S_formato; ?></td>
+        </tr>
+        <tr>
+        <th class="lineaFin" colspan="4"></th>
+     </tr>
 </table>
-
+<br/>
+<br/>
+<input type="submit" name="b_detalleManifiesto" value="Regresar"/> 
+</center>
 <?php
     $g_contenido = ob_get_contents();
     ob_end_clean();

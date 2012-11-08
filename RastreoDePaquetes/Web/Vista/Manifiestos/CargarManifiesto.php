@@ -6,55 +6,48 @@
  * @package RastreoDePaquetes.Web.Cliente.DetalleClientes
  */
 
-    $g_tituloPagina = 'Cargar Manifiesto';
+    $g_tituloPagina = 'Carga de Manifiestos por Archivo DBF';
     $g_formAction = "Manifiestos.php?vista=ManifiestoCargado";
     ob_start();
     
 ?>
-<script type="text/javascript">
-$(document).ready(function(){
-   $(".campofecha").calendarioDW();
-})
-</script> 
-
 <center>
-    <div id="TituloRegClMan">
-    <br/>
-    <br/>
-        <h1>Carga de Manifiestos por Archivo DBF</h1>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    </div>
-    <div id="bodyRegClMan">
-        <form name="fr_RegClArchivo" method="POST" onsubmit="">
-            <table>
+    <table class="vistaDetalle">
+        
+        <tr>
+            <th class="nombreFormulario" colspan="2">
+                Datos a cargar
+            </th>
+        </tr>
+        <tr>
+            <td>Archivo DBF:</td>
+            <td><input type="file" id="archivo" name="archivo" size="40"/>
+            <?php HtmlControles::UserHelpInformation('hlpInfo', "Ayuda", "CargaManifiestos.php?ayuda=Carga") ?>
+            </td>
+            </tr> 
+            <tr>
+                <td>Fecha ingreso:</td>
+                <td><input type="text" class="datepicker" name="tf_fechaIngreso" size="12"/></td>
+            </tr> 
+            <tr>
+            <th class="lineaFin" colspan="2">
                 
-                <tr>
-                    <td><text>Archivo DBF: </text></td>
-                    <td><input type="file" id="archivo" name="archivo" size="40"/>
-                    <?php HtmlControles::UserHelpInformation('hlpInfo', "Ayuda", "CargaManifiestos.php?ayuda=Carga") ?>
-                    </td>
-                    
-                </tr> 
-                
-                <tr>
-                    <td><text>Fecha: </text></td>
-                    <td><input type="text" id="archivo" name="archivo" class="campofecha" size="12"/></td>
-                </tr> 
-                
-           
-                
+            </th>
+        </tr>                   
             </table>
              <br/>
-                <br/>
-            <input type="submit" name="b_RegCLMan" onclick="cargaarchivo()" value="Cargar Manifiesto"/>
-        </form>
-    </div>
-    
+             <br/>
+            <input type="submit" name="b_RegCLMan" onclick="cargaarchivo()" value="Cargar Manifiesto"/>    
 </center>
-
+<script>
+    $(function() {
+        $( ".datepicker" ).datepicker();
+    });
+    
+    function confCambioEstado(){
+        return confirm('¿Seguro que desa Guardar los Cambios?');
+    }
+</script>
 <?php
     $g_contenido = ob_get_contents();
     ob_end_clean();

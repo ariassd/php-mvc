@@ -38,15 +38,26 @@ function InsertarBannerConfirmacion() {
     throw new Exception("Debe de implementarse");
     include("Vista/Banners/InsertarBannerConfirmacion.php");
 }
-
-function ActualizarBanner() {
-    throw new Exception("Debe de implementarse");
-    include("Vista/Banners/ActualizarBanners.php");
-}
-
 function ActualizarBannerConfirmacion() {
     throw new Exception("Debe de implementarse");
     include("Vista/Banners/ActualizarBannerConfirmacion.php");
 }
+function IngresarBanner() {
+   include("Vista/Banners/IngresarBanner.php");
+}
+function ActualizarBanners() {
+    include("Vista/Banners/ActualizarBanners.php");
+}
+function BuscarBanners() {
+    include("Vista/Banners/BuscarBanners.php");
+}
+
+function DetalleBannersSave() {
+    include("Vista/Banners/DetalleBannersSave.php");
+}
+function CargarListaBusquedaBanners() {
+    include("Vista/Banners/CargarListaBusquedaBanners.php");
+}
+
 
 ?>

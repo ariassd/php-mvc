@@ -49,4 +49,17 @@ function View($view = '', $params = array()) {
     
 }
 
+function CurrentController() {
+    $currentFile = $_SERVER["SCRIPT_NAME"];
+    $parts = Explode('/', $currentFile);
+    $currentFile = $parts[count($parts) - 1];
+    $currentFile = str_replace('.php', '', $currentFile);
+    return $currentFile;
+}
+
+function CurrentViewOfController() {
+    $viewToVisit = $_GET["vista"];
+    return $viewToVisit;
+}
+
 ?> 

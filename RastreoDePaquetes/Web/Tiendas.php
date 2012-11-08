@@ -58,13 +58,15 @@ function AgregarTienda(){
 function ModificarTienda(){
     $o_Tiendas = TiendasBL::ListarTiendas_al();
     include ("Vista/Tiendas/ModificarTienda.php");
-    
-    
 }
 function EliminarTienda(){
     $o_Tiendas = TiendasBL::ListarTiendas_al();
     include ("Vista/Tiendas/EliminarTienda.php");
-    
-    
+}
+function AgregarTiendaConf(){
+    include ("Vista/Tiendas/AgregarTiendaConf.php");
+}
+function ModificarTiendaConf(){
+    include ("Vista/Tiendas/ModificarTiendaConf.php");
 }
 ?>

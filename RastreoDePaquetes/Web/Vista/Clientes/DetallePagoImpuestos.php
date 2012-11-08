@@ -6,42 +6,39 @@ ob_start();
     
 ?>
 <center>
-    
-    <br>
-    <br>
-    <h1>Detalle Pago Impuestos</h1>
-    <table width="400" border="1" cellpadding="1" bordercolor="#000000" bgcolor="gray">
-        
-        <tr align="center">
-            <td><text>CONCEPTO</text></td>
-            <td><text>COSTO</text></td>
-        </tr>
-        <tr bgcolor="black">
-            <td><text>VALOR CIF</text></td>
-            <td><text>$10,000.00</text></td>
-        </tr>
-        
-        <tr bgcolor="black">
-            <td><text>BODEGAJE</text></td>
-            <td><text>$10,000,00</text></td>
-            
-        </tr>
-        <tr bgcolor="black">
-            <td><text>DESALMACENAJE</text></td>
-            <td><text>$10,000,00</text></td>
-        </tr>
-        
-        <tr bgcolor="black">
-            <td><text>IMPUESTO DE IMPORTACION</text></td>
-            <td><text>$5,250.00</text></td>
+   <table class="Lista">
+        <tr>
+            <td colspan='13' class="nombreTabla">Detalle Pago Impuestos</td>
+	</tr>
+       <tr>
+            <th>CONCEPTO</th>
+            <th>COSTO</th>
+       </tr>
+        <tr>
+            <td>VALOR CIF</td>
+            <td>$10,000.00</td>
         </tr>
         
         <tr>
-            <td><text>TOTAL A PAGAR: </text></td>
-            <td><text>$35,250.00</text></td>
+            <td>BODEGAJE</td>
+            <td>$10,000,00</td>
+            
+        </tr>
+        <tr>
+            <td>DESALMACENAJE</td>
+            <td>$10,000,00</td>
         </tr>
         
+        <tr>
+            <td>IMPUESTO DE IMPORTACION</td>
+            <td>$5,250.00</td>
+        </tr>
         
+        <tr>
+            <td>TOTAL A PAGAR:</td>
+            <td>$35,250.00</td>
+        </tr>  
+         <tr><td class="lineaFin" colspan="2"></td></tr>
   </table>
     <br>
     <br>

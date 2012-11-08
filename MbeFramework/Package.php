@@ -17,7 +17,14 @@ class PackageException extends Exception {   }
  * @access public
  * @param string $class El paquete que se desea incluir
  */
-function import($class, $dirs = null) {
+function import($class, $params = array()) {
+    
+    foreach ($params as $key => $value) {
+        //echo $key;
+        global $$key;
+        $$key = $value;
+    }
+    
     $path = str_replace('.', DIRECTORY_SEPARATOR, $class);
     //$pathArray = split('\.',$class); //menos de PHP 5
     $pathArray = explode('.', $class); //PHP 5

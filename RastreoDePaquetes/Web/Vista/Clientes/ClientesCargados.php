@@ -23,7 +23,7 @@ function pregunta(){
 <center>
     <table class="Lista">
         <tr>
-            <td colspan='12' class="nombreTabla">CLIENTES MBE-ESCAZU</td>
+            <td colspan='13' class="nombreTabla">CLIENTES MBE-ESCAZU</td>
 	</tr>
         <tr align='center'>
             <th>NUM</th>
@@ -41,27 +41,30 @@ function pregunta(){
         </tr> 
         <tr>
         
-        <?php
-        for($i=1; $i < 10; $i++){
-            echo "<tr align='center' bgcolor='black'>";    
-                echo '<td align=center>'.$i.'</td>';
-                echo '<td>000'.$i.'</td>';
-                echo '<td>ZAMBRANA-'.$i.' '.'GUTIERREZ-'.$i.' '.'ARMANDO'.$i.'</td>';
-                echo '<td>SJO</td>';
-                echo '<td>000'.$i.'</td>';
-                echo '<td>61</td>';
-                echo '<td>DIR-'.$i.'</td>';
-                echo '<td><input name="todos" type="text" size="10" value=""/></td>';
-                echo '<td>2552-120'.$i.'</td>';
-                echo '<td>A</td>';
-                echo '<td>ACTIVO</td>';
-                echo '<td><input name="todos" type="checkbox" value=""/></td>';
-            echo '</tr>';
-        }?>
-    <tr align="center">
-        <td colspan='12'>TOTALE DE CLIENTES = 9, COSTA MBE-ESCAZU</td>
+        <?php for($i=1; $i < 10; $i++){ ?>
+            
+        <tr>
+            <td align=center><?php echo $i; ?></td>
+            <td>000<?php echo $i; ?></td>
+            <td>Cliente <?php echo $i; ?></td>
+            <td>SJO</td>
+            <td>000<?php echo $i; ?></td>
+            <td>61</td>
+            <td>DIR-<?php echo $i; ?></td>
+            <td><input name="email<?php echo $i;?>" type="text" size="10" value="" class="validate[required,custom[email]]"/></td>
+            <td>2552-120<?php echo $i; ?></td>
+            <td>A</td>
+            <td>ACTIVO</td>
+            <td align="center"><input name="todos" type="checkbox" value=""/></td>
+            
+        </tr>
+            
+        <?php } ?>
         
-    </tr>  
+        <tr align="center">
+            <td colspan='12'>TOTALE DE CLIENTES = 9, COSTA MBE-ESCAZU</td>
+
+        </tr>  
         <tr>
             <td class="lineaFin" colspan="12">
                 
@@ -72,6 +75,8 @@ function pregunta(){
     <br/>
     <br/>
     <input type="submit" name="b_RegCLMan" onclick="pregunta()" value="Guardar Seleccionados"/>   
+    <br/>
+    <a href="javascript:return(false)" onclick="jQuery('form').validationEngine('hide')">Cerrar Validaciones</a>
 </center>
 
 <?php

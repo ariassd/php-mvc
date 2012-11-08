@@ -1,110 +1,80 @@
 <?php
-
 $g_tituloPagina = 'Actualizar Informacion Cliente';
-$g_formAction = "";
+$g_formAction = "Clientes.php?vista=ClienteActualizaInformacionConf";
 ob_start();
-    
 ?>
-<script language="JavaScript">
-function pregunta(){
-    if (confirm('¿Estas seguro que desea actualizar la informacion?')){
-        alert('Informacion Actualizada con exito');
-        <?php
-        $g_formAction = "Empleados.php?vista=BuscarEmpleado";
-        ?>
-     }
-    else{
-    <?php
-      $g_formAction = ""; 
-      ?> 
-    }
-}
-</script>
 <center>
-    
-    <br>
-    <br>
-    <h1>Actualizar Informacion Cliente</h1>
     <input type="hidden" value="1" name="enviar" />
-    <table class="detailview">
-        
+    
+    <table class="vistaDetalle">
         <tr>
-            <td align="right"><text>Identificacion:</text></td>
-            <td><input type="text" name="identificacion" value="2-0233-0258" readonly="true"  size="15"/></td>
+            <th class="nombreFormulario" colspan="2">
+                Datos del cliente
+            </th>
         </tr>
-        
         <tr>
-            <td><label>Codigo Pais:</label></td>
+            <td>Codigo de Pais:</td>
+            <td><input type="text" name="tf_CodPais" size="3" readonly="true" value="SJO"/>
+                Número de Casillero: 
+                <input type="text" name="tf_NumCasillero" size="4" readonly="true" value="1"/>
+                Código de tienda: 
+                <input type="text" name="tf_CodTienda" size="4" readonly="true" value="1"/></td>
+        </tr>
+        <tr>
+            <td>Identificacion: </td>
+            <td><input type="text" name="tf_IDCliente" size="15" readonly="true" value="1-2222-333333"/></td>
+        </tr>
+        <tr>
+            <td>Nombre: </td>
+            <td><input type="text" name="tf_NombreCliente" size="15" readonly="true" 
+                       value="<?php if (isset($cl1E) != NULL) { echo $cl1E->getS_nombre();} ?>" value="Cliente x"/></td>
+        </tr>
+        <tr>
+            <td>Apellido1:</td>
+            <td><input type="text" name="tf_ApellidoCliente1" size="15" readonly="true"  value="A1"/></td>
+        </tr>
+        <tr>
+            <td>Apellido 2: </td>
+            <td><input type="text" name="tf_ApellidoCliente2" size="15"  readonly="true"  value="A2"></td>
+        </tr>
+        <tr>
+            <td>Dirección: </td>
+            <td><input type="textarea" name="tf_DireccionCliente" size="50" class="validate[required]" value="Direccion del cliente"/></td>
+        </tr>
+        <tr>
+            <td>Email: </td>
+            <td><input type="text" name="tf_EmailCliente" class="validate[required,custom[email]]" value="qq@busbus.com"/></td>
+        </tr>
+        <tr>
+            <td>Telefono:</td>
+            <td><input type="text" name="tf_Telefono" class="validate[required]" value="888-999"/></td>
+        </tr>
+        <tr> 
+            <td>Plan Contratado: </td>
             <td>
-                <input type="text" name="codigoPais" value="SJO" readonly="true" size="5"/>
-              
+                <fieldset>
+                    <?php $i = 0; foreach ($planes as $value) { ?>
+                        <input type='radio' name="r_PlanContratado" id='r_PlanContratado' value='<?php echo $value->S_tipo; ?>' disabled="true" checked="<?php if($i==0) {echo "true"; }else { echo "false"; } ?>"/>
+                        <?php echo $value->S_tipo; ?>
+                    <?php 
+                    
+                    $i++;
+                    } ?>
+                </fieldset>
             </td>
         </tr>
         <tr>
-            <td>Numero Casillero:</td>
-            <td>
-                <input type="text" name="numerocasillero" value="0021" readonly="true" size="5"/>
-            </td>
+            <th class="lineaFin" colspan="2">
+
+            </th>
         </tr>
-         <tr>
-            <td align="right"><label>Nombres:</label></td>
-            <td><input type="text" name="nombres" value="Armando" size="30"/>
-            </td>
-        </tr>
-        
-        <tr>
-            <td align="right"><label>Apellidos:</label></td>
-            <td><input type="text" name="apellidos" value="Zambrana Gutierrez" size="30"/></td>
-        </tr>
-            
-        <tr>
-            <td align="right"><label>Email: </label></td>
-            <td><input type="text" name="email" value="armyrene@gmail.com" size="30px"/></td>
-        </tr>
-		
-        <tr>
-            <td align="right"><label>Direccion: </label></td>
-            <td><textarea name="direccion" resize:none cols="30" rows="2" wrap="physical">Heredia Centro.</textarea></td>
-        </tr>
-		
-        <tr>
-            <td align="right"><label>Telefono: </label></td>
-            <td><input type="text" name="telefono" value="Casa = 2255-8829, Celular = 8858-1214, Otro = 8922-2255" size="40"/></td>
-        </tr>
-        
-        <tr>
-            <td align="right"><label>Password: </label></td>
-            <td><input type="password" name="pass" value="12345" size="15"/></td>
-        </tr>
-        
-        <tr>
-            <td align="right"><label>Confirmar Password: </label></td>
-            <td><input type="password" name="confirmar" value="12345" size="15"/></td>
-        </tr>
-		
-        <tr>
-            <td align="right"><label>Plan Contratado:</label></td>
-            <td>
-                <input name="" type="radio" disabled value="a"/>Plan A
-                <input name="" type="radio" disabled value="b" checked/>Plan B
-            </td>
-        </tr>
-        <tr>
-            <td align="right"><label>Estado:</label></td>
-            <td>
-                <input name="" type="radio" disabled value="activo" checked/>Activo
-                <input name="" type="radio" disabled value="activo"/>Activo
-                  
-            </td>
-        </tr>
-        
     </table>
-    <br>
+    
     <br>
     <input type="submit" onclick="pregunta()" value="Actualizar Informacion"/>  
 </center>
 <?php
-    $g_contenido = ob_get_contents();
-    ob_end_clean();
-    include "Master.php"; 
+$g_contenido = ob_get_contents();
+ob_end_clean();
+include "Master.php";
 ?>

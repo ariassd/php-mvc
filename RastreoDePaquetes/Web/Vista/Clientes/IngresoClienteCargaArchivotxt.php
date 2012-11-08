@@ -7,7 +7,7 @@
  */
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
-    $g_tituloPagina = 'Ingreso de Clientes';
+    $g_tituloPagina = 'Registro de Clientes por Carga de Archivo txt';
     $g_formAction = "Clientes.php?vista=ClientesCargados";
     ob_start();
     
@@ -15,30 +15,28 @@ ini_set('display_errors', '1');
 
 
 <center>
-    <div id="TituloRegClMan">
-    <br/>
-    <br/>
-        <h1>Registro de Clientes por Carga de Archivo TXT</h1>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    </div>
-    <div id="bodyRegClMan">
+    <table class="vistaDetalle">
         
-            <table>
+        <tr>
+            <th class="nombreFormulario" colspan="2">
+                Datos a cargar
+            </th>
+        </tr>
                 <tr>
-                    <td><text>Archivo txt: </text></td>
-                    <td><input type="file" id="archivo" name="archivo" size="40"/>
+                    <td>Archivo .txt:</td>
+                    <td><input type="file" name="tf_archivotxt" size="40"/>
                     <?php HtmlControles::UserHelpInformation('hlpInfo', "Ayuda", "CargaClientes.php?ayuda=Carga") ?>
                     </td>
-                </tr>      
+                </tr> 
+                <tr>
+            <th class="lineaFin" colspan="2">
+                
+            </th>
+        </tr>
             </table>
              <br/>
-                <br/>
-            <input type="submit" name="b_RegCLMan" value="Cargar Clientes"/>   
-    </div>
-    
+             <br/>
+            <input type="submit" name="b_RegCLMan" value="Cargar Clientes"/>
 </center>
 
 <?php

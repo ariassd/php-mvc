@@ -48,5 +48,9 @@ function ActualizarPreAlertaConfirmacion() {
     throw new Exception("Debe de implementarse");
     include("Vista/PreAlertas/ActualizarPreAlertaConfirmacion.php");
 }
+function RegistroPreAlerta() {
+    include("Vista/PreAlertas/RegistroPreAlerta.php");
+}
+
 
 ?>

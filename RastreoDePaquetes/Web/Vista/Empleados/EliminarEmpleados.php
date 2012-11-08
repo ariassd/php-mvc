@@ -31,21 +31,20 @@ function pregunta(){
 }
 </script>
 <center>
-   <br/>
-   <h1>Detalle Empleados a Eliminar:</h1>
-    <table border="1" cellpadding="0" cellspacing="1" bordercolor="#000000" bgcolor="gray">
+   <table class="Lista">
         <tr>
-        <td colspan='13' align="center"><text>EMPLEADOS MBE-ESCAZU</text></td>
-		</tr>
+            <td colspan='13' class="nombreTabla">Datos del Empleado</td>
+	</tr>
         <tr align='center'>
-            <td><text>N</text></td>
-            <td><text>ID</text></td>
-            <td><text>NOMBRE</text></td>
-            <td><text>NOM. USUARIO</text></td>
-            <td><text>CLAVE</text></td>
-            <td><text>TIPO USUARIO</text></td>
-            <td><text>ESTADO</text></td>
-            
+            <th>Nº</th>
+            <th>IDENTIFICACION</th>
+            <th>NOMBRE</td>
+            <th>PRIMER APELLIDO</th>
+            <th>SEGUNDO APELLIDO</th>
+            <th>USUARIO</th>
+            <th>CLAVE</th>
+            <th>TIPO USUARIO</th>
+            <th>ESTADO ACTUAL</th>
         </tr> 
         
         <?php
@@ -53,7 +52,9 @@ function pregunta(){
             echo "<tr align='center' bgcolor='black'>";    
                 echo '<td align=center>'.$i.'</td>';
                 echo '<td>000'.$i.'</td>';
-                echo '<td>Zambrana Gutierrez Armando - '.$i.'</td>';
+                echo '<td>Armando - '.$i.'</td>';
+                echo '<td>Zambrana - '.$i.'</td>';
+                echo '<td>Gutierrez - '.$i.'</td>';
                 echo '<td>Usuario-1'.$i.'</td>';
                 echo '<td>7325363jhfjdf-23'.$i.'</td>';
                 echo '<td>E.T</td>';

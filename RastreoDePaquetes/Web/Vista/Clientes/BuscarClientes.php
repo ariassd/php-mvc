@@ -6,18 +6,28 @@
     
 ?>
 
-<center><h1>Actualizacion de Datos de Cliente</h1>
-    <table>
+<center>
+    <table class="vistaDetalle">
+        
         <tr>
-            <td><h3>Codigo de Pais:</h3></td>
-            <td><input type="text" name="tf_CodPais" size="6"/></td>
+            <th class="nombreFormulario" colspan="2">
+                Parametros de Busqueda
+            </th>
         </tr>
         <tr>
-            <td><h3>Numero de casillero:</h3></td>
-            <td><input type="text" name="tf_NumCasillero" size="6"/></td>
+            <td>Codigo de Pais:</td>
+            <td><input type="text" name="tf_CodPais" placeholder="Eje: SJO" size="6" class="validate[required]"/></td>
+        </tr>
+        <tr>
+            <td>Numero de casillero:</td>
+            <td><input type="text" name="tf_NumCasillero" placeholder="Eje: 0125" size="6" class="validate[required,custom[integer]]"/></td>
+        </tr>
+        <tr>
+            <th class="lineaFin" colspan="2">
+                
+            </th>
         </tr>
     </table>
-    <br/>
     <br/>
     <br/>
     <input type="submit" name="b_Buscar" onclick="" value="Buscar"/>

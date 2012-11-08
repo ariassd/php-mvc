@@ -1,18 +1,20 @@
 <?php
 
-$g_tituloPagina = 'Actualizar Empleados';
+$g_tituloPagina = 'Accesos de Empleados a Modulos';
 $g_formAction = "";
 ob_start();
     
 ?>
 <center>
-    <h1>Acceso por Modulos</h1>
-    <br/>
-    <br/>
-    <table class="Lista" border="1">
-        <th>Modulo</th>
-        <th>Funcionalidad</th>
-        <th>Dar Acceso</th>
+    <table class="Lista">
+        <tr>
+            <td colspan='3' class="nombreTabla">Acceso a Modulos</td>
+	</tr>
+        <tr>
+            <th>MODULO</th>
+            <th>FUNCIONALIDAD</th>
+            <th>DAR ACCESO</th>
+        </tr>
         <tr>
             <td>Ingreso de Clientes</td>
             <td>
@@ -39,7 +41,7 @@ ob_start();
             <td><center><input type="checkbox" name="cb_SeleccionarConsPaq"/></center></td>
         </tr>
         <tr>
-            <td>Carga de Listado de Paquetes</td>
+            <td>Carga Listado de Paquetes</td>
             <td>Carga diaria de los paq que ingresan a Miami</td>
             <td><center><input type="checkbox" name="cb_SeleccionarListPaq"/></center></td>
         </tr>
@@ -85,8 +87,8 @@ ob_start();
             </td>
             <td><center><input type="checkbox" name="cb_SeleccionarAdminEmp"/></center></td>
         </tr>
+        <tr><td class="lineaFin" colspan="3"></td></tr>
     </table>
-    <br/>
     <br/>
     <br/>
     <input type="submit" name="b_AsignarPermisos" value="Asignar Permisos"/>

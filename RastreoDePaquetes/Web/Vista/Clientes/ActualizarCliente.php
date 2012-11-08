@@ -11,14 +11,7 @@
     ob_start();
 ?>
 <center>
-    <div id="TituloRegClMan">
-    <br/>
-        <h1>Actualizar Cliente</h1>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    </div>
+    
     <div id="bodyRegClMan">
         <form name="fr_RegClMan" method="POST" onsubmit="">
             <table>

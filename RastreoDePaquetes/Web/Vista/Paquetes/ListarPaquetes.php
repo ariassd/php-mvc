@@ -6,16 +6,19 @@
  * @package RastreoDePaquetes.Web.Paquete.ListarPaquetes
  */
 
-    $g_tituloPagina = 'Lista de Paquetes';
+    $g_tituloPagina = 'Busqueda de Paquetes';
     $g_formAction = "";
     ob_start();
 ?>
-
-	<center><h1>Lista de Paquetes</h1>
-        <table class="Lista" border="2">
-            <thead>
-                <tr>
-                    <th>Numero de EBL</th>
+<center>
+    
+    <table class="Lista">
+        <tr>
+            <td colspan='12' class="nombreTabla">Lista de Paquetes Encontrados</td>
+	</tr>    
+    
+        <tr>
+                    <th>Nº EBL</th>
                     <th>Tracking</th>
                     <th>Descripcion</th>
                     <th>Peso</th>
@@ -23,9 +26,9 @@
                     <th>Fecha de Ingreso a Miami</th>
                     <th>Estado Actual</th>
                     <th>Archivar</th>
+                    <th></th>
                 </tr>
-            </thead>
-            <tbody>
+            
                 <?php foreach ($o_Paquetes as $value) { ?>
                 <tr>
                     <td><?php echo $value->I_numeroebl; ?></td>
@@ -35,16 +38,15 @@
                     <td><?php echo $value->D_valorcomercial; ?></td>
                     <td><?php echo $value->Dt_fechaingresoamiami; ?></td>
                     <td><?php echo $value->S_estadoimportacion; ?></td>
-                    <td><input type="checkBox" name="cb_ArchivarPaquete"/></td>
-                    <td><a href="?vista=DetallePaquete&idPaquete=<?php echo $value->I_idPaquete; ?>">Ver detalle</a></td>
+                    <td><center><input type="checkBox" name="cb_ArchivarPaquete"/></center></td>
+                    <td><a href="?vista=DetallePaquetes&idPaquete=<?php echo $value->I_idPaquete; ?>">Ver detalle</a></td>
                 </tr>
                 <?php } ?>
-            </tbody>
         </table>
             <br/>
             <br/>
             <input type="submit" name="b_ArchivarPaquetes" value="Archivar Paquetes seleccionados"/>
-        </center>
+</center>
 <?php
     $g_contenido = ob_get_contents();
     ob_end_clean();

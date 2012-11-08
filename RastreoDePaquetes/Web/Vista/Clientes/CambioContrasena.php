@@ -1,32 +1,38 @@
 <?php
 
-$g_tituloPagina = 'Cambio de Contrasena';
+$g_tituloPagina = 'Cambio de Contraseña';
 $g_formAction = "Clientes.php?vista=LogInCliente";
 ob_start();
     
 ?><center>
-    <h1>Cambio de Contraseña</h1>
-    <br/>
-    <br/>
-    <br/>
-    <table>
+    <table class="vistaDetalle">
+        
         <tr>
-            <td><h3>Contraseña Anterior:</h3></td>
-            <td><input type="text" name="tf_ContrasenaAnt"/></td>
+            <th class="nombreFormulario" colspan="2">
+                Cambiar Datos
+            </th>
         </tr>
         <tr>
-            <td><h3>Contraseña Nueva:</h3></td>
-            <td><input type="text" name="tf_ContrasenaNueva"/></td>
+            <td>Contraseña Anterior:</td>
+            <td><input type="text" name="tf_ContrasenaAnt" size="10"/></td>
         </tr>
         <tr>
-            <td><h3>Confirmar Contraseña:</h3></td>
-            <td><input type="text" name="tf_ContrasenaConf"/></td>
+            <td>Contraseña Nueva:</td>
+            <td><input type="text" name="tf_ContrasenaNueva" size="10"/></td>
+        </tr>
+        <tr>
+            <td>Confirmar Contraseña:</td>
+            <td><input type="text" name="tf_ContrasenaConf" size="10"/></td>
+        </tr>
+        <tr>
+            <th class="lineaFin" colspan="2">
+                
+            </th>
         </tr>
     </table>
     <br/>
     <br/>
-    <br/>
-    <input type="submit" name="b_ActContrasena" value="Guardar"/>
+    <input type="submit" name="b_ActContrasena" value="Cambiar"/>
 </center>
 
 

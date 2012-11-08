@@ -23,11 +23,11 @@ function pregunta(){
     <table>
         <tr>
             <td align="right"><text>Contraseña nueva:</text></td>
-            <td><input type="password" name="tf_claveNueva" size="6"/></td>
+            <td><input type="password" name="tf_claveNueva"/></td>
         </tr>
         <tr>
             <td align="right"><text>Confirmar Contraseña:</text></td>
-            <td><input type="password" name="tf_claveConfirma" size="6"/></td>
+            <td><input type="password" name="tf_claveConfirma"/></td>
         </tr>
     </table>
     <br/>

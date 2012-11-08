@@ -1,37 +1,48 @@
 <?php
 $g_tituloPagina = 'Agregar Nueva Tienda';
-    $g_formAction = "Tiendas.php?vista=AgregarTienda.php";
+    $g_formAction = "Tiendas.php?vista=AgregarTiendaConf";
     ob_start();
 ?>
-<center><h1>Agregar Tienda</h1>
-<br/>
-<br/>
-<br/>
-<br/>
-<div>
-    <table>
+<center>
+<table class="vistaDetalle">
+        
         <tr>
-            <td><h3>Codigo de Tienda: </h3></td>
-            <td><input type="text" name="tf_CodTienda"/></td>
+            <th class="nombreFormulario" colspan="2">
+                Datos de la Tienda
+            </th>
         </tr>
         <tr>
-            <td><h3>Pais: </h3></td>
-            <td><input type="text" name="tf_Pais"/></td>
+            <td>Codigo de Tienda:</td>
+            <td><input type="text" name="tf_CodTienda" size="5"/></td>
         </tr>
         <tr>
-           <td><h3>Dirección: </h3></td>
-           <td><input type="text" name="tf_DireccionTienda" size="25"</td>
+            <td>Codigo Pais:</td>
+            <td><input type="text" name="tf_Pais" size="5"/></td>
         </tr>
         <tr>
-            <td><h3>Telefono: </h3></td>
-            <td><input type="text" name="tf_TelefonoTienda"</td>
+           <td>Dirección:</td>
+           <td><input type="text" name="tf_DireccionTienda" size="30"/></td>
         </tr>
         <tr>
-            <td><h3>Estado: </h3></td>
-            <td><input type="radio" name="r_Estado" value="1">Activo</input>
-            <input type="radio" name="r_Estado" value="0">Inactivo</input></td>
+            <td>Telefono:</td>
+            <td><input type="text" name="tf_TelefonoTienda" size="10"/></td>
         </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input type="text" name="tf_EmailTienda"/></td>
+        </tr>
+        <tr>
+            <td>Estado:</td>
+            <td>
+                <label for="r_EstadoActivo">Activo</label>
+                <input id="r_EstadoActivo" type="radio" name="r_Estado" value="1"/>
+                <label for="r_EstadoInActivo">Inactivo</label>
+                <input id="r_EstadoInActivo" type="radio" name="r_Estado" value="0"/>
+            </td>
+        </tr>
+        <tr><th class="lineaFin" colspan="2"></th></tr>
     </table>
+    <input type="submit" name="b_AgregarTienda" value="Agregar Tienda"/>
 </div>
 
 </center>

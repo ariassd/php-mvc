@@ -12,37 +12,36 @@ $g_tituloPagina = 'Detalle Manifiestos';
 $g_formAction = "Manifiestos.php?vista=CargarManifiesto";
 ob_start();
 ?>
-<center>
-    <br/>
-   
-    <h1>Detalle de Manifiesto Guardado</h1>
-    <h3>Movimiento de Guias por Tiendas</h3>
-    <h4>Desde el 05/06/2012 hasta el 05/06/2012, Estados: Todos, Pais: Costa RIca, Tienda: MBE-EZCAZU</h4>    
-    <table border="1" bgcolor="gray">
+<center>  
+    <table class="Lista">
+        <tr>
+            <td align="center" colspan='15' class="nombreTabla">
+                Movimiento de Guias por Tiendas <br>
+                Desde el 05/06/2012 hasta el 05/06/2012, Estados: Todos, Pais: Costa RIca, Tienda: MBE-EZCAZU
+            </td>
+	</tr>
 
         <tr align='center'>
-            <td><text>N</text></td>
-            <td><text>GUIA</text></td>
-            <td><text>FECHA INGRESO</text></td>
-            <td><text>ESTADO</text></td>
-            <td><text>FECHA DEL ESTADO</text></td>
-            <td><text>PIEZAS</text></td>
-            <td><text>PESO(KG)</text></td>
-            <td><text>TIPO DE ENVIO</text></td>
-            <td><text>CODIGO TIENDA</text></td>
-            <td><text>TIENDA</text></td>
-            <td><text>CASILLERO</text></td>
-            <td><text>DESCP.</text></td>
-            <td><text>TIPO MERCANCIA</text></td>
-            <td rowspan="2">Guardar<input name="todos" type="checkbox" value="" />
-            </td>
+            <th>Nº</th>
+            <th>GUIA</th>
+            <th>FECHA INGRESO</th>
+            <th>ESTADO</td>
+            <th>FECHA DEL ESTADO</th>
+            <th>PIEZAS</th>
+            <th>PESO(KG)</th>
+            <th>TIPO DE ENVIO</th>
+            <th>CODIGO TIENDA</th>
+            <th>TIENDA</th>
+            <th>CASILLERO</th>
+            <th>DESCP.</th>
+            <th>TIPO MERCANCIA</th>
+            <th>Guardar<input name="todos" type="checkbox" value=""/>
+            </th>
         </tr> 
-        <tr>
-        <td colspan='13'><text>MBE-ESCAZU</text></td>
-		</tr>
         <?php
+        
         for($i=1; $i < 10; $i++){
-            echo "<tr align='center' bgcolor='black'>";    
+            echo '<tr aling="center">';    
                 echo '<td align=center>'.$i.'</td>';
                 echo '<td>000'.$i.'</td>';
                 echo '<td>0'.$i.'/06/2012</td>';
@@ -56,21 +55,19 @@ ob_start();
                 echo '<td>SJ000'.$i.'</td>';
                 echo '<td>TAPA-'.$i.'</td>';
                 echo '<td>MBV</td>';
-                echo '<td><input name="todos" type="checkbox" value="" checked/></td>';
+                echo '<td colspan="2"><input name="todos" type="checkbox" value="" checked/></td>';
             echo '</tr>';
         }?>
     <tr>
-        <td colspan='5'><text>TOTALES PARA COSTA MBE-ESCAZU</text></td>
-        <td align='center'><text>56</text></td>
-        <td align='center'><text>10,5 kg</text></td>
-        <td colspan='7'><text></text></td>
+        <td colspan='5'>TOTALES PARA COSTA MBE-ESCAZU</td>
+        <td align='center'>56</td>
+        <td align='center'>10,5 kg</td>
+        <td colspan='5'><text></text></td>
     </tr>    
     </table>
     <br/>
-    <br/>
-    <input type="submit" name="b_RegCLMan" value="Cargar Manifiesto"/>   
+    <br/><input type="submit" name="b_RegCLMan" value="Nueva Carga"/>   
 </center>
-
 <?php
 
 $g_contenido = ob_get_contents();
